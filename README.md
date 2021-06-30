@@ -1,8 +1,4 @@
 # SEI56-Project-3
 
 
-aesfgs
-daria testingwergawegegtdsfgsf
-
-
-sedffa
+daria trying ot get errors

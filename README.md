@@ -2,12 +2,12 @@
 
 product working
 
-<<<<<<< HEAD
 daria trying ot get errors
-=======
 aesfgs
 daria testingwergawegegtdsfgsf
 
+working on my code cheerio
+
+
 
 sedffa
->>>>>>> b4461df3fef4d24f39aae4903f2adb52a85e1768

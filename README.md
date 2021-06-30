@@ -1,13 +1,10 @@
 # SEI56-Project-3
 
-product working
+Becca
+Ole
+Daria
+Victoria
 
-daria trying ot get errors
-aesfgs
-daria testingwergawegegtdsfgsf
+Oles 
 
-working on my code cheerio
-
-
-
-sedffa
+new stuff here 

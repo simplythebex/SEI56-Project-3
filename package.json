@@ -1,0 +1,16 @@
+{
+  "name": "SEI56-Project-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:simplythebex/SEI56-Project-3.git",
+  "author": "simplythebex <becca.jones@live.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.0"
+  },
+  "type": "module",
+  "scripts": {
+    "serve": "npx nodemon index.js"
+  }
+}

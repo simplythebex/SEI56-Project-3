@@ -2,6 +2,8 @@ import mongoose from 'mongoose'
 import { dbURI } from '../config/environment.js'
 import Drink from '../models/drink.js'
 import drinkData from './data/drinks.js'
+import User from '../models/user.js'
+import userData from './data/users.js'
 
 const seedDatabase = async () => {
   try {
@@ -13,8 +15,18 @@ const seedDatabase = async () => {
     await mongoose.connection.db.dropDatabase()
     console.log('👍🏽 DB dropped')
 
+    // create users
+    const users = await User.create(userData)
+    console.log(users)
+
+    // create drinkData with added ownwer field 
+    const drinksWithAddedUsers = drinkData.map(drink => {
+      return { ...drink, owner: users[0]._id }
+    })
+    console.log(drinksWithAddedUsers)
+
     // create drinks using drinkData
-    const drinks = await Drink.create(drinkData)
+    const drinks = await Drink.create(drinksWithAddedUsers)
     console.log(`🌱 DB seeded with ${drinks.length} drinks`)
 
     // closing the connection 

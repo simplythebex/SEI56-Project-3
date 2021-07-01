@@ -7,7 +7,8 @@ const drinkSchema = new mongoose.Schema({
   country: { type: String, required: true },
   description: { type: String, required: true },
   image: { type: String, required: true },
-  funFact: { type: String, maxlength: 300 }
+  funFact: { type: String, maxlength: 300 },
+  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 })
 
 // define model

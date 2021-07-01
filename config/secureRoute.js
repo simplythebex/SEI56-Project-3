@@ -18,6 +18,10 @@ export const secureRoute = async (req, res, next) => {
     //check user exists
     if (!userToVerify) throw new Error('User not found')
 
+    console.log(userToVerify)
+    
+    req.currentUser = userToVerify 
+
     next()
   } catch (err) {
     console.log(err)

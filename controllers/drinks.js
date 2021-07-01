@@ -9,7 +9,9 @@ export const getAllDrinks = async (_req, res) => {
 // CREATE ROUTE - create a drink
 export const createDrink = async (req, res) => {
   try {
-    const drinkToAdd = await Drink.create(req.body)
+    const drinkWithOwner = { ...req.body, owner: req.currentUser._id }
+    console.log(drinkWithOwner)
+    const drinkToAdd = await Drink.create(drinkWithOwner)
     console.log('DRINK TO ADD', drinkToAdd)
     return res.status(201).json(drinkToAdd)
   } catch (err) {
@@ -22,7 +24,7 @@ export const createDrink = async (req, res) => {
 export const displayDrink =  async (req, res) => {
   try {
     const { id } = req.params
-    const singleDrink = await Drink.findById(id)
+    const singleDrink = await Drink.findById(id).populate('owner')
     if (!singleDrink) throw new Error()
     console.log('single drink', singleDrink)
     return res.status(200).json(singleDrink)
@@ -34,9 +36,14 @@ export const displayDrink =  async (req, res) => {
 
 // DELETE ROUTE - removes a drink
 export const deleteDrink =  async (req, res) => {
-  const { id } = req.params
   try {
-    await Drink.findByIdAndDelete({ _id: id })
+    const { id } = req.params
+    const drinkToDelete = await Drink.findById(id)
+    if (!drinkToDelete) throw new Error()
+    //check
+    if (!drinkToDelete.owner.equals(req.currentUser._id)) throw new Error('Unauthorized')
+    await drinkToDelete.remove()
+    //await Drink.findByIdAndDelete({ _id: id })
     return res.sendStatus(204)
   } catch (err) {
     console.log(err)

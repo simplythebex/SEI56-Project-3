@@ -7,6 +7,14 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 })
 
+// remove password 
+userSchema.set('toJSON', {
+  transform(_doc, json) {
+    delete json.password
+    return json
+  }
+})
+
 // Virtual field 
 userSchema 
   .virtual('passwordConfirmation')

@@ -20,11 +20,11 @@ export const createDrink = async (req, res) => {
   }
 }
 
-// DRINK ROUTE - get one drink
+// DRINK ROUTE (SHOW) - get one drink
 export const displayDrink =  async (req, res) => {
   try {
     const { id } = req.params
-    const singleDrink = await Drink.findById(id).populate('owner')
+    const singleDrink = await Drink.findById(id).populate('owner').populate('comments.owner')
     if (!singleDrink) throw new Error()
     console.log('single drink', singleDrink)
     return res.status(200).json(singleDrink)
@@ -61,5 +61,39 @@ export const editDrink =  async (req, res) => {
   } catch (err) {
     console.log(err)
     return res.status(404).json({ 'message': 'Oh no! This drink was not found!' })
+  }
+}
+
+// Create comment 
+export const addComment = async (req, res) => {
+  try {
+    const { id } = req.params
+    const drink = await Drink.findById(id)
+    if (!drink) throw new Error('No drink found')
+    const commentToAdd = { ...req.body, owner: req.currentUser._id }
+    console.log(commentToAdd)
+    drink.comments.push(commentToAdd)
+    await drink.save()
+    return res.status(200).json(drink)
+  } catch (err) {
+    console.log(err) 
+    return res.status(404).json({ message: err.message })
+  }
+}
+
+// Delete comment
+export const deleteComment = async (req, res) => {
+  try {
+    const { id, commentId } = req.params
+    const drink = await Drink.findById(id)
+    if (!drink) throw new Error('no drink found')
+    const commentToDelete = drink.comments.id(commentId)
+    if (!commentToDelete) throw new Error('Comment not found')
+    await commentToDelete.remove()
+    await drink.save()
+    return res.sendStatus(204)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: 'Something went wrong' })
   }
 }

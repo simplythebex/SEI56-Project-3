@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllDrinks, createDrink, displayDrink, editDrink, deleteDrink } from '../controllers/drinks.js'
+import { getAllDrinks, createDrink, displayDrink, editDrink, deleteDrink, addComment, deleteComment } from '../controllers/drinks.js'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute } from './secureRoute.js'
 const router = express.Router()
@@ -13,11 +13,19 @@ router.route('/drinks/:id')
   .put(secureRoute, editDrink)
   .delete(secureRoute, deleteDrink)
 
+router.route('/drinks/:id/comments')
+  .post(secureRoute, addComment)
+
+router.route('/drinks/:id/comments/:commentId')
+  .delete(secureRoute, deleteComment)
+
 router.route('/register')
   .post(registerUser)
 
 router.route('/login')
   .post(loginUser)
+
+
 
 
 export default router

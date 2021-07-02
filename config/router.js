@@ -2,6 +2,7 @@ import express from 'express'
 import { getAllDrinks, createDrink, displayDrink, editDrink, deleteDrink, addComment, deleteComment } from '../controllers/drinks.js'
 import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute } from './secureRoute.js'
+import { getUserProfile } from '../controllers/users.js'
 const router = express.Router()
 
 router.route('/drinks')
@@ -25,6 +26,8 @@ router.route('/register')
 router.route('/login')
   .post(loginUser)
 
+router.route('/profile')
+  .get(secureRoute, getUserProfile)
 
 
 

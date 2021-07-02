@@ -7,8 +7,16 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 })
 
+// Reverse relationship that shows all shows related to current user
+userSchema.virtual('createdDrinks', {
+  ref: 'Drink', // references the Drink model
+  localField: '_id',
+  foreignField: 'owner'
+})
+
 // remove password 
 userSchema.set('toJSON', {
+  virtuals: true,
   transform(_doc, json) {
     delete json.password
     return json
@@ -45,6 +53,8 @@ userSchema
 userSchema.methods.validatePassword = function(password){
   return bcrypt.compareSync(password, this.password)
 }
+
+
 
 // Export the model 
 export default mongoose.model('User', userSchema)

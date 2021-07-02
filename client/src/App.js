@@ -1,5 +1,6 @@
 import React from 'react'
 // import axios from 'axios'
+import style from '../src/styles/images/style.png'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
@@ -48,7 +49,7 @@ const App = () => {
       <Figure>
         <Figure.Image
           alt="zig-zag"
-          src="./styles/images/style.png" 
+          src={style}
         /> 
       </Figure>
       

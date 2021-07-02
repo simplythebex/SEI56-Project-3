@@ -6,10 +6,12 @@
   "author": "simplythebex <becca.jones@live.co.uk>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt": "^5.0.1",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.13.0"
+    "mongoose": "^5.13.0",
+    "react-bootstrap": "^1.6.1"
   },
   "type": "module",
   "scripts": {

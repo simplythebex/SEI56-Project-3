@@ -20,7 +20,7 @@ const startServer = async () => {
 
     app.use(express.json())
 
-    app.use(router)
+    app.use('/api', router)
 
     app.listen(port, () => console.log(`🚀 Express is up and running on port ${port}`))
     

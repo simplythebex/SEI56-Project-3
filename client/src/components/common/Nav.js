@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
@@ -17,8 +18,12 @@ const Nav = () => {
           <Navbar.Brand href="#index">Order Online</Navbar.Brand>
           <Navbar.Brand href="#index">Heiss Room</Navbar.Brand>
           <Navbar.Brand href="#index">About us</Navbar.Brand>
-          <Button variant="outline-light">Sign up</Button>{' '}
-          <Button variant="outline-light">Login</Button>{' '}
+          <Link to="/register">
+            <Button variant="outline-light">Sign up</Button>{' '}
+          </Link>
+          <Link to="/Login">
+            <Button variant="outline-light">Login</Button>{' '}
+          </Link>
         </div>
       </Container>
     </Navbar>

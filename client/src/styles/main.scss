@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
 
 // font-family: ‘Marko One’, serif;
+// Global
 $primaryPink: #F7CAC7;
 $primaryBlue: #99CEE3;
 $primaryGreen: #9CCA89;
 $primaryYellow: #F9D85F;
 $primaryGrey: #E8EDE5;
+
+h2 {
+  font-family: 'Marko One', serif;
+  font-size: 4.5em;
+  padding-top: 150px;
+}
 
 
 .hero {
@@ -41,4 +48,33 @@ $primaryGrey: #E8EDE5;
   p {
     font-size: 2em;
   }
+}
+
+// Index page hero section
+.row {
+  .index-hero-img {
+    background-image: url(./assets/other/longharholdcup.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px;
+  }
+  .index-hero-txt {
+    background-color:$primaryGrey; //placeholder colour
+    text-align: center;
+    padding: 100px;
+    p {
+      padding: 20px;
+    }
+  }
+  
+}
+// Index page API section
+
+.left-filters {
+  background-color: $primaryGrey;
+}
+
+.right-api {
+
 }

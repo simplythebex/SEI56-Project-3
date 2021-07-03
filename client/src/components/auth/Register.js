@@ -36,9 +36,10 @@ const Register = () => {
     console.log('submitted')
     try {
       await axios.post('/api/register', formData)
-      history.pushState('./login')
+      history.push('/login')
     } catch (err) {
-      console.log(err)
+      console.log('error response', err.response)
+      setErrors(err.response.data.errors)
     }
   }
   return (
@@ -52,6 +53,7 @@ const Register = () => {
             <Form.Label>Please choose a username</Form.Label>
             <Form.Control type="text" placeholder="Enter username" name="username" onChange={handleChange}/>
           </Form.Group>
+          {errors.username && <p className="error">{errors.username}</p>}
 
           <Form.Group className="mb-3" controlId="fromBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -60,16 +62,19 @@ const Register = () => {
             We will never share your email with anyone else.
             </Form.Text>
           </Form.Group>
+          {errors.email && <p className="error">{errors.email}</p>}
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Please enter a password</Form.Label>
             <Form.Control type="password" placeholder="Password" name="password" onChange={handleChange}/>
           </Form.Group>
+          {errors.password && <p className="error">{errors.password}</p>}
 
           <Form.Group className="mb-3" controlId="fromBasicPasswordConfirmation">
             <Form.Label>Please confirm password</Form.Label>
             <Form.Control type="password" placeholder="Confirm password" name="passwordConfirmation" onChange={handleChange}/>
           </Form.Group>
+          {errors.passwordConfirmation && <p className="error">{errors.passwordConfirmation}</p>}
 
           <Button variant="warning" type="Submit">Register</Button>
 

@@ -24,17 +24,20 @@ const Login = () => {
 
   const setTokenToLocalStorage = (token) => {
     window.localStorage.setItem('token', token)
+    console.log('token', token)
   }
 
   const handleFocus = () => {
     setError(false)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     try {
-      const { data } = axios.post('/api/login', formData)
-      setTokenToLocalStorage(data)
+      const { data } = await axios.post('/api/login', formData)
+      console.log('data', data)
+      console.log('data.token', data.token)
+      setTokenToLocalStorage(data.token)
       history.push('/')
     } catch (err) {
       console.log(err)

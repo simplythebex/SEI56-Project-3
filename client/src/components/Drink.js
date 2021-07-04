@@ -7,6 +7,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import vietnamese from '../styles/images/vietnamese.jpeg'
 import Figure from 'react-bootstrap/Figure'
+import Button from 'react-bootstrap/Button'
 
 
 
@@ -31,38 +32,44 @@ const DrinkShow = () => {
   return (
     <>
       <Nav />
-      
-      <Container className='show' fluid>
-        <Row>
-          <Col>
-            <Figure>
+      <Container className="show" fluid>
+        <Row className="image-text">
+          <Col className="image-col">
+            <Figure className="image">
               <Figure.Image
+                width={600}
                 alt={drink.drink}
                 src={vietnamese}
               /> 
             </Figure>
           </Col>
           <Col className="right">
-            <Container className="title" style={{ width: 'auto' }}>
+            <Container className="title" style={{ width: '100' }}>
               <h2>{drink.drink}</h2>
-              <h3 className="mb-2 text-muted">{drink.country}</h3>
+              <h4 className="origin">Origin: {drink.country}</h4>
             </Container>
-            <Container className="content" style={{ width: 'auto' }}>
+            <Container className="content" style={{ width: '100' }}>
               <h4>Description</h4>
               <p>
                 {drink.description}
               </p>
-              <p><span>Average rating: </span>{drink.avgRating}</p>
+              <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
             </Container> 
           
           </Col>
+        
         </Row>
       </Container>
-      <Container>
+      <Container className="buttons">
+        <Button variant="info">Add to favorites</Button>{' '}
+        <Button variant="danger">Order</Button>{' '}
+      </Container>
+      <Container className="footer" fluid>
         <Row>
-          <Col>Footer</Col>
+          <Col>Map</Col>
         </Row>
       </Container>
+      
     </>
   )
 

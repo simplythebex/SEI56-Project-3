@@ -9,6 +9,7 @@ import vietnamese from '../styles/images/vietnamese.jpeg'
 import Figure from 'react-bootstrap/Figure'
 
 
+
 const DrinkShow = () => {
   const [drink, setDrink] = useState({})
   const { id } = useParams()
@@ -41,11 +42,25 @@ const DrinkShow = () => {
               /> 
             </Figure>
           </Col>
-          <Col>
-            <h3>{drink.drink}</h3>
-            <h4>ABOUT THIS COFFEE</h4>
+          <Col className="right">
+            <Container className="title" style={{ width: 'auto' }}>
+              <h2>{drink.drink}</h2>
+              <h3 className="mb-2 text-muted">{drink.country}</h3>
+            </Container>
+            <Container className="content" style={{ width: 'auto' }}>
+              <h4>Description</h4>
+              <p>
+                {drink.description}
+              </p>
+              <p><span>Average rating: </span>{drink.avgRating}</p>
+            </Container> 
+          
           </Col>
-
+        </Row>
+      </Container>
+      <Container>
+        <Row>
+          <Col>Footer</Col>
         </Row>
       </Container>
     </>

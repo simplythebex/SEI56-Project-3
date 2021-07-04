@@ -31,7 +31,6 @@ $primaryGrey: #E8EDE5;
     }
   }
   
-
   h2 {
     font-family: 'Marko One', serif;
     font-size: 4.5em;
@@ -41,4 +40,11 @@ $primaryGrey: #E8EDE5;
   p {
     font-size: 2em;
   }
+}
+div.show.container-fluid {
+  font-family: 'Marko One', serif;
+}
+
+div.title.container {
+  background-color: primaryYellow;
 }

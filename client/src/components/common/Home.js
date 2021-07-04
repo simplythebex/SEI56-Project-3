@@ -8,7 +8,7 @@ import Figure from 'react-bootstrap/Figure'
 const Home = () => {
   return (
     <>
-      <Container fluid className="hero">
+      <Container className="hero" fluid>
         <Nav />
         <Container>
           <h2>Hot Drinks Around The World</h2>

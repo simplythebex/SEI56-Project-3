@@ -8,16 +8,21 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
+
+
 
 const DrinksIndex = () => {
   const [drinks, setDrinks] = useState([])
-
+  const [filteredDrinks, setFilteredDrinks] = useState(drinks)
 
   useEffect(() => {
     const getData = async () =>{
       try {
         const { data } = await axios.get('/api/drinks')
         setDrinks(data)
+        setFilteredDrinks(data)
       } catch (err) {
         console.log(err)
       }
@@ -25,10 +30,17 @@ const DrinksIndex = () => {
     getData()
   }, [])
 
-  console.log('drinks on state>', drinks)
+  //filter drinks
+  const handleFilter = (event) => {
+    setFilteredDrinks(event)
+  }
+
+
+
+  // console.log('drinks on state>', drinks)
   return (
     <Container fluid className="index-wrapper">
-      <Nav />
+      <Nav sticky="top"/>
       <Row fluid>
         <Col className="index-hero-txt">
           <article>
@@ -45,7 +57,7 @@ const DrinksIndex = () => {
         <Breadcrumb.Item active>Browse Drinks</Breadcrumb.Item>
       </Breadcrumb>
 
-      {/* Common filters row, with sorting and title */}
+      {/* Row with ctea/coffee sort buttons and sory by dropdown */}
       <Container className="sorting-row-wrapper">
         <Row className="buttons-row">
           <Col className="shop-drinks">
@@ -75,13 +87,70 @@ const DrinksIndex = () => {
 
 
       {/* Main drinks API section with filters */}
+      {/* Left side - Filters section */}
       <Container className="api-wrapper">
         <Row className="api-section">
+          <hr className="grey-breakline"></hr>
           <Col className="left-filters">
-            <h3>test text</h3>
+            <Button className="btn-filters" variant="link">
+              <img alt src="../styles/assets/filter-filled-tool-symbol.png" width="18" height="18"></img>
+              Filters
+            </Button>
+            <Button className="btn-filters-clear" variant="link">Clear All</Button>
+            <h3 className="filter-name">Type</h3>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Teas" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Coffees" />
+            </Form.Group>
+            
+            <h3 className="filter-name">Origin</h3>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Africa" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Americas" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Asia" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Europe" />
+            </Form.Group>
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Oceania" />
+            </Form.Group>
+
           </Col>
+
+          {/* Right side - API display section */}
+          
           <Col className="right-api">
-            <h3>test text</h3>
+            <p className=""></p>
+            <Row>
+              {drinks.map(drink => {
+                return (
+                  <Card key={drink._id} style={{ width: '16rem' }}>
+                    <Card.Img variant="top" src={drink.image} />
+                    <Card.Header as="h3">
+                      {drink.drink}
+                    
+                      <Card.Title as="h6">{drink.country}</Card.Title>
+                    </Card.Header>
+                    <Card.Body>
+                      <Card.Text>{drink.description}</Card.Text>
+                      <Card.Text></Card.Text>
+                      <Button variant="primary">More info</Button>
+                    </Card.Body>
+                  </Card>
+                )
+                
+              })}
+            </Row>
+            
+            
+
           </Col>
         </Row>
       </Container>

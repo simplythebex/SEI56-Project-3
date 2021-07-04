@@ -51,9 +51,10 @@ h2 {
 }
 
 // Index page hero section
+
 .row {
   .index-hero-img {
-    background-image: url(./assets/other/longharholdcup.jpeg);
+    background-image: url(./assets/indexpagehero.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -72,9 +73,20 @@ h2 {
 // Index page API section
 
 .left-filters {
+  // position: fixed;
+  top: top;
+  max-width: 25%;
   background-color: $primaryGrey;
+
 }
 
 .right-api {
-
+  overflow-y: scroll;
+  .row {
+    justify-content: space-evenly;
+  }
+  .card {
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
 }

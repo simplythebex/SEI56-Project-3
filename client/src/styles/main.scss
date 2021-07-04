@@ -42,3 +42,22 @@ $primaryGrey: #E8EDE5;
     font-size: 2em;
   }
 }
+
+.outer-box {
+  max-width: 50%;
+  background-color: #F7CAC7;
+  border: 2px solid black;
+  padding: 20px;
+  h2 {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Marko One', serif;
+  }
+  input {
+    margin-bottom: 30px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+}

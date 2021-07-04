@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Nav from '../common/Nav'
 import axios from 'axios'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -51,7 +51,7 @@ const Login = () => {
       <Nav />
 
       <Container className = "outer-box">
-        <h2>Login here</h2>
+        <h2>Login</h2>
         <Form onSubmit={handleSubmit} >
           <Form.Group className="mb-3" controlId="fromBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -65,9 +65,10 @@ const Login = () => {
           {error && <p className="help is-danger">Sorry, your username or password are incorrect</p>}
 
 
-          <Button variant="warning" type="Submit">Login</Button>
+          <Button variant="light" type="Submit" block>Login</Button>
 
         </Form>
+        <Link to="/register" className="login-register">Not yet registered? Sign up here!</Link>
 
       </Container>
     </>

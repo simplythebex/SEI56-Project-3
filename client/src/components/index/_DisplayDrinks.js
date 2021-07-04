@@ -5,13 +5,12 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
 const DisplayDrinks = ({ drinks, filteredDrinks }) => {
-  console.log('displayed drinks', filteredDrinks)
   
   return (
     <Col className="right-api">
-      <p className=""></p>
+      <p className=""></p>      
       <Row>
-        {drinks.map(drink => {
+        {(filteredDrinks.length > 0 ? filteredDrinks : drinks).map(( drink ) => {
           return (
             <Card key={drink._id} style={{ width: '16rem' }}>
               <Card.Img variant="top" src={drink.image} />

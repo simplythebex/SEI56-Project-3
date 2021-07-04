@@ -1,7 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
 
-// font-family: ‘Marko One’, serif;
+// h font-family: ‘Marko One’, serif;
+// body font-family: 'Raleway', sans-serif;
 // Global
 $primaryPink: #F7CAC7;
 $primaryBlue: #99CEE3;
@@ -13,6 +15,10 @@ h2 {
   font-family: 'Marko One', serif;
   font-size: 4.5em;
   padding-top: 150px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
 }
 
 
@@ -83,6 +89,7 @@ h2 {
   top: top;
   max-width: 25%;
   background-color: $primaryGrey;
+  font-family: 'Raleway', sans-serif;
 
 }
 

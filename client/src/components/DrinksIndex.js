@@ -8,40 +8,70 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Dropdown from 'react-bootstrap/Dropdown'
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import Card from 'react-bootstrap/Card'
-import Form from 'react-bootstrap/Form'
+import DisplayDrinks from './index/_DisplayDrinks.js'
+import DisplayChecked from './index/_DisplayChecked.js'
 
 
 
 const DrinksIndex = () => {
   const [drinks, setDrinks] = useState([])
   const [filteredDrinks, setFilteredDrinks] = useState(drinks)
+  const [hasError, setHasError] = useState(false)
+  const typesOfDrinks = ['All']
+  let type = 'All'
+  const search = ''
+  
 
+  // request to API on first render
   useEffect(() => {
     const getData = async () =>{
       try {
         const { data } = await axios.get('/api/drinks')
         setDrinks(data)
-        setFilteredDrinks(data)
       } catch (err) {
-        console.log(err)
+        setHasError(true)
+        
       }
     }
     getData()
   }, [])
 
-  //filter drinks
-  const handleFilter = (event) => {
-    setFilteredDrinks(event)
+  // default display for 'All', creates array of types of drinks
+  const getTypes = () => {
+    drinks.map(drink => {
+      if (!typesOfDrinks.includes(drink.type)) {
+        typesOfDrinks.push(drink.type)
+      }
+    })
+  }
+
+  // filter drinks
+  const filterDrinks = () => {
+    const regexSearch = new RegExp(search, 'i')
+    console.log('re ->', regexSearch)
+    const filteredArray = drinks.filter(drink => {
+      return (
+        regexSearch.test(drink.drink) && (drink.type === type || type === 'All')
+      )
+    })
+    setFilteredDrinks(filteredArray)
   }
 
 
+  //sets type whe checkbox is handleChecked
+  const handleChecked = (event) => {
+    type = event.target.value
+    filterDrinks()
+  }
 
-  // console.log('drinks on state>', drinks)
+  getTypes()
+
+  console.log('filteredDrinks>', filteredDrinks)
   return (
     <Container fluid className="index-wrapper">
-      <Nav sticky="top"/>
+      <Nav />
       <Row fluid>
+        
         <Col className="index-hero-txt">
           <article>
             <p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr&apos;s standard 1960s with the release of Letraset sheets containing Lore.</p>
@@ -57,7 +87,7 @@ const DrinksIndex = () => {
         <Breadcrumb.Item active>Browse Drinks</Breadcrumb.Item>
       </Breadcrumb>
 
-      {/* Row with ctea/coffee sort buttons and sory by dropdown */}
+      {/* Row with tea/coffee sort buttons and sory by dropdown */}
       <Container className="sorting-row-wrapper">
         <Row className="buttons-row">
           <Col className="shop-drinks">
@@ -92,67 +122,23 @@ const DrinksIndex = () => {
         <Row className="api-section">
           <hr className="grey-breakline"></hr>
           <Col className="left-filters">
-            <Button className="btn-filters" variant="link">
-              <img alt src="../styles/assets/filter-filled-tool-symbol.png" width="18" height="18"></img>
-              Filters
-            </Button>
-            <Button className="btn-filters-clear" variant="link">Clear All</Button>
-            <h3 className="filter-name">Type</h3>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Teas" />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Coffees" />
-            </Form.Group>
-            
-            <h3 className="filter-name">Origin</h3>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Africa" />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Americas" />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Asia" />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Europe" />
-            </Form.Group>
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Oceania" />
-            </Form.Group>
-
+            <DisplayChecked 
+              typesOfDrinks = {typesOfDrinks}
+              handleChecked = {handleChecked}
+            />
           </Col>
 
           {/* Right side - API display section */}
           
-          <Col className="right-api">
-            <p className=""></p>
-            <Row>
-              {drinks.map(drink => {
-                return (
-                  <Card key={drink._id} style={{ width: '16rem' }}>
-                    <Card.Img variant="top" src={drink.image} />
-                    <Card.Header as="h3">
-                      {drink.drink}
-                    
-                      <Card.Title as="h6">{drink.country}</Card.Title>
-                    </Card.Header>
-                    <Card.Body>
-                      <Card.Text>{drink.description}</Card.Text>
-                      <Card.Text></Card.Text>
-                      <Button variant="primary">More info</Button>
-                    </Card.Body>
-                  </Card>
-                )
-                
-              })}
-            </Row>
-            
-            
+          <DisplayDrinks 
+            drinks = {drinks}
+            filteredDrinks = {filteredDrinks}
+          />
 
-          </Col>
         </Row>
+      </Container>
+      <Container fluid className="index-footer">
+        <h2>Footer</h2>
       </Container>
     </Container>
   )

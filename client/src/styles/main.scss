@@ -72,8 +72,14 @@ h2 {
 }
 // Index page API section
 
+// buttons row
+.buttons-row.row {
+  
+}
+
 .left-filters {
   // position: fixed;
+  margin-right: 30px;
   top: top;
   max-width: 25%;
   background-color: $primaryGrey;
@@ -81,12 +87,16 @@ h2 {
 }
 
 .right-api {
-  overflow-y: scroll;
+  // overflow-y: scroll;
   .row {
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .card {
     max-width: 300px;
     margin-bottom: 30px;
   }
+}
+// Index footer
+.index-footer {
+  background-color: $primaryYellow;
 }

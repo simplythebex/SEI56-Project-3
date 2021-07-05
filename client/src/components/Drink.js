@@ -5,7 +5,6 @@ import Nav from './common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import vietnamese from '../styles/images/vietnamese.jpg'
 import Figure from 'react-bootstrap/Figure'
 import Button from 'react-bootstrap/Button'
 
@@ -32,21 +31,21 @@ const DrinkShow = () => {
   return (
     <>
       <Nav />
-      <Container className="show" fluid>
+      <Container className="show-drink" fluid>
         <Row className="image-text">
-          <Col className="image-col">
+          <Col className="image-col image-container">
             <Figure className="image">
               <Figure.Image
                 
                 alt={drink.drink}
-                src={vietnamese}
+                src={drink.image}
               /> 
             </Figure>
           </Col>
           <Col className="right">
             <Container className="title" style={{ width: '100' }}>
               <h2>{drink.drink}</h2>
-              <h4 className="origin">Origin: {drink.country}</h4>
+              <h4 className="origin">Origin: <span className="country-name">{drink.country}</span></h4>
             </Container>
             <Container className="content" style={{ width: '100' }}>
               <h4>Description</h4>
@@ -55,8 +54,8 @@ const DrinkShow = () => {
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
               <Container className="buttons" fluid>
-                <Button variant="outline-light">Add to favorites</Button>{' '}
-                <Button variant="outline-light">Add to basket</Button>{' '}
+                <Button variant="outline-warning">Add to favorites</Button>{' '}
+                <Button variant="outline-warning">Add to basket</Button>{' '}
               </Container>
             </Container> 
           

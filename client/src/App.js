@@ -5,6 +5,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import DrinkShow from './components/Drink.js'
 import DrinksIndex from './components/DrinksIndex.js'
+import SuggestDrink from './components/Suggestions/SuggestDrink'
 
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/suggest-drink">
+            <SuggestDrink />
           </Route>
           <Route path="/">
             <Home />

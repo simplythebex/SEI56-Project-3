@@ -1,5 +1,6 @@
 import React from 'react'
 import Nav from './Nav.js'
+import { Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import style from '../../styles/images/style.png'
 import Happy from '../../styles/images/Happy.png'
@@ -30,7 +31,9 @@ const Home = () => {
           <div>
             <div className='paragraph'>
               <p>Your favourite tea and coffee.</p>
-              <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
+              <Link to="/suggest-drink">
+                <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
+              </Link>
               <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
             </div>
           </div>

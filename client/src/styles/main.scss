@@ -7,38 +7,207 @@ $primaryBlue: #99CEE3;
 $primaryGreen: #9CCA89;
 $primaryYellow: #F9D85F;
 $primaryGrey: #E8EDE5;
+$primaryBrown: #360719;
 
 
 .hero {
   background-image: url(./images/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: inherit;
   text-align: center;
   color: white;
-  padding-bottom: 200px;
+  padding-bottom: 400px;
+  max-height: 900px;
+}
 
-  .navbar-left {
-    a.navbar-brand {
-      color: white;
-      font-family: 'Marko One', serif;
-    }
-  }
-  .navbar-right {
-    a.navbar-brand {
-      color: white;
-      font-size: 0.9em;
-    }
-  }
-  
+.main {
+  width: 100%;
+}
 
-  h2 {
+
+.hot h2 {
+  font-family: "Marko One", serif;
+  font-size: 96px;
+  padding-top: 150px;
+  // letter-spacing:-5px;
+  padding-left: inherit;
+}
+
+.hot .paragraph p {
+  margin-top: 60px;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  width: auto;
+}
+
+.btn-outline-light {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+  height: 54px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-warning {
+  color: #360719;
+  background-color: #F9D85F;
+  border-color: #F9D85F;
+  height: 54px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 220px;
+}
+
+.navbar-right-right .register {
+  height: 45px !important;
+  width: 124px;
+}
+
+.navbar-right-right .login {
+  height: 45px !important;
+  width: 124px;
+}
+
+.paragraph span {
+  font-weight: bold;
+}
+
+.navbar-left {
+  a.navbar-brand {
+    color: white;
     font-family: 'Marko One', serif;
-    font-size: 4.5em;
-    padding-top: 150px;
+    font-size: 40px;
+    margin-left: -150px;
   }
+}
 
-  p {
-    font-size: 2em;
+.navbar-right {
+  a.navbar-brand {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 15px;
   }
+}
+
+.navbar-right {
+  margin-top: 15px;
+  font-weight: normal;
+  margin-left: -20px;
+}
+
+.navbar-right-right {
+  margin-top: 5px;
+}
+
+.figure-img {
+  margin-top: -30px;
+}
+
+p {
+  margin-top: 30px;
+  color: #360719;
+  width: 718px;
+  word-spacing: 4px;
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.how-it-works {
+  position: relative;
+  display: flex;
+}
+  
+// .divider {
+//   background-color: rgba(252, 203, 201, 0.25);
+//   margin-bottom: 50px;
+//   margin-top: -50px;
+//   max-width: inherit;
+// }
+
+.choice {
+  background-color: rgba(252, 203, 201, 0.25);
+  margin-top: -50px;
+  padding-bottom: 100px;
+  height: 1100px;
+}
+
+.drink h2 {
+  font-family: "Marko One", serif;
+  color: #360719;
+  font-size: 64px;
+  padding-top: 150px;
+  padding-left: inherit;
+  word-spacing: -10px;
+  margin-top: revert;
+}
+
+.card-group {
+  max-width: fit-content;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.col-md-8 {
+  padding-left: 110px;
+}
+
+.col-md-4 {
+  margin-top: 180px;
+}
+
+.card-group {
+  width: min-content;
+}
+
+.card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card:not(:first-child) {
+  margin-right: 30px;
+}
+
+.card-title {
+  font-size: 36px;
+  color: #360719;
+  margin-left: -12px;
+  font-family: "Marko One", serif;
+}
+
+.card-text:last-child {
+  font-size: 20px;
+  margin-left: -12px;
+  margin-top: revert;
+}
+
+.room {
+  background-color: #ffffff;
+  padding-bottom: 100px;
+  height: 911px
+}
+
+.heiss-room h2 {
+  font-family: "Marko One", serif;
+  color: #360719;
+  font-size: 64px;
+  padding-top: 150px;
+  word-spacing: -10px;
+  margin-top: revert;
+  text-align: center;
+}
+
+.w-100 {
+  width: auto !important; 
+}
+
+.carousel-item {
+  display: flex;
+  width: auto;
+  margin-right: auto;
 }

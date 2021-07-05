@@ -24,7 +24,7 @@ export default [
     description: 'An espresso shot,  sweetened  with natural brown sugar which has been whipped with the first and strongest drops of espresso. ' ,
     image: 'https://331mrnu3ylm2k3db3s1xd1hg-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/egg_coffee.jpg ' ,
     funFact: ' ' ,
-    origin: 'Asia'
+    origin: 'Americas'
   },
   {
     drink: 'Scandinavian Egg Coffee ',

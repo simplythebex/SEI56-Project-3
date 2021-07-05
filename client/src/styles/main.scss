@@ -233,11 +233,7 @@ div.navbar-left {
   
 }
 
-<<<<<<< HEAD
 //Drink page 
-div.show.container-fluid {
-=======
->>>>>>> b092158580230bbe267d2bf1e223558fd670f964
 // Show page styling 
 // div.show.container-fluid {
   
@@ -333,7 +329,7 @@ div.show.container-fluid {
     margin: 40px;
     align-items: center;
     justify-content: center;
-
+  
     .image-container {
       padding: 0;
     }
@@ -394,90 +390,90 @@ div.show.container-fluid {
 //   margin-bottom: 60px;
 // }
 
-.how-it-works {
-  position: relative;
-  display: flex;
-}
+// .how-it-works {
+//   position: relative;
+//   display: flex;
+// }
   
 
-.choice {
-  background-color: rgba(252, 203, 201, 0.25);
-  margin-top: -50px;
-  padding-bottom: 100px;
-  height: 1100px;
-}
+// .choice {
+//   background-color: rgba(252, 203, 201, 0.25);
+//   margin-top: -50px;
+//   padding-bottom: 100px;
+//   height: 1100px;
+// }
 
-.drink h2 {
-  font-family: "Marko One", serif;
-  color: #360719;
-  font-size: 64px;
-  padding-top: 150px;
-  padding-left: inherit;
-  word-spacing: -10px;
-  margin-top: revert;
-}
+// .drink h2 {
+//   font-family: "Marko One", serif;
+//   color: #360719;
+//   font-size: 64px;
+//   padding-top: 150px;
+//   padding-left: inherit;
+//   word-spacing: -10px;
+//   margin-top: revert;
+// }
 
-.card-group {
-  max-width: fit-content;
-}
+// .card-group {
+//   max-width: fit-content;
+// }
 
-.card {
-  border: none;
-  background-color: transparent;
-}
+// .card {
+//   border: none;
+//   background-color: transparent;
+// }
 
-.col-md-8 {
-  padding-left: 110px;
-}
+// .col-md-8 {
+//   padding-left: 110px;
+// }
 
-.col-md-4 {
-  margin-top: 180px;
-}
+// .col-md-4 {
+//   margin-top: 180px;
+// }
 
-.card-group {
-  width: min-content;
-}
+// .card-group {
+//   width: min-content;
+// }
 
-.card:not(:last-child) {
-  margin-right: 30px;
-}
+// .card:not(:last-child) {
+//   margin-right: 30px;
+// }
 
-.card:not(:first-child) {
-  margin-right: 30px;
-}
+// .card:not(:first-child) {
+//   margin-right: 30px;
+// }
 
-.card-title {
-  font-size: 36px;
-  color: #360719;
-  margin-left: -12px;
-  font-family: "Marko One", serif;
-}
+// .card-title {
+//   font-size: 36px;
+//   color: #360719;
+//   margin-left: -12px;
+//   font-family: "Marko One", serif;
+// }
 
-.card-text:last-child {
-  font-size: 20px;
-  margin-left: -12px;
-  margin-top: revert;
-}
+// .card-text:last-child {
+//   font-size: 20px;
+//   margin-left: -12px;
+//   margin-top: revert;
+// }
 
-.room {
-  background-color: #ffffff;
-  padding-bottom: 100px;
-  height: 911px
-}
+// .room {
+//   background-color: #ffffff;
+//   padding-bottom: 100px;
+//   height: 911px
+// }
 
-.heiss-room h2 {
-  font-family: "Marko One", serif;
-  color: #360719;
-  font-size: 64px;
-  padding-top: 150px;
-  word-spacing: -10px;
-  margin-top: revert;
-  text-align: center;
-}
+// .heiss-room h2 {
+//   font-family: "Marko One", serif;
+//   color: #360719;
+//   font-size: 64px;
+//   padding-top: 150px;
+//   word-spacing: -10px;
+//   margin-top: revert;
+//   text-align: center;
+// }
 
-.w-100 {
-  width: auto !important; 
-}
+// .w-100 {
+//   width: auto !important; 
+// }
 
 .carousel-item {
   display: flex;
@@ -495,5 +491,3 @@ div.show.container-fluid {
   padding: 1.5rem;
   word-spacing: 0px;
 }
-
-

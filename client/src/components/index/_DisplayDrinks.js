@@ -6,8 +6,15 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 
-const DisplayDrinks = ({ drinks, filteredDrinks }) => {
+const DisplayDrinks = ({ drinks, filteredDrinks, filteredOrigins }) => {
+  console.log('FILTERED ORIGINS->', filteredOrigins)    
+  console.log('FILTERED DRINKS->', filteredDrinks)
+
+  // const filteredLife = Object.assign(filteredOrigins, ...filteredDrinks)
+
+  // console.log('FILTERED LIFE->', filteredLife)
   
+  //! Both arrays filtering just fine but can display only one filtered verison at a time
   return (
     <Col className="right-api">
       <p className=""></p>      
@@ -27,10 +34,8 @@ const DisplayDrinks = ({ drinks, filteredDrinks }) => {
                 <Container >
                   <Row>
                     <Col className="card-btn">
-                      <Link to={`/drink/${drink._id}`}>
-                        <Button>More info</Button>
-                      </Link>
-                      
+                      <Link to={`/drink/${drink._id}`}></Link>
+                      <Button>More info</Button>
                     </Col>
                   </Row>
                 </Container>

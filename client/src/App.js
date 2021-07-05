@@ -3,6 +3,9 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/common/Home.js'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
+import DrinkShow from './components/Drink.js'
+import DrinksIndex from './components/DrinksIndex.js'
+
 
 const App = () => {
 
@@ -11,15 +14,23 @@ const App = () => {
     <>
       <BrowserRouter>
         <Switch>
+          {/* </Switch><Route exact path="/"> */}
+          <Route path="/drinks/:id">
+            <DrinkShow />
+          </Route> 
+          <Route path="/drinks">
+            <DrinksIndex />
+          </Route>
           <Route path="/register">
             <Register />
           </Route>
-          <Route path="/Login">
+          <Route path="/login">
             <Login />
           </Route>
           <Route path="/">
             <Home />
           </Route>
+          
         </Switch>
       </BrowserRouter>
       

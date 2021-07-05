@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
+// import Col from 'react-bootstrap/Col'
+// import Row from 'react-bootstrap/Row'
+
 // import Figure from 'react-bootstrap/Figure'
 import { getPayload } from '../helpers/auth'
 
@@ -36,7 +40,7 @@ const Nav = () => {
           <Navbar.Brand href="#index">Heiss Room</Navbar.Brand>
           <Navbar.Brand href="#index">About us</Navbar.Brand>
           {!userIsAuthenticated() ?
-            <div className="buttons">
+            <div className="buttons navbar-right-right">
               <Link to="/register">
                 <Button variant="outline-light">Sign up</Button>{' '}
               </Link>
@@ -45,12 +49,36 @@ const Nav = () => {
               </Link>
             </div>
             :
-            <div className="buttons">
+            <div className="buttons navbar-right-right">
               <Button variant="outline-light" onClick={handleLogout}>Logout</Button>{' '}
             </div>
           }
         </div>
       </Container>
+      {/* <div className="main">
+        <Row>
+          <Col>
+            <div className="navbar-left">
+              <Navbar.Brand href="#home">Heiss</Navbar.Brand>
+            </div>
+          </Col>
+          <Col className="column">
+            <div className="navbar-right">
+              <Navbar.Brand href="#index">Our coffees</Navbar.Brand>
+              <Navbar.Brand href="#index">Our teas</Navbar.Brand>
+              <Navbar.Brand href="#index">Order online</Navbar.Brand>
+              <Navbar.Brand href="#index">Heiss room</Navbar.Brand>
+              <Navbar.Brand href="#index">About us</Navbar.Brand>
+            </div>
+          </Col>
+          <Col>
+            <div className="navbar-right-right">
+              <Button variant="outline-light register">Sign up</Button>{' '}
+              <Button variant="outline-light login">Login</Button>{' '}
+            </div>
+          </Col>
+        </Row>
+        </div> */}
     </Navbar>
   )
 }

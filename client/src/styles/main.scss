@@ -1,45 +1,160 @@
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500;600;700&display=swap');
 
-// font-family: ‘Marko One’, serif;
+// h font-family: ‘Marko One’, serif;
+// body font-family: 'Raleway', sans-serif;
+// Global
 $primaryPink: #F7CAC7;
 $primaryBlue: #99CEE3;
 $primaryGreen: #9CCA89;
 $primaryYellow: #F9D85F;
 $primaryGrey: #E8EDE5;
+$primaryBrown: #360719; // the  color for the fonts
+
+
+body {
+  color:$primaryBrown;
+}
+
+
+h2 {
+  font-family: 'Marko One', serif;
+  font-size: 4.5em;
+  padding-top: 150px;
+}
+
+h3, p {
+  font-family: 'Raleway', sans-serif;
+}
 
 
 .hero {
   background-image: url(./images/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: inherit;
   text-align: center;
   color: white;
-  padding-bottom: 200px;
+  padding-bottom: 400px;
+  max-height: 900px;
+}
 
-  .navbar-left {
-    a.navbar-brand {
-      color: white;
-      font-family: 'Marko One', serif;
-    }
+.main {
+  width: 100%;
+}
+
+
+.hot h2 {
+  font-family: "Marko One", serif;
+  font-size: 96px;
+  padding-top: 150px;
+  // letter-spacing:-5px;
+  padding-left: inherit;
+}
+
+.hot .paragraph p {
+  margin-top: 60px;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  width: auto;
+}
+
+.btn-outline-light {
+  color: #f8f9fa;
+  border-color: #f8f9fa;
+  height: 54px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-warning {
+  color: #360719;
+  background-color: #F9D85F;
+  border-color: #F9D85F;
+  height: 54px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 220px;
+}
+
+.navbar-right-right .register {
+  height: 45px !important;
+  width: 124px;
+}
+
+.navbar-right-right .login {
+  height: 45px !important;
+  width: 124px;
+}
+
+.paragraph span {
+  font-weight: bold;
+}
+
+.navbar-left {
+  a.navbar-brand {
+    color: white;
+    font-family: 'Marko One', serif;
+    font-size: 40px;
+    margin-left: -150px;
   }
-  .navbar-right {
-    a.navbar-brand {
-      color: white;
-      font-size: 0.9em;
+}
+
+.navbar-right {
+  a.navbar-brand {
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+}
+
+// Index page hero section
+
+.row {
+  .index-hero-img {
+    background-image: url(./assets/indexpagehero.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px;
+  }
+  .index-hero-txt {
+    background-color:$primaryPink; //placeholder colour
+    text-align: center;
+    padding: 100px;
+    p {
+      padding: 20px;
     }
   }
   
-
   h2 {
     font-family: 'Marko One', serif;
     font-size: 4.5em;
     padding-top: 150px;
+}
+// Index page API section
+
+// buttons row
+.buttons-row.row {
+    .shop-drinks.col {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 36px;
   }
 
-  p {
-    font-size: 2em;
+  .sorting-buttons.col-6 {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .dropdown.col {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
   }
 }
 
@@ -60,4 +175,262 @@ $primaryGrey: #E8EDE5;
   button {
     margin-bottom: 20px;
   }
+
+}
+
+//filters on the left
+.left-filters {
+  .flter-col-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  // position: fixed;
+  margin-right: 30px;
+  top: top;
+  max-width: 25%;
+  background-color: $primaryGrey;
+  font-family: 'Raleway', sans-serif;
+
+
+
+  .checkbox-list {
+    display: inline-flex;
+    /* vertical-align: middle; */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+// api display section on the right
+.right-api {
+  // overflow-y: scroll;
+  .row {
+    justify-content: space-between;
+  }
+  .card {
+    max-width: 300px;
+    margin-bottom: 30px;
+    border: none;
+  }
+    .card-header {
+      background-color:$primaryPink;
+    }
+    .card-btn {
+      text-align: center;
+      .btn{
+        background-color: $primaryBlue;
+        color: $primaryBrown;
+        border: none;
+      }
+    }
+  }
+}
+
+
+
+div.navbar-left {
+  font-family: ‘Marko One’, serif;
+  
+}
+
+
+div.show.container-fluid {
+  
+  font-family: 'Marko One', serif;
+  max-width: 70rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  
+}
+div.img-text.row {
+  margin: 0;
+  padding: 0;
+}
+
+div.image-col.col {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+figure.image.figure { 
+  margin: 0;
+  padding: 0;
+}
+.figure-img {
+  margin: 0;
+}
+
+div.title.container {
+  
+  color: black;
+  background-color: #F7CAC7;
+  margin: 0;
+  padding-top: 2rem;
+}
+
+div.right.col {
+  
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+div.content.container {
+  background-color: #99CEE3;
+  margin: 0;
+  padding-top: 2rem;
+  color: white;
+}
+p.description {
+  font-family: sans-serif;
+}
+
+p.averageRating {
+  padding-top: 1.5rem;
+}
+
+div.buttons.container-fluid {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    
+}
+button.btn.btn-outline-light {
+  margin-right: 10px;
+}
+
+div.footer.container-fluid {
+  background-color: #E8EDE5;
+  margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 15rem;
+}
+// Index footer
+.index-footer {
+  background-color: $primaryYellow;
+}
+.navbar-right {
+  margin-top: 15px;
+  font-weight: normal;
+  margin-left: -20px;
+}
+
+.navbar-right-right {
+  margin-top: 5px;
+}
+
+.figure-img {
+  margin-top: -30px;
+}
+
+p {
+  margin-top: 30px;
+  color: #360719;
+  width: 718px;
+  word-spacing: 4px;
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+
+.how-it-works {
+  position: relative;
+  display: flex;
+}
+  
+
+.choice {
+  background-color: rgba(252, 203, 201, 0.25);
+  margin-top: -50px;
+  padding-bottom: 100px;
+  height: 1100px;
+}
+
+.drink h2 {
+  font-family: "Marko One", serif;
+  color: #360719;
+  font-size: 64px;
+  padding-top: 150px;
+  padding-left: inherit;
+  word-spacing: -10px;
+  margin-top: revert;
+}
+
+.card-group {
+  max-width: fit-content;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.col-md-8 {
+  padding-left: 110px;
+}
+
+.col-md-4 {
+  margin-top: 180px;
+}
+
+.card-group {
+  width: min-content;
+}
+
+.card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card:not(:first-child) {
+  margin-right: 30px;
+}
+
+.card-title {
+  font-size: 36px;
+  color: #360719;
+  margin-left: -12px;
+  font-family: "Marko One", serif;
+}
+
+.card-text:last-child {
+  font-size: 20px;
+  margin-left: -12px;
+  margin-top: revert;
+}
+
+.room {
+  background-color: #ffffff;
+  padding-bottom: 100px;
+  height: 911px
+}
+
+.heiss-room h2 {
+  font-family: "Marko One", serif;
+  color: #360719;
+  font-size: 64px;
+  padding-top: 150px;
+  word-spacing: -10px;
+  margin-top: revert;
+  text-align: center;
+}
+
+.w-100 {
+  width: auto !important; 
+}
+
+.carousel-item {
+  display: flex;
+  width: auto;
+  margin-right: auto;
 }

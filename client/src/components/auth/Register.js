@@ -60,7 +60,7 @@ const Register = () => {
               onChange={handleChange}
               value={formData.username}
             />
-            {errors.username && <p className="error">{errors.username.message}</p>}
+            {errors && <p className="error">{errors.username.message}</p>}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="fromBasicEmail">

@@ -120,6 +120,37 @@ const Home = () => {
         </div>
 
         <Carousel>
+          <Carousel.Item >
+            <div className='review-card'>
+              <p>
+                I have never written a review
+              </p>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item >
+            <div className='review-card'>
+              <p>
+                I have never written a review
+              </p>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item >
+            <div className='review-card'>
+              <p>
+                I have never written a review
+              </p>
+            </div>
+          </Carousel.Item>
+          {/* <Carousel.Item interval={500}>
+            <div className='review-card'>
+              <p>
+                I have never written a review
+              </p>
+            </div>
+          </Carousel.Item> */}
+        </Carousel>
+
+        <Carousel>
           <Carousel.Item interval={1000}>
             <img
               className="d-block w-100"

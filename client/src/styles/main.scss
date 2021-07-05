@@ -434,3 +434,16 @@ p {
   width: auto;
   margin-right: auto;
 }
+
+.carousel-item p {
+  background-color: #F9D85F;
+  border: 3px solid #181c1c;
+  display: flex;
+  height: 200px;
+  max-width: 420px;
+  flex-direction: column;
+  padding: 1.5rem;
+  word-spacing: 0px;
+}
+
+

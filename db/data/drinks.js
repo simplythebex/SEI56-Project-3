@@ -1,7 +1,7 @@
 export default [
   {
     drink: ' Vietnamese iced coffee, cà phê đá',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Vietnam ',
     description: ' Made using medium to coarse ground dark roast Vietnamese-grown coffee with a small metal Vietnamese drip filter (phin cà phê). This finished cup of hot coffee is then quickly poured into a glass full of ice making the finished Vietnamese iced coffee.' ,
     image: ' https://quangtanhoa.com/wp-content/uploads/2018/01/ca-phe-den-da.jpg' ,
@@ -9,7 +9,7 @@ export default [
   },
   {
     drink: ' Turkish coffee, Türk kahvesi',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Turkey ',
     description: ' Very finely ground coffee brewed by boiling.' ,
     image: ' https://www.thespruceeats.com/thmb/z0dysGil3bQVHw7sgWFmACfC_pc=/4000x2667/filters:fill(auto,1)/turkish-coffee-recipe-2355497-hero-02-b14bd83fe6114322af9d8040801e8391.jpg' ,
@@ -17,7 +17,7 @@ export default [
   },
   {
     drink: ' Cuban espresso',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Cuba ',
     description: 'An espresso shot,  sweetened  with natural brown sugar which has been whipped with the first and strongest drops of espresso. ' ,
     image: 'https://331mrnu3ylm2k3db3s1xd1hg-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/egg_coffee.jpg ' ,
@@ -25,7 +25,7 @@ export default [
   },
   {
     drink: 'Scandinavian Egg Coffee ',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Norway/Sweden ',
     description: ' Coffee grounds are mixed with raw egg before being added to boiling water.' ,
     image: ' https://331mrnu3ylm2k3db3s1xd1hg-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/egg_coffee.jpg' ,
@@ -33,7 +33,7 @@ export default [
   },
   {
     drink: ' Cafe de Olla ',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Mexico ',
     description: 'Contains a mix of three spices (cloves, anise, and cinnamon) and a minimally-processed sugar called piloncillo.' ,
     image: 'https://www.maricruzavalos.com/wp-content/uploads/2020/12/cafe_de_olla_recipe.jpg ' ,
@@ -41,7 +41,7 @@ export default [
   },
   {
     drink: ' Flat white',
-    type: 'Coffee ',
+    type: 'Coffee',
     country: 'Australia ',
     description: 'Espresso mixed with a small amount of steamed milk and a thin layer of microfoam.' ,
     image: 'https://perfectdailygrind.com/wp-content/uploads/2018/11/flatwhite5.jpg ' ,
@@ -49,15 +49,15 @@ export default [
   },
   {
     drink: 'Mazagran',
-    type: ' coffee',
+    type: 'Coffee',
     country: 'Algeria ',
     description: 'Cold black brew with a simple syrup and a squeeze of lemon ' ,
     image: 'https://coffeeordie.com/wp-content/uploads/2020/05/mazagran.jpg ' ,
     funFact: ' '
   },
   {
-    drink: 'Frappe ',
-    type: 'Coffee ',
+    drink: 'Frappe',
+    type: 'Coffee',
     country: 'Greece',
     description: 'Nescafe instant coffee, sugar, and a little water are shaken or blended together until a thick foam is made. This is poured into the serving glass and ice cubes, cold water, and, optionally, evaporated milk are added to it.' ,
     image: 'https://herbsandflour.com/wp-content/uploads/2020/08/frappe-750x1000.jpg?x92940' ,
@@ -168,7 +168,7 @@ export default [
     funFact: ' '
   },
   {
-    drink: 'Taiwanese bubble tea, 珍珠奶茶',
+    drink: 'Taiwanese bubble tea, Zhēnzhū nǎichá 珍珠奶茶',
     type: 'Tea',
     country: 'Taiwan',
     description: 'Milk tea accompanied by chewy tapioca balls' ,
@@ -217,7 +217,7 @@ export default [
     funFact: 'Served on special occasions, Noon Chai is typically enjoyed with pastries like sheermaal, kandir tchot, bakarkhani, and kulcha. '
   },
   {
-    drink: 'Persian Chai, چاییi',
+    drink: 'Persian Chai, چایی',
     type: 'Tea',
     country: 'Iran',
     description: 'Strong tea is served accompanied by a bright yellow rock candy called nabat. Rather than mixing in sugar to counteract the bitterness, you should place a sugar cube between your front teeth and suck the strong brew through it. ' ,
@@ -249,7 +249,7 @@ export default [
     funFact: 'Omija means "five flavors", which are sweetness, sourness, bitterness, saltiness, and pungency'
   },
   {
-    drink: 'Maghrebi mint tea, الشاي المغربي بالنعناع',
+    drink: 'Maghrebi mint tea, Alshaay Almaghribiu Bialnaenae, الشاي المغربي بالنعناع',
     type: 'Tea',
     country: 'Maghreb region, spread across Morocco, Algeria, Tunisia, Libya, and Mauritania',
     description: 'Gunpowder green tea infused with spearmint and herbs such as sage, woodworm, lemon verbena, wild thyme and wild geranium. Sweetened with sugar.' ,

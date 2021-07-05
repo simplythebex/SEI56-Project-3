@@ -79,11 +79,12 @@ figure.image.figure {
 }
 .figure-img {
   margin: 0;
+ 
 }
 
 div.title.container {
   
-  color: white;
+  color: black;
   background-color: #F7CAC7;
   margin: 0;
   padding-top: 2rem;
@@ -101,13 +102,28 @@ div.right.col {
 
 
 div.content.container {
-  background-color: #F9D85F;
+  background-color: #99CEE3;
   margin: 0;
   padding-top: 2rem;
+  color: white;
+}
+p.description {
+  font-family: sans-serif;
 }
 
 p.averageRating {
   padding-top: 1.5rem;
+}
+
+div.buttons.container-fluid {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    font-family: sans-serif;
+    
+}
+button.btn.btn-outline-light {
+  margin-right: 10px;
 }
 
 div.footer.container-fluid {
@@ -118,5 +134,7 @@ div.footer.container-fluid {
     align-content: flex-end;
     justify-content: flex-end;
     align-items: center;
+    margin-top: 5rem;
     padding: 15rem;
+    
 }

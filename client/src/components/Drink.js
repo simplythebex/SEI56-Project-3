@@ -5,7 +5,7 @@ import Nav from './common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import vietnamese from '../styles/images/vietnamese.jpeg'
+import vietnamese from '../styles/images/vietnamese.jpg'
 import Figure from 'react-bootstrap/Figure'
 import Button from 'react-bootstrap/Button'
 
@@ -37,7 +37,7 @@ const DrinkShow = () => {
           <Col className="image-col">
             <Figure className="image">
               <Figure.Image
-                width={600}
+                
                 alt={drink.drink}
                 src={vietnamese}
               /> 
@@ -50,20 +50,21 @@ const DrinkShow = () => {
             </Container>
             <Container className="content" style={{ width: '100' }}>
               <h4>Description</h4>
-              <p>
+              <p className="description">
                 {drink.description}
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
+              <Container className="buttons" fluid>
+                <Button variant="outline-light">Add to favorites</Button>{' '}
+                <Button variant="outline-light">Add to basket</Button>{' '}
+              </Container>
             </Container> 
           
           </Col>
         
         </Row>
       </Container>
-      <Container className="buttons">
-        <Button variant="info">Add to favorites</Button>{' '}
-        <Button variant="danger">Order</Button>{' '}
-      </Container>
+      
       <Container className="footer" fluid>
         <Row>
           <Col>Map</Col>

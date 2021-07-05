@@ -233,90 +233,139 @@ div.navbar-left {
   
 }
 
-
+<<<<<<< HEAD
+//Drink page 
 div.show.container-fluid {
+=======
+>>>>>>> b092158580230bbe267d2bf1e223558fd670f964
+// Show page styling 
+// div.show.container-fluid {
   
-  font-family: 'Marko One', serif;
-  max-width: 70rem;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+//   font-family: 'Marko One', serif;
+//   max-width: 70rem;
+//   margin-top: 5rem;
+//   margin-bottom: 5rem;
   
-}
-div.img-text.row {
-  margin: 0;
-  padding: 0;
-}
+// }
+// div.img-text.row {
+//   margin: 0;
+//   padding: 0;
+// }
 
-div.image-col.col {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+// div.image-col.col {
+//   margin: 0px;
+//   padding: 0px;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-figure.image.figure { 
-  margin: 0;
-  padding: 0;
-}
-.figure-img {
-  margin: 0;
-}
+// figure.image.figure { 
+//   margin: 0;
+//   padding: 0;
+// }
+// .figure-img {
+//   margin: 0;
+// }
 
-div.title.container {
+// div.title.container {
   
-  color: black;
-  background-color: #F7CAC7;
-  margin: 0;
-  padding-top: 2rem;
-}
+//   color: black;
+//   background-color: #F7CAC7;
+//   margin: 0;
+//   padding: 0;
+//   // padding-top: 2rem;
+// }
 
-div.right.col {
+// div.right.col {
   
-  margin: 0px;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
+//   margin: 0px;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+// }
 
-div.content.container {
-  background-color: #99CEE3;
-  margin: 0;
-  padding-top: 2rem;
-  color: white;
-}
-p.description {
-  font-family: sans-serif;
-}
+// div.content.container {
+//   background-color: #99CEE3;
+//   margin: 0;
+//   padding-top: 2rem;
+//   color: white;
+// }
+// p.description {
+//   font-family: sans-serif;
+// }
 
-p.averageRating {
-  padding-top: 1.5rem;
-}
+// p.averageRating {
+//   padding-top: 1.5rem;
+// }
 
-div.buttons.container-fluid {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1rem;
-    font-family: sans-serif;
+// div.buttons.container-fluid {
+//     display: flex;
+//     justify-content: flex-end;
+//     margin-bottom: 1rem;
+//     font-family: sans-serif;
     
-}
-button.btn.btn-outline-light {
-  margin-right: 10px;
+// }
+// button.btn.btn-outline-light {
+//   margin-right: 10px;
+// }
+
+// div.footer.container-fluid {
+//   background-color: #E8EDE5;
+//   margin: 0px;
+//     display: flex;
+//     flex-direction: column;
+//     align-content: flex-end;
+//     justify-content: flex-end;
+//     align-items: center;
+//     margin-top: 5rem;
+//     padding: 15rem;
+// }
+// end of show styling
+
+// Becca show styling
+
+.show-drink {
+  .image-text {
+    // background-color: #f8f9fa;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+
+    .image-container {
+      padding: 0;
+    }
+    .right {
+      padding: 0;
+    }
+    .title {
+      background-color: #F9D85F;
+      padding: 10px 10px;
+      h2 {
+        padding: 0;
+        font-size: 2em;
+      }
+    }
+    h4 {
+      font-family: 'Marko One', serif;
+      .country-name {
+        font-family: 'Raleway', sans-serif;
+      }
+    }
+    .content {
+      background-color: #f8f9fa;
+      padding: 30px 10px;
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
 }
 
-div.footer.container-fluid {
-  background-color: #E8EDE5;
-  margin: 0px;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 5rem;
-    padding: 15rem;
-}
+
 // Index footer
 .index-footer {
   background-color: $primaryYellow;
@@ -335,14 +384,15 @@ div.footer.container-fluid {
   margin-top: -30px;
 }
 
-p {
-  margin-top: 30px;
-  color: #360719;
-  width: 718px;
-  word-spacing: 4px;
-  font-size: 24px;
-  margin-bottom: 60px;
-}
+// this needs to be wrapped or else it breaks styling on show drink page
+// p {
+//   margin-top: 30px;
+//   color: #360719;
+//   width: 718px;
+//   word-spacing: 4px;
+//   font-size: 24px;
+//   margin-bottom: 60px;
+// }
 
 .how-it-works {
   position: relative;

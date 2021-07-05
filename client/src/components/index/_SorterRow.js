@@ -15,10 +15,10 @@ const SortingRow = ({ drinks, filteredDrinks }) => {
         <Col className="shop-drinks">
           <h3>Shop drinks</h3>
         </Col>
-        <Col className="sorting-buttons">
+        <Col xs={6} className="sorting-buttons">
           <ButtonGroup aria-label="Basic example">
-            <Button variant="secondary">Left</Button>
-            <Button variant="secondary">Right</Button>
+            <Button variant="outline-secondary">Coffee</Button>
+            <Button variant="outline-secondary">Tea</Button>
           </ButtonGroup>
         </Col>
         <Col className="dropdown">

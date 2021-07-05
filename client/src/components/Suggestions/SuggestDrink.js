@@ -32,7 +32,7 @@ const SuggestDrink = () => {
     event.preventDefault()
     try {
       await axios.post(
-        '/api/drinks',
+        '/api/suggested-drinks',
         formData,
         {
           headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },

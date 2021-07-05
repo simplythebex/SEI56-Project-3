@@ -37,7 +37,7 @@ const Nav = () => {
           <Navbar.Brand href="#index">Our Coffees</Navbar.Brand>
           <Navbar.Brand href="#index">Our Teas</Navbar.Brand>
           <Navbar.Brand href="#index">Order Online</Navbar.Brand>
-          <Navbar.Brand href="#index">Heiss Room</Navbar.Brand>
+          <Navbar.Brand href="/heiss-room">Heiss Room</Navbar.Brand>
           <Navbar.Brand href="#index">About us</Navbar.Brand>
           {!userIsAuthenticated() ?
             <>

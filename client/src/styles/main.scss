@@ -74,7 +74,7 @@ h3, p {
     padding: 100px;
   }
   .index-hero-txt {
-    background-color:$primaryGrey; //placeholder colour
+    background-color:$primaryPink; //placeholder colour
     text-align: center;
     padding: 100px;
     p {
@@ -139,6 +139,19 @@ h3, p {
   .card {
     max-width: 300px;
     margin-bottom: 30px;
+    border: none;
+
+    .card-header {
+      background-color:$primaryPink;
+    }
+    .card-btn {
+      text-align: center;
+      .btn{
+        background-color: $primaryBlue;
+        color: $primaryBrown;
+        border: none;
+      }
+    }
   }
 }
 // Index footer

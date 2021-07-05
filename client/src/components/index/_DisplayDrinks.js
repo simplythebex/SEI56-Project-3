@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 
 const DisplayDrinks = ({ drinks, filteredDrinks }) => {
   
@@ -22,7 +23,14 @@ const DisplayDrinks = ({ drinks, filteredDrinks }) => {
               <Card.Body>
                 <Card.Text>{drink.description}</Card.Text>
                 <Card.Text></Card.Text>
-                <Button variant="primary">More info</Button>
+                <Container >
+                  <Row>
+                    <Col className="card-btn">
+                      <Button >More info</Button>
+                    </Col>
+                  </Row>
+                </Container>
+                
               </Card.Body>
             </Card>
           )

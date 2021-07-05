@@ -263,6 +263,6 @@ export default [
     description: 'It is made from a strong brew of black tea blended with condensed milk. The mixture is poured back and forth repeatedly between two vessels from a height, giving it a thick frothy top. This process cools the tea to optimal drinking temperatures, thoroughly mixes the tea with the condensed milk, and improves its flavour.' ,
     image: 'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/8252F1F2-D924-401F-B167-0F4ACEBEB819/Derivates/84404ac4-d061-4d45-938e-11c2de0218e6.jpg' ,
     funFact: 'Its name is derived from the pouring process of "pulling" the drink during preparation. '
-  },
+  }
     
 ]

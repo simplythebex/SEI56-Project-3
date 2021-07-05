@@ -34,7 +34,7 @@ const seedDatabase = async () => {
     console.log('✌🏽 bye')
 
   } catch (err) {
-    console.log(err)
+    console.log('Error:', err)
     console.log('🆘 something has gone wrong')
     await mongoose.connection.close()
     console.log('💃🏽 bye')

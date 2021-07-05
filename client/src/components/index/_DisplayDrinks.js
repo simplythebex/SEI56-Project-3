@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -26,7 +27,10 @@ const DisplayDrinks = ({ drinks, filteredDrinks }) => {
                 <Container >
                   <Row>
                     <Col className="card-btn">
-                      <Button >More info</Button>
+                      <Link to={`/drink/${drink._id}`}>
+                        <Button>More info</Button>
+                      </Link>
+                      
                     </Col>
                   </Row>
                 </Container>

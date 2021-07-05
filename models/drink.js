@@ -17,6 +17,7 @@ const drinkSchema = new mongoose.Schema({
   description: { type: String, required: true },
   image: { type: String, required: true },
   funFact: { type: String, maxlength: 300 },
+  origin: { type: String, required: true },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   comments: [commentSchema] // comments field is array of comments from commentSchema
 })

@@ -27,25 +27,9 @@ const DisplayChecked = ({ handleChecked, typesOfDrinks }) => {
             )
           })}
         </select>
-
         <br></br>
-
-
-        <ToggleButtonGroup type="checkbox" defaultValue={[1, 3]} className="checkbox-list">
-          <ToggleButton variant="outline-secondary" id="tbg-check-1" value={1}>
-      Checkbox 1 (pre-checked)
-          </ToggleButton>
-          <ToggleButton variant="outline-secondary" id="tbg-check-2" value={2}>
-      Checkbox 2
-          </ToggleButton>
-          <ToggleButton variant="outline-secondary" id="tbg-check-3" value={3}>
-      Checkbox 3 (pre-checked)
-          </ToggleButton>
-        </ToggleButtonGroup>
       </Container>
-
     </>
-
   )
 }
 

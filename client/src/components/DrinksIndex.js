@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -111,7 +112,6 @@ const DrinksIndex = () => {
         </Row>
       </Container>
       <Container fluid className="index-footer">
-        <h2>Footer</h2>
       </Container>
     </Container>
   )

@@ -34,7 +34,7 @@ const DisplayDrinks = ({ drinks, filteredDrinks  }) => {
                   <Row>
                     <Col className="card-btn">
                       <Link to={`drinks/${drink._id}`}>
-                        <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
+                        <Button><span>Shop Hot Drinks</span></Button>{' '}
                       </Link>
                     </Col>
                   </Row>

@@ -37,7 +37,9 @@ const Home = () => {
               <Link to="/suggest-drink">
                 <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
               </Link>
-              <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
+              <Link to="/drinks">
+                <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
+              </Link>
             </div>
           </div>
         </div>

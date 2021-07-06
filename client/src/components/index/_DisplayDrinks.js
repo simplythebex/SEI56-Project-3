@@ -6,8 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 
-const DisplayDrinks = ({ drinks, filteredDrinks, filteredOrigins }) => {
-  console.log('FILTERED ORIGINS->', filteredOrigins)    
+const DisplayDrinks = ({ drinks, filteredDrinks  }) => {
   console.log('FILTERED DRINKS->', filteredDrinks)
 
   // const filteredLife = Object.assign(filteredOrigins, ...filteredDrinks)
@@ -18,7 +17,7 @@ const DisplayDrinks = ({ drinks, filteredDrinks, filteredOrigins }) => {
   return (
     <Col className="right-api">
       <p className=""></p>      
-      <Row>
+      <Row className="api-row">
         {(filteredDrinks.length > 0 ? filteredDrinks : drinks).map(( drink ) => {
           return (
             <Card key={drink._id} style={{ width: '16rem' }}>
@@ -34,8 +33,9 @@ const DisplayDrinks = ({ drinks, filteredDrinks, filteredOrigins }) => {
                 <Container >
                   <Row>
                     <Col className="card-btn">
-                      <Link to={`/drink/${drink._id}`}></Link>
-                      <Button>More info</Button>
+                      <Link to={`drinks/${drink._id}`}>
+                        <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
+                      </Link>
                     </Col>
                   </Row>
                 </Container>

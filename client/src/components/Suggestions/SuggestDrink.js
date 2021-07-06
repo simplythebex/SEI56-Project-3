@@ -38,7 +38,7 @@ const SuggestDrink = () => {
           headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
         }
       )
-      history.push('/drinks')
+      history.push('/heiss-room')
     } catch (err) {
       console.log(err)
     }
@@ -65,12 +65,13 @@ const SuggestDrink = () => {
           </Form.Group>
 
           <Form.Group>
-            <Form.Label>Select drink type</Form.Label>
+            {/* <Form.Label>Select drink type</Form.Label> */}
             <Form.Control 
               as="select" 
               value={formData.type} 
               name="type" 
               onChange={handleChange}>
+              <option>- Please select a type of drink -</option>
               <option>Tea</option>
               <option>Coffee</option>
             </Form.Control>
@@ -119,12 +120,28 @@ const SuggestDrink = () => {
             />
           </Form.Group>
 
+          <Form.Group>
+            {/* <Form.Label>Where is your drink from?</Form.Label> */}
+            <Form.Control 
+              as="select" 
+              value={formData.origin} 
+              name="origin" 
+              onChange={handleChange}>
+              <option>- Where is your drink from? -</option>
+              <option>Africa</option>
+              <option>Antartica</option>
+              <option>Asia</option>
+              <option>Europe</option>
+              <option>North America</option>
+              <option>Oceania</option>
+              <option>South America</option>
+            </Form.Control>
+          </Form.Group>
+          <br />
+
           <Form.Group 
             className="mb-3" 
             controlId="formBasicImage" 
-            // value={formData.image} 
-            // name="image"
-            // onChange={handleChange}
           >
             <Form.File id="upload" name="image" value={formData.image} onChange={handleChange}label="Please upload an image of your suggestion!" />
           </Form.Group>

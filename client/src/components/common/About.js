@@ -11,6 +11,10 @@ const About = () => {
       <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
       </Container>
+
+
+
+      
       <Breadcrumb>
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
         <Breadcrumb.Item active>About</Breadcrumb.Item>

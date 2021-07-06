@@ -16,7 +16,7 @@ const Nav = () => {
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
-    history.push('/login')
+    history.push('/')
   }
 
   const userIsAuthenticated = () => {

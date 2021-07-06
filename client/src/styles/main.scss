@@ -21,7 +21,7 @@ body {
 h2 {
   font-family: 'Marko One', serif;
   font-size: 4.5em;
-  padding-top: 150px;
+  // padding-top: 150px; // does this need to be here? It is breaking the styling in the forms
 }
 
 h3, p {
@@ -222,9 +222,10 @@ h3, p {
 
 .outer-box {
   max-width: 50%;
-  background-color: #F7CAC7;
+  background-color: $primaryYellow;
   border: 2px solid black;
   padding: 20px;
+  margin-top: 30px;
   h2 {
     text-align: center;
     margin: 20px;
@@ -519,6 +520,9 @@ div.card-title.h5 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    .suggested-drink {
+      margin: 20px;
+    }
     h3 {
       font-size: 1em;
     }

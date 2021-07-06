@@ -51,9 +51,9 @@ const SuggestDrink = () => {
 
   return (
     <>
-      <div className="nav-container-pages">
+      <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
-      </div>
+      </Container>
 
       <Container className = "outer-box">
         <h2>Suggest a Drink</h2>

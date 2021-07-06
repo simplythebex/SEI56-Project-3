@@ -502,6 +502,9 @@ width: 720px;
 
 // Profile Page
 
+div.main-container.container {
+  background-color: #99CEE3;
+}
 div.createdItems.container {
   
 
@@ -516,6 +519,7 @@ div.suggestions.container {
 div.col {
   display: flex;
   flex-direction: row;
+  max-width: 300px;
 }
 .outline-light {
   margin-bottom: 3px;

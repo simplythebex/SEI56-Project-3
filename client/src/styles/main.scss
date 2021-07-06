@@ -499,3 +499,40 @@ margin-top: 40px;
 font-size: 24px;
 width: 720px;
 }
+
+// Profile Page
+
+div.createdItems.container {
+  
+
+
+
+div.suggestions.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+div.col {
+  display: flex;
+  flex-direction: row;
+}
+.outline-light {
+  margin-bottom: 3px;
+}
+div.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.card-title.h5 {
+  background-color: #9CCA89;
+}
+
+}
+// $primaryPink: #F7CAC7;
+// $primaryBlue: #99CEE3;
+// $primaryGreen: #9CCA89;
+// $primaryYellow: #F9D85F;
+// $primaryGrey: #E8EDE5;
+// $primaryBrown: #360719; // the  color for the fonts

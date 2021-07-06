@@ -8,6 +8,7 @@ import DrinksIndex from './components/DrinksIndex.js'
 import UserProfile from './components/UserProfile.js'
 import SuggestDrink from './components/Suggestions/SuggestDrink'
 import HeissRoom from './components/Suggestions/HeissRoom.js'
+import SuggestedDrinkShow from './components/SuggestedDrinkShow.js'
 
 
 
@@ -20,6 +21,9 @@ const App = () => {
         <Switch>
           <Route path="/drinks/:id">
             <DrinkShow />
+          </Route> 
+          <Route path="/profile/:id">
+            <SuggestedDrinkShow />
           </Route> 
           <Route path="/heiss-room">
             <HeissRoom />

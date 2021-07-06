@@ -48,7 +48,9 @@ const Login = () => {
 
   return (
     <>
-      <Nav />
+      <div className="nav-container-pages">
+        <Nav />
+      </div>
 
       <Container className = "outer-box">
         <h2>Login</h2>

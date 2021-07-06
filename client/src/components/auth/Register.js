@@ -46,7 +46,9 @@ const Register = () => {
   }
   return (
     <>
-      <Nav />
+      <div className="nav-container-pages">
+        <Nav />
+      </div>
 
       <Container className = "outer-box">
         <h2>Register</h2>

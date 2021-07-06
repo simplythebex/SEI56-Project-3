@@ -10,7 +10,7 @@ const commentSchema = new mongoose.Schema({
 }) 
 
 // define the drink schema
-const drinkSchema = new mongoose.Schema({
+const suggestedDrinkSchema = new mongoose.Schema({
   drink: { type: String, required: true, unique: true },
   type: { type: String, required: true },
   country: { type: String, required: true },
@@ -19,14 +19,11 @@ const drinkSchema = new mongoose.Schema({
   funFact: { type: String, maxlength: 300 },
   origin: { type: String, required: true },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  comments: [commentSchema] ,// comments field is array of comments from commentSchema,
-  longitude: { type: Number },
-  latitude: { type: Number },
-  icon: { type: String }
+  comments: [commentSchema] // comments field is array of comments from commentSchema
 })
 
 // Ratings 
-drinkSchema.virtual('avgRating')
+suggestedDrinkSchema.virtual('avgRating')
   .get(function() { 
     //get all the ratings
     if (!this.comments.length) return 'Not rated yet'
@@ -39,7 +36,7 @@ drinkSchema.virtual('avgRating')
   })
 
 
-drinkSchema.set('toJSON', {
+suggestedDrinkSchema.set('toJSON', {
   virtuals: true
 })
 
@@ -48,8 +45,4 @@ drinkSchema.set('toJSON', {
 
 
 // define model
-export default mongoose.model('Drink', drinkSchema)
-
-
-
-
+export default mongoose.model('SuggestedDrink', suggestedDrinkSchema)

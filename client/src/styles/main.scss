@@ -79,36 +79,62 @@ h3, p {
   width: 220px;
 }
 
-.navbar-right-right .register {
-  height: 45px !important;
-  width: 124px;
-}
-
-.navbar-right-right .login {
-  height: 45px !important;
-  width: 124px;
-}
-
 .paragraph span {
   font-weight: bold;
 }
 
+// homepage navbar styling
 .navbar-left {
   a.navbar-brand {
     color: white;
     font-family: 'Marko One', serif;
-    font-size: 40px;
-    margin-left: -150px;
+    font-size: 2.5em;
   }
 }
 
 .navbar-right {
   a.navbar-brand {
     color: white;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-top: 15px;
   }
+  .login-register {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 7px;
+  }
+}
+
+// all other pages nav-bar styling
+.nav-container-pages {
+  nav {
+    background-color: #F7CAC7;
+    padding-bottom: 10px;
+    align-items: center;
+    .navbar-left {
+      a {
+        color: #360719;
+        padding: 20px;
+      }
+    }
+    .navbar-right {
+      display: flex;
+      font-size: 0.8em;
+      a {
+        color: #360719;
+      }
+      .login-register {
+        border: 1px solid #360719;
+      }
+      .login-register:hover {
+        color: black;
+      }
+    }
+  }
+
+}
+
+div.navbar-left {
+  font-family: ‘Marko One’, serif;
+  
 }
 
 // Index page hero section
@@ -226,13 +252,18 @@ h3, p {
   }
 }
 
+// Becca show styling
 
-
-div.navbar-left {
-  font-family: ‘Marko One’, serif;
-  
+.show-drink-breadcrumb {
+  margin-top: 20px;
+  padding: 0 20px;
+  a {
+    color: #360719;
+    text-decoration: none;
+  }
 }
 
+<<<<<<< HEAD
 //Drink page
 //div.show.container-fluid {
 // Show page styling 
@@ -324,18 +355,27 @@ div.navbar-left {
 
 // Becca show styling
 
+=======
+>>>>>>> development
 .show-drink {
   .image-text {
     // background-color: #f8f9fa;
-    margin: 40px;
+    margin: 40px 100px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 400px;
 
-    .image-container {
-      padding: 0;
-    }
+      img {
+        height: 403px;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover;
+      }
+
     .right {
       padding: 0;
+      max-height: 403px;
     }
     .title {
       background-color: #F9D85F;
@@ -354,12 +394,12 @@ div.navbar-left {
     .content {
       background-color: #f8f9fa;
       padding: 30px 10px;
+      height: 303px;
       p {
         font-size: 1em;
       }
     }
   }
-
 }
 
 
@@ -382,14 +422,16 @@ div.navbar-left {
 }
 
 // this needs to be wrapped or else it breaks styling on show drink page
-// p {
-//   margin-top: 30px;
-//   color: #360719;
-//   width: 718px;
-//   word-spacing: 4px;
-//   font-size: 24px;
-//   margin-bottom: 60px;
-// }
+div.card-group {
+  p {
+  margin-top: 30px;
+  color: #360719;
+  width: 718px;
+  word-spacing: 4px;
+  font-size: 24px;
+  margin-bottom: 60px;
+  }
+}
 
 .how-it-works {
   position: relative;
@@ -415,7 +457,8 @@ div.navbar-left {
 }
 
 .card-group {
-  max-width: fit-content;
+  flex-wrap: inherit;
+  width: fit-content;
 }
 
 .card {
@@ -429,10 +472,6 @@ div.navbar-left {
 
 .col-md-4 {
   margin-top: 180px;
-}
-
-.card-group {
-  width: min-content;
 }
 
 .card:not(:last-child) {
@@ -493,4 +532,45 @@ div.navbar-left {
   word-spacing: 0px;
 }
 
+.map-container {
+  height: calc(100vh - 52px);
+  width: 100%;
+}
 
+.map-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 220px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  margin: 1rem;
+}
+
+.buttons {
+  justify-content: space-evenly !important;
+}
+
+.marker {
+  font-size: 20px;
+}
+
+.rocket {
+  display: block;
+  transform: translateX(-20px);
+}
+
+.footer {
+  background-image: url(./images/footer.png);
+  text-align: center;
+  margin-top: 200px;
+}
+
+.covered {
+margin-bottom: 70px;
+margin-top: 40px;
+font-size: 24px;
+width: 720px;
+}

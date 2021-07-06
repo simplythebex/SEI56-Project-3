@@ -6,6 +6,8 @@ import Login from './components/auth/Login'
 import DrinkShow from './components/Drink.js'
 import DrinksIndex from './components/DrinksIndex.js'
 import UserProfile from './components/UserProfile.js'
+import SuggestDrink from './components/Suggestions/SuggestDrink'
+import HeissRoom from './components/Suggestions/HeissRoom.js'
 
 
 const App = () => {
@@ -15,10 +17,12 @@ const App = () => {
     <>
       <BrowserRouter>
         <Switch>
-          {/* </Switch><Route exact path="/"> */}
           <Route path="/drinks/:id">
             <DrinkShow />
           </Route> 
+          <Route path="/heiss-room">
+            <HeissRoom />
+          </Route>
           <Route path="/drinks">
             <DrinksIndex />
           </Route>
@@ -30,6 +34,9 @@ const App = () => {
           </Route>
           <Route path="/profile">
             <UserProfile />
+          </Route>
+          <Route path="/suggest-drink">
+            <SuggestDrink />
           </Route>
           <Route path="/">
             <Home />

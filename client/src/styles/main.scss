@@ -363,7 +363,8 @@ div.card-group {
 }
 
 .card-group {
-  max-width: fit-content;
+  flex-wrap: inherit;
+  width: fit-content;
 }
 
 .card {
@@ -377,10 +378,6 @@ div.card-group {
 
 .col-md-4 {
   margin-top: 180px;
-}
-
-.card-group {
-  width: min-content;
 }
 
 .card:not(:last-child) {
@@ -441,4 +438,45 @@ div.card-group {
   word-spacing: 0px;
 }
 
+.map-container {
+  height: calc(100vh - 52px);
+  width: 100%;
+}
 
+.map-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 220px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  margin: 1rem;
+}
+
+.buttons {
+  justify-content: space-evenly !important;
+}
+
+.marker {
+  font-size: 20px;
+}
+
+.rocket {
+  display: block;
+  transform: translateX(-20px);
+}
+
+.footer {
+  background-image: url(./images/footer.png);
+  text-align: center;
+  margin-top: 200px;
+}
+
+.covered {
+margin-bottom: 70px;
+margin-top: 40px;
+font-size: 24px;
+width: 720px;
+}

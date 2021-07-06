@@ -28,44 +28,32 @@ const Nav = () => {
 
 
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar expand="lg">
       <Container>
-        {/* <div className="navbar-left"> */}
-        <Navbar.Brand href="/">Heiss</Navbar.Brand>
-        {/* </div> */}
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            {/* <div className="navbar-right"> */}
-            <Navbar.Link href="/drinks">Our Coffees</Navbar.Link>
-            <Navbar.Link href="/drinks">Our Teas</Navbar.Link>
-            <Navbar.Link href="#index">Order Online</Navbar.Link>
-            <Navbar.Link href="/heiss-room">Heiss Room</Navbar.Link>
-            <Navbar.Link href="/aboutus">About us</Navbar.Link>
-          </Nav>
-          <Nav>
-            {!userIsAuthenticated() ?
-              <>
-                <Navbar.Brand className="login-register" href="/register">Sign up</Navbar.Brand>
-                <Navbar.Brand className="login-register" href="/login">Login</Navbar.Brand>
-              </>
-              :
-              <>
-                <Button variant="outline-light " onClick={handleLogout} size="sm">Logout</Button>{' '}
-              </>
-            }
-          </Nav>
-          
-          {/* </div> */}
-        
-        </Navbar.Collapse>
+        <div className="navbar-left">
+          <Navbar.Brand href="/">Heiss</Navbar.Brand>
+        </div>
+        <div className="navbar-right">
+          <Navbar.Brand href="/drinks">Our Coffees</Navbar.Brand>
+          <Navbar.Brand href="/drinks">Our Teas</Navbar.Brand>
+          <Navbar.Brand href="#index">Order Online</Navbar.Brand>
+          <Navbar.Brand href="/heiss-room">Heiss Room</Navbar.Brand>
+          <Navbar.Brand href="/aboutus">About us</Navbar.Brand>
+          {!userIsAuthenticated() ?
+            <>
+              <Navbar.Brand className="login-register" href="/register">Sign up</Navbar.Brand>
+              <Navbar.Brand className="login-register" href="/login">Login</Navbar.Brand>
+            </>
+            :
+            <>
+              <Button variant="outline-light " onClick={handleLogout} size="sm">Logout</Button>{' '}
+            </>
+          }
+        </div>
       </Container>
     </Navbar>
 
-
-
-
-
+    
   )
 }
 export default Nav

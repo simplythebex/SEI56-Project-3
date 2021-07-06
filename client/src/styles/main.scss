@@ -79,36 +79,62 @@ h3, p {
   width: 220px;
 }
 
-.navbar-right-right .register {
-  height: 45px !important;
-  width: 124px;
-}
-
-.navbar-right-right .login {
-  height: 45px !important;
-  width: 124px;
-}
-
 .paragraph span {
   font-weight: bold;
 }
 
+// homepage navbar styling
 .navbar-left {
   a.navbar-brand {
     color: white;
     font-family: 'Marko One', serif;
-    font-size: 40px;
-    margin-left: -150px;
+    font-size: 2.5em;
   }
 }
 
 .navbar-right {
   a.navbar-brand {
     color: white;
-    font-size: 20px;
-    margin-left: 10px;
-    margin-top: 15px;
   }
+  .login-register {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 7px;
+  }
+}
+
+// all other pages nav-bar styling
+.nav-container-pages {
+  nav {
+    background-color: #F7CAC7;
+    padding-bottom: 10px;
+    align-items: center;
+    .navbar-left {
+      a {
+        color: #360719;
+        padding: 20px;
+      }
+    }
+    .navbar-right {
+      display: flex;
+      font-size: 0.8em;
+      a {
+        color: #360719;
+      }
+      .login-register {
+        border: 1px solid #360719;
+      }
+      .login-register:hover {
+        color: black;
+      }
+    }
+  }
+
+}
+
+div.navbar-left {
+  font-family: ‘Marko One’, serif;
+  
 }
 
 // Index page hero section
@@ -226,115 +252,43 @@ h3, p {
   }
 }
 
-
-
-div.navbar-left {
-  font-family: ‘Marko One’, serif;
-  
-}
-
-//Drink page 
-// Show page styling 
-// div.show.container-fluid {
-  
-//   font-family: 'Marko One', serif;
-//   max-width: 70rem;
-//   margin-top: 5rem;
-//   margin-bottom: 5rem;
-  
-// }
-// div.img-text.row {
-//   margin: 0;
-//   padding: 0;
-// }
-
-// div.image-col.col {
-//   margin: 0px;
-//   padding: 0px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// figure.image.figure { 
-//   margin: 0;
-//   padding: 0;
-// }
-// .figure-img {
-//   margin: 0;
-// }
-
-// div.title.container {
-  
-//   color: black;
-//   background-color: #F7CAC7;
-//   margin: 0;
-//   padding: 0;
-//   // padding-top: 2rem;
-// }
-
-// div.right.col {
-  
-//   margin: 0px;
-//   padding: 0;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-// }
-
-// div.content.container {
-//   background-color: #99CEE3;
-//   margin: 0;
-//   padding-top: 2rem;
-//   color: white;
-// }
-// p.description {
-//   font-family: sans-serif;
-// }
-
-// p.averageRating {
-//   padding-top: 1.5rem;
-// }
-
-// div.buttons.container-fluid {
-//     display: flex;
-//     justify-content: flex-end;
-//     margin-bottom: 1rem;
-//     font-family: sans-serif;
-    
-// }
-// button.btn.btn-outline-light {
-//   margin-right: 10px;
-// }
-
-// div.footer.container-fluid {
-//   background-color: #E8EDE5;
-//   margin: 0px;
-//     display: flex;
-//     flex-direction: column;
-//     align-content: flex-end;
-//     justify-content: flex-end;
-//     align-items: center;
-//     margin-top: 5rem;
-//     padding: 15rem;
-// }
-// end of show styling
-
 // Becca show styling
 
+.show-drink-breadcrumb {
+  margin-top: 20px;
+  padding: 0 20px;
+  a {
+    color: #360719;
+    text-decoration: none;
+  }
+}
+
+
+
+// Styling for Show Drink Route
 .show-drink {
   .image-text {
     // background-color: #f8f9fa;
-    margin: 40px;
+    margin: 40px 100px;
+    display: flex;
     align-items: center;
     justify-content: center;
   
     .image-container {
       padding: 0;
     }
+    max-height: 400px;
+
+      img {
+        height: 403px;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover;
+      }
+
     .right {
       padding: 0;
+      max-height: 403px;
     }
     .title {
       background-color: #F9D85F;
@@ -353,12 +307,12 @@ div.navbar-left {
     .content {
       background-color: #f8f9fa;
       padding: 30px 10px;
+      height: 303px;
       p {
         font-size: 1em;
       }
     }
   }
-
 }
 
 
@@ -381,15 +335,19 @@ div.navbar-left {
 }
 
 // this needs to be wrapped or else it breaks styling on show drink page
-// p {
-//   margin-top: 30px;
-//   color: #360719;
-//   width: 718px;
-//   word-spacing: 4px;
-//   font-size: 24px;
-//   margin-bottom: 60px;
-// }
+div.card-group {
+  p {
+  margin-top: 30px;
+  color: #360719;
+  width: 718px;
+  word-spacing: 4px;
+  font-size: 24px;
+  margin-bottom: 60px;
+  }
+}
 
+
+// * Homepage styling - Victoria please have a look
 // .how-it-works {
 //   position: relative;
 //   display: flex;
@@ -416,6 +374,10 @@ div.navbar-left {
 // .card-group {
 //   max-width: fit-content;
 // }
+.card-group {
+  flex-wrap: inherit;
+  width: fit-content;
+}
 
 // .card {
 //   border: none;
@@ -437,6 +399,9 @@ div.navbar-left {
 // .card:not(:last-child) {
 //   margin-right: 30px;
 // }
+.card:not(:last-child) {
+  margin-right: 30px;
+}
 
 // .card:not(:first-child) {
 //   margin-right: 30px;
@@ -490,4 +455,47 @@ div.navbar-left {
   flex-direction: column;
   padding: 1.5rem;
   word-spacing: 0px;
+}
+
+.map-container {
+  height: calc(100vh - 52px);
+  width: 100%;
+}
+
+.map-controller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 220px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 0.8rem;
+  margin: 1rem;
+}
+
+.buttons {
+  justify-content: space-evenly !important;
+}
+
+.marker {
+  font-size: 20px;
+}
+
+.rocket {
+  display: block;
+  transform: translateX(-20px);
+}
+
+.footer {
+  background-image: url(./images/footer.png);
+  text-align: center;
+  margin-top: 200px;
+}
+
+.covered {
+margin-bottom: 70px;
+margin-top: 40px;
+font-size: 24px;
+width: 720px;
 }

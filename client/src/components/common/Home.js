@@ -1,5 +1,7 @@
 import React from 'react'
 import Nav from './Nav.js'
+import { Link } from 'react-router-dom'
+// import AnimatedMap from './AnimatedMap.js'
 import Container from 'react-bootstrap/Container'
 import style from '../../styles/images/style.png'
 import Happy from '../../styles/images/Happy.png'
@@ -18,8 +20,10 @@ import ladydrinks from '../../styles/images/ladydrinks.png'
 import mandrinks from '../../styles/images/mandrinks.png'
 import crossleg from '../../styles/images/crossleg.png'
 // import bighair from '../../styles/images/bighair.png'
+// import footer from '../../styles/images/footer.png'
 
 const Home = () => {
+
   return (
     <>
       <Container fluid className='hero'>
@@ -30,14 +34,16 @@ const Home = () => {
           <div>
             <div className='paragraph'>
               <p>Your favourite tea and coffee.</p>
-              <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
+              <Link to="/suggest-drink">
+                <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
+              </Link>
               <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
             </div>
           </div>
         </div>
       </Container>
       
-      <Figure classname='zig-zag'>
+      <Figure className='zig-zag'>
         <Figure.Image
           alt='zig-zag'
           src={style}
@@ -55,7 +61,7 @@ const Home = () => {
                   <br/>We Have You covered.
                 </h2>
               </div>
-              <div className='paragraph'>
+              <div className='covered'>
                 <p>We Heiss - a revolutionary hot drink service that delivers quality cofee or tea in minutes. With 2000+ carefully curated products, we got everything you need: from Cuban espresso to pink tea, to Maghrebi mint tea and Cafe de Olla, browse and order.</p>
               </div>
             </div>
@@ -141,13 +147,13 @@ const Home = () => {
               </p>
             </div>
           </Carousel.Item>
-          {/* <Carousel.Item interval={500}>
+          <Carousel.Item interval={500}>
             <div className='review-card'>
               <p>
                 I have never written a review
               </p>
             </div>
-          </Carousel.Item> */}
+          </Carousel.Item>
         </Carousel>
 
         <Carousel>
@@ -186,7 +192,16 @@ const Home = () => {
               alt="Third slide"
             />
           </Carousel.Item> */}
+          <div className='paragraph'>
+            <Button variant='warning'><span>Join Our Community</span></Button>{' '}
+          </div>
         </Carousel>
+
+        {/* <AnimatedMap /> */}
+          
+        <div className='footer'>
+          <p>Made With ❤️</p>
+        </div>
       </Container>
 
     </>     

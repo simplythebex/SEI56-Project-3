@@ -5,7 +5,7 @@ import Nav from './common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Figure from 'react-bootstrap/Figure'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
 
 
@@ -30,19 +30,26 @@ const DrinkShow = () => {
 
   return (
     <>
-      <Nav />
+      <div className="nav-container-pages">
+        <Nav />
+      </div>
+
+      <Breadcrumb className="show-drink-breadcrumb">
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>
+        <Breadcrumb.Item active>{drink.drink}</Breadcrumb.Item>
+      </Breadcrumb>
+
+
       <Container className="show-drink" fluid>
-        <Row className="image-text">
-          <Col className="image-col image-container">
-            <Figure className="image">
-              <Figure.Image
-                
-                alt={drink.drink}
-                src={drink.image}
-              /> 
-            </Figure>
-          </Col>
-          <Col className="right">
+        <div className="image-text">
+          {/* <div className="image"> */}
+          <img
+            alt={drink.drink}
+            src={drink.image}
+          /> 
+          {/* </div> */}
+          <div className="right">
             <Container className="title" style={{ width: '100' }}>
               <h2>{drink.drink}</h2>
               <h4 className="origin">Origin: <span className="country-name">{drink.country}</span></h4>
@@ -54,14 +61,13 @@ const DrinkShow = () => {
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
               <Container className="buttons" fluid>
-                <Button variant="outline-warning">Add to favorites</Button>{' '}
                 <Button variant="outline-warning">Add to basket</Button>{' '}
               </Container>
             </Container> 
           
-          </Col>
+          </div>
         
-        </Row>
+        </div>
       </Container>
       
       <Container className="footer" fluid>

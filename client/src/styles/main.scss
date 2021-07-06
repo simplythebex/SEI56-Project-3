@@ -104,11 +104,16 @@ h3, p {
 }
 
 // all other pages nav-bar styling
-.nav-container-pages {
-  nav {
-    background-color: #F7CAC7;
-    padding-bottom: 10px;
-    align-items: center;
+  // * Made changes for navbar to wrap fully to edges of screen - Daria * //
+.nav-container-pages.container-fluid {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  background-color: #F7CAC7;
+  padding-bottom: 10px;
+  align-items: center;
+  width: 100%;
     .navbar-left {
       a {
         color: #360719;
@@ -126,63 +131,94 @@ h3, p {
       }
       .login-register:hover {
         color: black;
+      } 
+  }
+}
+
+
+// Index page styling
+
+// * All colours are placwholders atm - Daria
+.index-wrapper.container-fluid {
+  background-color: $primaryGrey;
+  // hero section 
+  .align-items-center.index-hero-row.row {
+    .index-hero-img {
+      background-image: url(./assets/indexpagehero.jpeg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      // padding: 100px;
+    }
+    .index-hero-txt {
+      background-color: $primaryYellow; 
+      text-align: center;
+      padding: 100px;
+      p {
+        padding: 20px;
       }
     }
+    h2 {
+      font-family: 'Marko One', serif;
+      font-size: 4.5em;
+      padding-top: 150px;
   }
 
-}
-
-div.navbar-left {
-  font-family: ‘Marko One’, serif;
+  //  API section
+  // buttons row
+    .buttons-row.row {
+      .shop-drinks.col {
+      display: flex;
+      justify-content: flex-start;
+      font-weight: 700;
+      font-size: 36px;
+    }
   
-}
-
-// Index page hero section
-
-.row {
-  .index-hero-img {
-    background-image: url(./assets/indexpagehero.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 100px;
-  }
-  .index-hero-txt {
-    background-color:$primaryPink; //placeholder colour
-    text-align: center;
-    padding: 100px;
-    p {
-      padding: 20px;
+    .sorting-buttons.col-6 {
+      display: flex;
+      justify-content: flex-start;
     }
   }
-  
-  h2 {
-    font-family: 'Marko One', serif;
-    font-size: 4.5em;
-    padding-top: 150px;
 }
-// Index page API section
 
-// buttons row
-.buttons-row.row {
-    .shop-drinks.col {
-    display: flex;
-    justify-content: flex-start;
-    font-weight: 700;
-    font-size: 36px;
-  }
-
-  .sorting-buttons.col-6 {
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .dropdown.col {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-  }
+// api display section on the right
+.api-wrapper.container {
+  .right-api {
+    justify-content: center;
+    // overflow-y: scroll;
+    .api-row {
+      justify-content: center;
+      margin-left: 15px;
+      margin-right: 15px;
+      // justify-content: space-between;
+    }
+    .card {
+      max-width: 300px;
+      margin-bottom: 30px;
+      margin-left: 15px;
+      margin-right: 15px;
+      border: none;
+    }
+      .card-header {
+        background-color:$primaryPink;
+      }
+      .card-btn {
+        align-items: center;
+        .btn {
+          align-items: center;
+          background-color: $primaryBlue;
+          color: $primaryBrown;
+          border: none;
+        }
+      }
+    }
 }
+
+}
+
+
+
+
 
 .outer-box {
   max-width: 50%;
@@ -204,53 +240,6 @@ div.navbar-left {
 
 }
 
-//filters on the left
-.left-filters {
-  .flter-col-top {
-    display: flex;
-    justify-content: space-between;
-  }
-  // position: fixed;
-  margin-right: 30px;
-  top: top;
-  max-width: 25%;
-  background-color: $primaryGrey;
-  font-family: 'Raleway', sans-serif;
-
-
-
-  .checkbox-list {
-    display: inline-flex;
-    /* vertical-align: middle; */
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-// api display section on the right
-.right-api {
-  // overflow-y: scroll;
-  .row {
-    justify-content: space-between;
-  }
-  .card {
-    max-width: 300px;
-    margin-bottom: 30px;
-    border: none;
-  }
-    .card-header {
-      background-color:$primaryPink;
-    }
-    .card-btn {
-      text-align: center;
-      .btn{
-        background-color: $primaryBlue;
-        color: $primaryBrown;
-        border: none;
-      }
-    }
-  }
-}
 
 // Becca show styling
 
@@ -315,24 +304,6 @@ div.navbar-left {
   }
 }
 
-
-// Index footer
-.index-footer {
-  background-color: $primaryYellow;
-}
-.navbar-right {
-  margin-top: 15px;
-  font-weight: normal;
-  margin-left: -20px;
-}
-
-.navbar-right-right {
-  margin-top: 5px;
-}
-
-.figure-img {
-  margin-top: -30px;
-}
 
 // this needs to be wrapped or else it breaks styling on show drink page
 div.card-group {
@@ -399,9 +370,9 @@ div.card-group {
 // .card:not(:last-child) {
 //   margin-right: 30px;
 // }
-.card:not(:last-child) {
-  margin-right: 30px;
-}
+// .card:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 // .card:not(:first-child) {
 //   margin-right: 30px;

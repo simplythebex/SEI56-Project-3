@@ -470,3 +470,67 @@ margin-top: 40px;
 font-size: 24px;
 width: 720px;
 }
+
+// Profile Page
+
+div.createdItems.container {
+  
+
+
+
+div.suggestions.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+div.col {
+  display: flex;
+  flex-direction: row;
+}
+.outline-light {
+  margin-bottom: 3px;
+}
+div.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.card-title.h5 {
+  background-color: #9CCA89;
+}
+
+}
+// $primaryPink: #F7CAC7;
+// $primaryBlue: #99CEE3;
+// $primaryGreen: #9CCA89;
+// $primaryYellow: #F9D85F;
+// $primaryGrey: #E8EDE5;
+// $primaryBrown: #360719; // the  color for the fonts
+
+// Becca styling for Heiss room
+.heiss-room-wrapper {
+  background-color: $primaryGrey;
+  h1 {
+    font-family: ‘Marko One’, serif;
+  }
+  .drink-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .suggested-drink {
+      border: 1px solid $primaryBrown;;
+      border-radius: 5px;
+      max-width: 40%;
+      min-width: 30%;
+      background-color: $primaryBlue;
+      margin: 20px;
+      padding: 10px;
+      h3 {
+        font-size: 1em;
+        color: $primaryBrown;
+      }
+    }
+  }
+}

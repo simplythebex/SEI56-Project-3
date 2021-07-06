@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import Form from 'react-bootstrap/Form'
 import { useHistory } from 'react-router-dom'
+import { ImageUploadField } from '../helpers/ImageUploadField'
 
 const SuggestDrink = () => {
 
@@ -42,6 +43,10 @@ const SuggestDrink = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+
+  const handleImageUrl = url => {
+    setFormData({ ...formData, image: url })
   }
 
   return (
@@ -110,18 +115,7 @@ const SuggestDrink = () => {
             /> 
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="fromBasicOrigin">
-            <Form.Control 
-              type="text" 
-              placeholder="Which continent is your drink from?" 
-              name="origin" 
-              onChange={handleChange}
-              value={formData.origin}
-            />
-          </Form.Group>
-
           <Form.Group>
-            {/* <Form.Label>Where is your drink from?</Form.Label> */}
             <Form.Control 
               as="select" 
               value={formData.origin} 
@@ -139,12 +133,11 @@ const SuggestDrink = () => {
           </Form.Group>
           <br />
 
-          <Form.Group 
-            className="mb-3" 
-            controlId="formBasicImage" 
-          >
-            <Form.File id="upload" name="image" value={formData.image} onChange={handleChange}label="Please upload an image of your suggestion!" />
-          </Form.Group>
+          <ImageUploadField 
+            value={formData.image}
+            name="image"
+            handleImageUrl={handleImageUrl}
+          />
 
           <Button variant="light" type="Submit" block>Submit</Button>
 
@@ -156,3 +149,6 @@ const SuggestDrink = () => {
 }
 
 export default SuggestDrink
+
+// dkgxxaoqn
+//  https://api.cloudinary.com/v1_1/dkgxxaoqn/image/upload

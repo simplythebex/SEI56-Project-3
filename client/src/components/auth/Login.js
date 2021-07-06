@@ -6,6 +6,7 @@ import Nav from '../common/Nav'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
 
+
 const Login = () => {
 
   const history = useHistory()
@@ -24,7 +25,6 @@ const Login = () => {
 
   const setTokenToLocalStorage = (token) => {
     window.localStorage.setItem('token', token)
-    console.log('token', token)
   }
 
   const handleFocus = () => {
@@ -35,8 +35,6 @@ const Login = () => {
     event.preventDefault()
     try {
       const { data } = await axios.post('/api/login', formData)
-      console.log('data', data)
-      console.log('data.token', data.token)
       setTokenToLocalStorage(data.token)
       history.push('/')
     } catch (err) {
@@ -48,9 +46,9 @@ const Login = () => {
 
   return (
     <>
-      <div className="nav-container-pages">
+      <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
-      </div>
+      </Container>
 
       <Container className = "outer-box">
         <h2>Login</h2>

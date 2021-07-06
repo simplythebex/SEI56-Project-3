@@ -1,17 +1,18 @@
 import React from 'react'
+import Card from 'react-bootstrap/Card'
 
 const SuggestedDrinkCard = ({ drink, image, country, owner, description, comments, avgRating }) => {
 
   return (
-    <div className="suggested-drink">
-      <div className="suggested-drink-header">
+    <Card className="suggested-drink" style={{ width: '40rem' }}>
+      <Card.Header className="suggested-drink-header">
         <h3>{owner}</h3>
         <h3>Drink name: {drink}</h3>
         <h3>About the drink: {description}</h3>
         <h3>Country: {country}</h3>
-      </div>
-      <img src={image} alt={drink} />
-      <div className="suggested-drink-footer">
+      </Card.Header>
+      <Card.Img src={image} alt={drink} />
+      <Card.Footer className="suggested-drink-footer">
         <hr />
         <h3>Rate this drink: {avgRating} </h3>
         <hr />
@@ -22,8 +23,8 @@ const SuggestedDrinkCard = ({ drink, image, country, owner, description, comment
             </div>
           )
         })}</h3>
-      </div>
-    </div>
+      </Card.Footer>
+    </Card>
   )
 
 }

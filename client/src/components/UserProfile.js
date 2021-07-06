@@ -1,19 +1,18 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react' 
-// import { useParams } from 'react-router-dom'
-// import { getTokenFromLocalStorage } from './helpers/auth'
+import { useParams, useHistory } from 'react-router-dom'
 import Nav from './common/Nav.js'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
 import Col from 'react-bootstrap/esm/Col'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-//import { getTokenFromLocalStorage } from './helpers/auth.js'
+import { getTokenFromLocalStorage } from './helpers/auth.js'
 
 const UserProfile = () => {
   const [userInfo,  setUserInfo] = useState([])
-
-  
+  const { id } = useParams()
+  const history = useHistory()
 
   
   useEffect(() => {
@@ -30,27 +29,28 @@ const UserProfile = () => {
   console.log('userinfo', userInfo)
   
 
-  // const handleDelete = async () => {
-  //   try {
-  //     await axios.delete(`/api/suggested-drinks/${id}`, 
-  //     headers: {
-  //       Authorization: `Bearer ${getTokenFromLocalStorage()}`
-  //     }
-  //     )
 
 
-  //   } catch (err) {
-  //     consolele.log(err)
-  //   }
-  // }
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/api/suggested-drinks/${id}`, {
+        headers: { 
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      history.push('/profile')
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
 
 
   return (
     <>
-      <div className="nav-container-pages">
+      <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
-      </div>
+      </Container>
       <Container className="main-container">
         <Breadcrumb className="breadcrump">
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
@@ -70,8 +70,8 @@ const UserProfile = () => {
                         <Card.Text>
                       
                         </Card.Text>
-                        <Button className="outline-light" to="/suggest"variant="warning">Edit</Button>
-                        <Button variant="warning">Delete</Button>
+                        <Button className="outline-light" variant="warning">Edit</Button>
+                        <Button onClick={handleDelete} variant="warning">Delete</Button>
                       </Card.Body>
                     </Card>
                   </Container>

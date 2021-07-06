@@ -4,7 +4,14 @@ import { registerUser, loginUser } from '../controllers/auth.js'
 import { secureRoute } from './secureRoute.js'
 import { getUserProfile } from '../controllers/users.js'
 import { createSuggestedDrink, getAllSuggestedDrinks, displaySuggestedDrink, editSuggestedDrink, deleteSuggestedDrink, deleteCommentOnSuggestedDrink, addCommentOnSuggestedDrink } from '../controllers/suggestedDrinks.js'
+import { getAllShoppedDrinks, displayShoppedDrink } from '../controllers/shoppedDrinks.js'
 const router = express.Router()
+
+router.route('/shopped-drinks')
+  .get(getAllShoppedDrinks)
+
+router.route('/shopped-drinks/:id')
+  .get(displayShoppedDrink)
 
 router.route('/suggested-drinks')
   .get(getAllSuggestedDrinks)

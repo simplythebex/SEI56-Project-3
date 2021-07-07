@@ -108,7 +108,7 @@ const DrinksIndex = () => {
   
   return (
     <>
-      <Container fluid sticky="top" className="nav-container-pages">
+      <Container fluid className="nav-container-pages">
         <Nav />
       </Container>
       <Container fluid className="index-wrapper">

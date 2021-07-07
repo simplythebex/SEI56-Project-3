@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 const ButtonSigunup = () => {
   return (
-    <Link to='sign-up'>
-      <button className='btn'>Sign Up</button>
+    <Link to='/register'>
+      <button className='signup-btn'>Sign Up</button>
     </Link>
   )
 }

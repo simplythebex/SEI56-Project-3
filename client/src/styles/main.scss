@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Marko+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;500;600;700&display=swap');
 
+/* ---------------------------------------------------------------*/
+//                     //** GLOBAL **//
 // h font-family: ‘Marko One’, serif;
 // body font-family: 'Raleway', sans-serif;
 // Global
@@ -32,8 +34,10 @@ h3, p {
   font-family: 'Raleway', sans-serif;
 }
 
-
-.hero {
+/* ---------------------------------------------------------------*/
+//                     //** HOMEPAGE **//
+// homepage hero
+.homepage-hero-wrapper {
   background-image: url(./images/hero.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -87,64 +91,150 @@ h3, p {
   font-weight: bold;
 }
 
-// homepage navbar styling
-// *
-// .navbar-left {
-//   a.navbar-brand {
-//     color: white;
-//     font-family: 'Marko One', serif;
-//     font-size: 2.5em;
-//   }
-// }
 
-// .navbar-right {
-//   a.navbar-brand {
-//     color: white;
-//   }
-//   .login-register {
-//     border: 1px solid white;
-//     border-radius: 5px;
-//     padding: 7px;
-//     text-decoration: none;
-//   }
-// }
+/* ---------------------------------------------------------------*/
+//                     //** NAVBAR STYLING **//
 
-// all other pages nav-bar styling
-  // * Made changes for navbar to wrap fully to edges of screen - Daria * //
-  .nav-container-pages.container-fluid {
-    background-color: $primaryPink;
+
+
+//** HOMEPAGE navbar styling ** //
+
+
+.homepage-navbar-wrapper {
+  background-color: rgba(2407, 0, 0, 0);
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  a {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    text-decoration: none;
   }
+  
+  .nav-logo-div {
+    .navbar-logo {
+      font-family: 'Marko One', serif;
+      color: #FFFFFF;
+      justify-self: start;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+    }
+  }
+  .signup-btn{
+    background: $primaryPink;
+    border-radius: 5px;
+    color: $primaryBrown;
+    padding: 5px;
+    text-decoration: none;
+    border: none;
+  }
+  .login-btn{
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    background: transparent;
+  }
+
+  // button:focus {
+  //   border: none;
+  //   outline: none;
+  //   }
+  
+    
+
+  //*? Homepage iPad screen size *//
+  @media screen and (max-width: 768px) {
+  .homepage-nav {
+    color: #FFFFFF;
+    
+    .fa-bars {
+      color: #FFFFFF;
+    }
+    .fa-firstdraft {
+      color: #FFFFFF;
+      margin-left: 0.5rem;
+      font-size: 1.6rem;
+    }
+    .fas.fa-times, .fas.fa-times::before {
+      color: #FFFFFF;
+      font-size: 2rem;
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 33%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      right: 0%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  
+    .nav-menu.active {
+      color: #360719;
+      background: $primaryBlue;
+      right: 0%;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+  }
+}
+  
+  
+
+    
+  
+  
+  
+  }
+
+
+
+
+
+//** ALL PAGES navbar styling ** //
+
   .navbar-wrapper {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    background-color: $primaryPink;
     height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-size: 1.2rem;
   }
-  
-  .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
+
+  .nav-logo-div {
+    .navbar-logo {
+      font-family: 'Marko One', serif;
+      color: $primaryBrown;
+      justify-self: start;
+      // margin-left: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2rem;
+    }
   }
   
+  
   .fa-firstdraft {
+    color: $primaryBrown;
     margin-left: 0.5rem;
     font-size: 1.6rem;
   }
   
   .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
     text-align: center;
     width: 70vw;
-    justify-content: end;
     margin-right: 2rem;
   }
   
@@ -155,19 +245,21 @@ h3, p {
   }
   
   .nav-links {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+    a {
+      color: $primaryBrown;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+    }
+
   }
   
   .nav-links:hover {
-    background-color: #1888ff;
-    border-radius: 4px;
+    font-weight: bold;
     transition: all 0.2s ease-out;
   }
   
   .fa-bars {
-    color: #fff;
+    color: $primaryBrown;
   }
   
   .nav-links-mobile {
@@ -177,25 +269,27 @@ h3, p {
   .menu-icon {
     display: none;
   }
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
+@media screen and (max-width: 768px) {
+
+  .nav-wrapper {
+    background-color: $primaryPink;
   }
 
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 33%;
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: -100%;
+    right: -100%;
     opacity: 1;
     transition: all 0.5s ease;
   }
 
   .nav-menu.active {
-    background: #242222;
+    color: #360719;
+    background: $primaryBlue;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -203,6 +297,7 @@ h3, p {
   }
 
   .nav-links {
+    color: #360719;
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -222,6 +317,7 @@ h3, p {
   }
 
   .menu-icon {
+    color: $primaryBrown;
     display: block;
     position: absolute;
     top: 0;
@@ -232,7 +328,7 @@ h3, p {
   }
 
   .fa-times {
-    color: #fff;
+    color: $primaryBrown;
     font-size: 2rem;
   }
 
@@ -261,27 +357,14 @@ h3, p {
   padding-bottom: 10px;
   align-items: center;
   width: 100%;
-  //   .navbar-left {
-  //     a {
-  //       color: #360719;
-  //       padding: 20px;
-  //     }
-  //   }
-  //   .navbar-right {
-  //     display: flex;
-  //     font-size: 0.8em;
-  //     a {
-  //       color: #360719;
-  //       text-decoration: none;
-  //     }
-  //     .login-register:hover {
-  //       color: black;
-  //     } 
-  // }
+
   }
 }
 
 
+
+
+/* ---------------------------------------------------------------*/
 // Index page styling
 
 // * All colours are placwholders atm - Daria

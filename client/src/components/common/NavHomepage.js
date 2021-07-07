@@ -10,7 +10,7 @@ import CartTally from '../Shopping/CartTally.js'
 import CartIcon from '../../styles/images/cart.svg'
 
 
-const Nav = () => {
+const NavHompage = () => {
 
   const [userInfo, setUserInfo] = useState([])
   const [click, setClick] = useState(false)
@@ -44,7 +44,7 @@ const Nav = () => {
   return (
     <>
       <div className="container-fluid">
-        <nav className="navbar-wrapper">
+        <nav className="homepage-navbar-wrapper">
           <div className="nav-logo-div">
             <Link to="/" className="navbar-logo">
           Heiss
@@ -90,8 +90,9 @@ const Nav = () => {
                   Login
                   </Link> 
                 </li>
-                <ButtonSignup />
                 <ButtonLogin />
+                <ButtonSignup />
+
               </>
               :
               <Link to="/profile" >
@@ -115,4 +116,4 @@ const Nav = () => {
 
   )
 }
-export default Nav
+export default NavHompage

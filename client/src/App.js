@@ -9,6 +9,9 @@ import UserProfile from './components/UserProfile.js'
 import SuggestDrink from './components/Suggestions/SuggestDrink'
 import HeissRoom from './components/Suggestions/HeissRoom.js'
 import About from './components/common/About.js'
+import ShopDrink from './components/Shopping/ShopDrink.js'
+import SuggestedDrinkShow from './components/SuggestedDrinkShow.js'
+import SuggestionsEdit from './components/SuggestionsEdit.js'
 
 
 
@@ -19,8 +22,14 @@ const App = () => {
     <>
       <BrowserRouter>
         <Switch>
+          <Route path="/profile/:id/edit">
+            <SuggestionsEdit />
+          </Route> 
           <Route path="/drinks/:id">
             <DrinkShow />
+          </Route> 
+          <Route path="/profile/:id">
+            <SuggestedDrinkShow />
           </Route> 
           <Route path="/heiss-room">
             <HeissRoom />
@@ -40,8 +49,13 @@ const App = () => {
           <Route path="/suggest-drink">
             <SuggestDrink />
           </Route>
+<<<<<<< HEAD
           <Route path="/aboutus">
             <About />
+=======
+          <Route path="/shop-drink">
+            <ShopDrink />
+>>>>>>> c9f2b0ab99e8d2f820c5a4ba53d14f2c81a08924
           </Route>
           <Route path="/">
             <Home />

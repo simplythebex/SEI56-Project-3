@@ -21,7 +21,6 @@ body {
 h2 {
   font-family: 'Marko One', serif;
   font-size: 4.5em;
-  // padding-top: 150px;
 }
 
 h3, p {
@@ -222,9 +221,10 @@ h3, p {
 
 .outer-box {
   max-width: 50%;
-  background-color: #F7CAC7;
+  background-color: $primaryYellow;
   border: 2px solid black;
   padding: 20px;
+  margin-top: 30px;
   h2 {
     text-align: center;
     margin: 20px;
@@ -242,7 +242,6 @@ h3, p {
 
 
 // Becca show styling
-
 .show-drink-breadcrumb {
   margin-top: 20px;
   padding: 0 20px;
@@ -473,19 +472,18 @@ width: 720px;
 
 // Profile Page
 
-div.main-container.container {
-  background-color: #99CEE3;
-}
+
 div.createdItems.container {
-  
-
-
 
 div.suggestions.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  
+}
+div.card {
+  background-color: #E8EDE5;
 }
 div.col {
   display: flex;
@@ -500,9 +498,7 @@ div.card-body {
   flex-direction: column;
   align-items: center;
 }
-div.card-title.h5 {
-  background-color: #9CCA89;
-}
+
 
 }
 // $primaryPink: #F7CAC7;
@@ -515,26 +511,17 @@ div.card-title.h5 {
 // Becca styling for Heiss room
 .heiss-room-wrapper {
   background-color: $primaryGrey;
-  h1 {
-    font-family: ‘Marko One’, serif;
-  }
   .drink-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     .suggested-drink {
-      border: 1px solid $primaryBrown;;
-      border-radius: 5px;
-      max-width: 40%;
-      min-width: 30%;
-      background-color: $primaryBlue;
       margin: 20px;
-      padding: 10px;
-      h3 {
-        font-size: 1em;
-        color: $primaryBrown;
-      }
+    }
+    h3 {
+      font-size: 1em;
     }
   }
 }
+

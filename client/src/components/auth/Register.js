@@ -46,9 +46,9 @@ const Register = () => {
   }
   return (
     <>
-      <div className="nav-container-pages">
+      <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
-      </div>
+      </Container>
 
       <Container className = "outer-box">
         <h2>Register</h2>
@@ -74,9 +74,6 @@ const Register = () => {
               onChange={handleChange}
               value={formData.email}
             />
-            {/* <Form.Text className="text-muted">
-            We will never share your email with anyone else.
-            </Form.Text> */}
             {errors.email && <p className="error">{errors.email.message}</p>}
           </Form.Group>
 

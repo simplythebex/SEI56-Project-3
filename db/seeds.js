@@ -4,6 +4,8 @@ import Drink from '../models/drink.js'
 import drinkData from './data/drinks.js'
 import User from '../models/user.js'
 import userData from './data/users.js'
+import ShoppedDrink from '../models/shoppedDrink.js'
+import shoppedDrinkData from './data/shoppedDrink.js'
 
 const seedDatabase = async () => {
   try {
@@ -19,6 +21,7 @@ const seedDatabase = async () => {
     const users = await User.create(userData)
     console.log(users)
 
+
     // create drinkData with added ownwer field 
     const drinksWithAddedUsers = drinkData.map(drink => {
       return { ...drink, owner: users[0]._id }
@@ -28,6 +31,15 @@ const seedDatabase = async () => {
     // create drinks using drinkData
     const drinks = await Drink.create(drinksWithAddedUsers)
     console.log(`🌱 DB seeded with ${drinks.length} drinks`)
+
+    // create drinkData with added ownwer field 
+    const shoppedDrinksWithData = shoppedDrinkData.map(drink => {
+      return { ...drink, owner: users[0]._id }
+    })
+
+    // create shoppedDrinks
+    const shoppedDrinks = await ShoppedDrink.create(shoppedDrinksWithData)
+    console.log(`🌱 DB seeded with ${shoppedDrinks.length} drinks`)
 
     // closing the connection 
     await mongoose.connection.close()

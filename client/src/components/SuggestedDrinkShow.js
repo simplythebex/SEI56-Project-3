@@ -1,29 +1,25 @@
 import React, { useEffect, useState } from 'react' 
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useParams,  useHistory, Link } from 'react-router-dom'
 import Nav from './common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
-// import { getTokenFromLocalStorage } from './helpers/auth'
-import { useHistory } from 'react-router-dom'
+import { getTokenFromLocalStorage } from './helpers/auth.js'
 
 
 
-const DrinkShow = () => {
+const SuggestedDrinkShow = () => {
   const [drink, setDrink] = useState({})
-  const [quantity, setQuantity] = useState(1)
   const { id } = useParams()
-
   const history = useHistory()
-
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/api/drinks/${id}`)
+        const { data } = await axios.get(`/api/suggested-drinks/${id}`)
         setDrink(data)
       } catch (err) {
         console.log(err)
@@ -33,42 +29,36 @@ const DrinkShow = () => {
   }, [id])
   console.log(drink)
 
-  const handleChange = (event) => {
-    console.log('changed=>', event.target.value)
-    setQuantity(event.target.value)
-  }
+  // const userIsOwner = (userId) => {
+  //   const payload = getPayload()
+  //   if (!payload) return
+  //   return payload.sub === userId
+  // }
+  // userIsOwner()
+  // console.log('drink', drink)
 
-  const handleCart = async (event) => {
-    event.preventDefault()
-    const total = quantity * drink.price
-    const formData = {
-      drinkId: drink._id,
-      quantity: parseInt(quantity),
-      price: drink.price,
-      total: total,
-    }
 
-    console.log('My form data=>', formData)
-    
+
+
+  const handleDelete = async () => {
     try {
-      await axios.post(
-        `/api/shopped-drinks/${drink._id}`,
-        formData
-        // {
-        //   headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
-        // }
-      )
-      history.push('/shop-drink')
+      await axios.delete(`/api/suggested-drinks/${id}`, {
+        headers: { 
+          Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+        },
+      })
+      history.push('/profile')
     } catch (err) {
       console.log(err)
     }
   }
 
+ 
   return (
     <>
-      <div className="nav-container-pages">
+      <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
-      </div>
+      </Container>
 
       <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -96,11 +86,13 @@ const DrinkShow = () => {
                 {drink.description}
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
-              <p className="averageRating"><span>Price: £</span>{drink.price}</p>
-              <p className="averageRating"><span>Quantity: </span><input name="quantity" value={quantity} onChange={handleChange}></input></p>
+              
+              {/* {userIsOwner(drink.user._id) && */}
               <Container className="buttons" fluid>
-                <Button variant="outline-warning" onClick={handleCart}>Add to basket</Button>{' '}
-              </Container>
+                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="warning">Edit</Button></Link>
+                <Button onClick={handleDelete} variant="warning">Delete</Button>
+              </Container> 
+              {/* } */}
             </Container> 
           
           </div>
@@ -121,7 +113,7 @@ const DrinkShow = () => {
 
 }
 
-export default DrinkShow
+export default SuggestedDrinkShow
 
 
 

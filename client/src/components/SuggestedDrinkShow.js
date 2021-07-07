@@ -89,8 +89,8 @@ const SuggestedDrinkShow = () => {
               
               {/* {userIsOwner(drink.user._id) && */}
               <Container className="buttons" fluid>
-                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="warning">Edit</Button></Link>
-                <Button onClick={handleDelete} variant="warning">Delete</Button>
+                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="primary">Edit</Button></Link>
+                <Button onClick={handleDelete} variant="primary">Delete</Button>
               </Container> 
               {/* } */}
             </Container> 

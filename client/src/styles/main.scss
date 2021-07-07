@@ -21,7 +21,6 @@ body {
 h2 {
   font-family: 'Marko One', serif;
   font-size: 4.5em;
-  // padding-top: 150px; // does this need to be here? It is breaking the styling in the forms
 }
 
 h3, p {
@@ -156,12 +155,12 @@ h3, p {
       padding: 100px;
       p {
         padding: 20px;
+        font-size: 21px;
       }
     }
     h2 {
       font-family: 'Marko One', serif;
       font-size: 4.5em;
-      padding-top: 150px;
   }
 
   //  API section

@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar'
 // import Button from 'react-bootstrap/Button'
 // import Col from 'react-bootstrap/Col'
 // import Row from 'react-bootstrap/Row'
-
 // import Figure from 'react-bootstrap/Figure'
 import { getPayload } from '../helpers/auth'
 

@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Nav from '../common/Nav'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
+import { ImageUploadField } from '../helpers/ImageUploadField'
 
 const Register = () => {
 
@@ -44,6 +45,11 @@ const Register = () => {
 
     console.log('errors', errors)
   }
+
+  const handleImageUrl = url => {
+    setFormData({ ...formData, image: url })
+  }
+
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
@@ -100,6 +106,12 @@ const Register = () => {
             />
             {errors.passwordConfirmation && <p className="error">{errors.passwordConfirmation.message}</p>}
           </Form.Group>
+
+          <ImageUploadField 
+            value={formData.image}
+            name="image"
+            handleImageUrl={handleImageUrl}
+          />
 
           <Button variant="light" type="Submit" block>Register</Button>
 

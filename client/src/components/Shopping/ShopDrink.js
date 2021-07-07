@@ -57,7 +57,7 @@ const ShopDrink = () => {
       </Breadcrumb>
 
       <div className='cartpage'>
-        <div className='cartpage-right'>
+        <div className='cartpage-main'>
           {shoppedDrinks.map(drink => {
             if (drink !== null) {
               return (

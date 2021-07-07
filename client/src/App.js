@@ -49,13 +49,10 @@ const App = () => {
           <Route path="/suggest-drink">
             <SuggestDrink />
           </Route>
-<<<<<<< HEAD
           <Route path="/aboutus">
             <About />
-=======
           <Route path="/shop-drink">
             <ShopDrink />
->>>>>>> c9f2b0ab99e8d2f820c5a4ba53d14f2c81a08924
           </Route>
           <Route path="/">
             <Home />

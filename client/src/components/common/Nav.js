@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar'
 import Button from 'react-bootstrap/Button'
 // import Col from 'react-bootstrap/Col'
 // import Row from 'react-bootstrap/Row'
-
 // import Figure from 'react-bootstrap/Figure'
 import { getPayload } from '../helpers/auth'
 
@@ -16,7 +15,7 @@ const Nav = () => {
 
   const handleLogout = () => {
     window.localStorage.removeItem('token')
-    history.push('/')
+    history.push('/login')
   }
 
   const userIsAuthenticated = () => {
@@ -34,11 +33,11 @@ const Nav = () => {
           <Navbar.Brand href="/">Heiss</Navbar.Brand>
         </div>
         <div className="navbar-right">
-          <Navbar.Brand href="/drinks">Our Coffees</Navbar.Brand>
-          <Navbar.Brand href="/drinks">Our Teas</Navbar.Brand>
+          <Navbar.Brand href="#index">Our Coffees</Navbar.Brand>
+          <Navbar.Brand href="#index">Our Teas</Navbar.Brand>
           <Navbar.Brand href="#index">Order Online</Navbar.Brand>
           <Navbar.Brand href="/heiss-room">Heiss Room</Navbar.Brand>
-          <Navbar.Brand href="/aboutus">About us</Navbar.Brand>
+          <Navbar.Brand href="#index">About us</Navbar.Brand>
           {!userIsAuthenticated() ?
             <>
               <Navbar.Brand className="login-register" href="/register">Sign up</Navbar.Brand>
@@ -52,8 +51,6 @@ const Nav = () => {
         </div>
       </Container>
     </Navbar>
-
-    
   )
 }
 export default Nav

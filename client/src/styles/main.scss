@@ -21,7 +21,6 @@ body {
 h2 {
   font-family: 'Marko One', serif;
   font-size: 4.5em;
-  // padding-top: 150px; // does this need to be here? It is breaking the styling in the forms
 }
 
 h3, p {
@@ -155,12 +154,12 @@ h3, p {
       padding: 100px;
       p {
         padding: 20px;
+        font-size: 21px;
       }
     }
     h2 {
       font-family: 'Marko One', serif;
       font-size: 4.5em;
-      padding-top: 150px;
   }
 
   //  API section
@@ -474,7 +473,10 @@ width: 720px;
 
 
 div.createdItems.container {
-
+h3.title {
+  text-align: center;
+}
+ 
 div.suggestions.container {
   display: flex;
   flex-direction: column;
@@ -485,7 +487,7 @@ div.suggestions.container {
 div.card {
   background-color: #E8EDE5;
 }
-div.col {
+div.createdItems.col {
   display: flex;
   flex-direction: row;
   max-width: 300px;
@@ -498,9 +500,16 @@ div.card-body {
   flex-direction: column;
   align-items: center;
 }
-
-
 }
+
+// Edit Page
+div.suggestChangeForm.container {
+  max-width: min-content;
+  background-color: #E8EDE5;
+  padding: 2rem;
+}
+
+
 // $primaryPink: #F7CAC7;
 // $primaryBlue: #99CEE3;
 // $primaryGreen: #9CCA89;
@@ -567,8 +576,19 @@ div.card-body {
   }
 }
 
-
+// nav bar  image styling
 .nav-bar-profile-image {
   border-radius: 100%;
   object-fit: cover;
 }
+
+// Cart styling
+.cart-wrapper.container {
+  .cartpage .cartpage-main {
+    display: flex;
+    max-width: 1300px;
+    margin: 2rem auto;
+  }
+}
+
+

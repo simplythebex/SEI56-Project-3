@@ -32,7 +32,7 @@ const seedDatabase = async () => {
     const drinks = await Drink.create(drinksWithAddedUsers)
     console.log(`🌱 DB seeded with ${drinks.length} drinks`)
 
-    // create drinkData with added ownwer field 
+    // create shoppedDrinkData with added ownwer field 
     const shoppedDrinksWithData = shoppedDrinkData.map(drink => {
       return { ...drink, owner: users[0]._id }
     })

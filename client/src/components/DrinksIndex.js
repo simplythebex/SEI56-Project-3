@@ -115,8 +115,10 @@ const DrinksIndex = () => {
         <Row fluid className="align-items-center index-hero-row">
         
           <Col className="index-hero-txt">
+            <h2>Fresh brew</h2>
             <article>
-              <p>What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr&apos;s standard 1960s with the release of Letraset sheets containing Lore.</p>
+              <p>Discover your new favourite brew with Teas and Coffees that you didnt even know existed.
+                Browse our a range of tastes and preparation methods you’ll love, and choose the right new brew for you.</p>
             </article>
           </Col>
           <Col className="index-hero-img">

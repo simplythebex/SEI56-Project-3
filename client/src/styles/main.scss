@@ -475,10 +475,10 @@ width: 720px;
 
 
 div.createdItems.container {
-
-  h3.title {
-    text-align: center;
-  }
+h3.title {
+  text-align: center;
+}
+ 
 div.suggestions.container {
   display: flex;
   flex-direction: column;
@@ -502,9 +502,16 @@ div.card-body {
   flex-direction: column;
   align-items: center;
 }
-
-
 }
+
+// Edit Page
+div.suggestChangeForm.container {
+  max-width: min-content;
+  background-color: #E8EDE5;
+  padding: 2rem;
+}
+
+
 // $primaryPink: #F7CAC7;
 // $primaryBlue: #99CEE3;
 // $primaryGreen: #9CCA89;

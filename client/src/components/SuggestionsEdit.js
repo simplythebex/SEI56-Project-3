@@ -49,10 +49,6 @@ const SuggestionsEdit = () => {
     }
   }
 
-  // const handleImageUrl = url => {
-  //   setFormData({ ...formData, image: url })
-  // }
-
   const handleImageUrl = url => {
     setFormData({ ...formData, image: url })
   }
@@ -61,14 +57,16 @@ const SuggestionsEdit = () => {
     <>
       <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
+      </Container >
+      <Container className="breadcrumbs">
+        <Breadcrumb className="breadcrump">
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item href="/profile">Profile</Breadcrumb.Item>
+          <Breadcrumb.Item active>Edit</Breadcrumb.Item>
+        </Breadcrumb>
+        <hr />
       </Container>
-      <Breadcrumb className="breadcrump">
-        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="/profile">Profile</Breadcrumb.Item>
-        <Breadcrumb.Item active>Edit</Breadcrumb.Item>
-      </Breadcrumb>
-      <hr />
-      <Container>
+      <Container className="suggestChangeForm">
         <SuggestDrinkForm 
           handleChange = {handleChange}
           handleSubmit = {handleSubmit}

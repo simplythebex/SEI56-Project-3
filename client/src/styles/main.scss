@@ -476,6 +476,9 @@ width: 720px;
 
 div.createdItems.container {
 
+  h3.title {
+    text-align: center;
+  }
 div.suggestions.container {
   display: flex;
   flex-direction: column;
@@ -486,7 +489,7 @@ div.suggestions.container {
 div.card {
   background-color: #E8EDE5;
 }
-div.col {
+div.createdItems.col {
   display: flex;
   flex-direction: row;
   max-width: 300px;

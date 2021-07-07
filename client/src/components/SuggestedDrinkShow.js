@@ -62,7 +62,7 @@ const SuggestedDrinkShow = () => {
 
       <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>
+        <Breadcrumb.Item href="/profile">User Profile</Breadcrumb.Item>
         <Breadcrumb.Item active>{drink.drink}</Breadcrumb.Item>
       </Breadcrumb>
 

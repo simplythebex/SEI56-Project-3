@@ -12,12 +12,12 @@ import { getPayload } from '../helpers/auth'
 
 const Nav = () => {
 
-  const history = useHistory()
+  // const history = useHistory()
 
-  const handleLogout = () => {
-    window.localStorage.removeItem('token')
-    history.push('/')
-  }
+  // const handleLogout = () => {
+  //   window.localStorage.removeItem('token')
+  //   history.push('/')
+  // }
 
   const userIsAuthenticated = () => {
     const payload = getPayload()
@@ -38,7 +38,7 @@ const Nav = () => {
           <Navbar.Brand href="#index">Our Teas</Navbar.Brand>
           <Navbar.Brand href="#index">Order Online</Navbar.Brand>
           <Navbar.Brand href="/heiss-room">Heiss Room</Navbar.Brand>
-          <Navbar.Brand href="#index">About us</Navbar.Brand>
+          <Navbar.Brand href="/about">About us</Navbar.Brand>
           {!userIsAuthenticated() ?
             <>
               <Navbar.Brand className="login-register" href="/register">Sign up</Navbar.Brand>
@@ -46,7 +46,7 @@ const Nav = () => {
             </>
             :
             <>
-              <Button variant="outline-light " onClick={handleLogout} size="sm">Logout</Button>{' '}
+              {/* <Button variant="outline-light " onClick={handleLogout} size="sm">Logout</Button>{' '} */}
             </>
           }
         </div>

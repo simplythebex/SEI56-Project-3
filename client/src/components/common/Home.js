@@ -69,7 +69,7 @@ const Home = () => {
                 show={show} 
                 onHide={handleClose}>
                 <Modal.Header>
-                  <Modal.Title>Please login to suggest a drink</Modal.Title>
+                  <Modal.Title>Please log in to suggest a drink</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                   <LoginBox 

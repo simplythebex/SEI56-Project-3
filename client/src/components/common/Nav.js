@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Container from 'react-bootstrap/Container'
+// import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import { getPayload } from '../helpers/auth'
-import Button from './navbar/Button.js'
+import ButtonSignup from './navbar/ButtonSignup.js'
+import ButtonLogin from './navbar/ButtonLogin.js'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const Nav = () => {
   const [click, setClick] = useState(false)
 
-  // const history = useHistory()
   const [userInfo, setUserInfo] = useState([])
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
-  const handleLogout = () => {
-    window.localStorage.removeItem('token')
-    history.push('/')
-  }
 
   const userIsAuthenticated = () => {
     const payload = getPayload()
@@ -88,6 +84,8 @@ const Nav = () => {
                   Login
                   </Link> 
                 </li>
+                <ButtonSignup />
+                <ButtonLogin />
               </>
               :
               <Link to="/profile" >
@@ -102,7 +100,7 @@ const Nav = () => {
               </Link>
             }
           </ul>
-          <Button />
+
         </nav>
       </div>
       

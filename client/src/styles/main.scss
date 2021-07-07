@@ -89,28 +89,31 @@ h3, p {
 
 // homepage navbar styling
 // *
-.navbar-left {
-  a.navbar-brand {
-    color: white;
-    font-family: 'Marko One', serif;
-    font-size: 2.5em;
-  }
-}
+// .navbar-left {
+//   a.navbar-brand {
+//     color: white;
+//     font-family: 'Marko One', serif;
+//     font-size: 2.5em;
+//   }
+// }
 
-.navbar-right {
-  a.navbar-brand {
-    color: white;
-  }
-  .login-register {
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 7px;
-    text-decoration: none;
-  }
-}
+// .navbar-right {
+//   a.navbar-brand {
+//     color: white;
+//   }
+//   .login-register {
+//     border: 1px solid white;
+//     border-radius: 5px;
+//     padding: 7px;
+//     text-decoration: none;
+//   }
+// }
 
 // all other pages nav-bar styling
   // * Made changes for navbar to wrap fully to edges of screen - Daria * //
+  .nav-container-pages.container-fluid {
+    background-color: $primaryPink;
+  }
   .navbar-wrapper {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     height: 80px;
@@ -121,7 +124,7 @@ h3, p {
   }
   
   .navbar-logo {
-    color: #fff;
+    // color: #fff;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -725,6 +728,7 @@ div.suggestChangeForm.container {
 .nav-bar-profile-image {
   border-radius: 100%;
   object-fit: cover;
+  background-color: $primaryBlue;
 }
 
 // Cart styling

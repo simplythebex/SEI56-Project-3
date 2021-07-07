@@ -2,7 +2,7 @@ import React from 'react'
 import './button.css'
 import { Link } from 'react-router-dom'
 
-const Button = () => {
+const ButtonSigunup = () => {
   return (
     <Link to='sign-up'>
       <button className='btn'>Sign Up</button>
@@ -10,4 +10,4 @@ const Button = () => {
   )
 }
 
-export default Button
+export default ButtonSigunup

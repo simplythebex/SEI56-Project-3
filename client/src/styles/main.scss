@@ -502,12 +502,6 @@ div.card-body {
 
 
 }
-// $primaryPink: #F7CAC7;
-// $primaryBlue: #99CEE3;
-// $primaryGreen: #9CCA89;
-// $primaryYellow: #F9D85F;
-// $primaryGrey: #E8EDE5;
-// $primaryBrown: #360719; // the  color for the fonts
 
 // Becca styling for Heiss room
 .heiss-room-wrapper {
@@ -525,4 +519,14 @@ div.card-body {
     }
   }
 }
+
+// Cart styling
+.cart-wrapper.container {
+  .cartpage .cartpage-main {
+    display: flex;
+    max-width: 1300px;
+    margin: 2rem auto;
+  }
+}
+
 

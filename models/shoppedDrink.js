@@ -1,5 +1,6 @@
 import mongoose from 'mongoose'
 
+// Define the cart schema
 const shoppedDrinkSchema = new mongoose.Schema({
   drinkId: { type: String, required: true, unique: true },
   quantity: { type: Number, required: true },

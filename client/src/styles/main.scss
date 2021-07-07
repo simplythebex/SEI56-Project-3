@@ -32,38 +32,120 @@ h3, p {
   font-family: 'Raleway', sans-serif;
 }
 
+// Homepage styling Bex Wednesday PM
+.homepage {
+  .hero {
+    background-image: url(./images/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    text-align: center;
+    color: white;
+    padding-bottom: 400px;
+    max-height: 900px;
+    .hot {
+      h2 {
+        font-family: "Marko One", serif;
+        font-size: 6rem;
+        padding-top: 100px;
+        padding-left: inherit;
+      }
+      .paragraph {
+        p {
+          margin-top: 60px;
+          font-size: 36px;
+          margin-bottom: 30px;
+          color: #ffffff;
+          width: auto;
+        }
+      }
+    }
+  }
+  
+  .zig-zag {
+    position: relative;
+    z-index: 1;
+    margin: -30px 0;
+    width: 100%;
+  }
 
-.hero {
-  background-image: url(./images/hero.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: inherit;
-  text-align: center;
-  color: white;
-  padding-bottom: 400px;
-  max-height: 900px;
+  .choice {
+    background-color: $primaryPink;
+    padding: 50px 20px;
+    .choice-wrapper {
+      margin: 5px;
+      padding: 0 30px;
+      .drink {
+        padding-top: 30px;
+        h2 {
+          font-size: 4em;
+        }
+      }
+    }
+
+    .need-choose-receive {
+      margin: 0 30px;
+      border: none;
+      background-color: $primaryPink;
+      div.card-title.h5 {
+        font-size: 2em;
+        font-family: 'Marko One', serif;
+      }
+      p.card-text {
+        font-size: 1.25em;
+      }
+    }
+    .card-body {
+      border: none;
+    }
+
+    .happy {
+      padding-top: 100px;
+    }
+    @media screen and (max-width: 1300px) {
+      .happy {
+        display: none;
+      }
+    }
+  }
+
+  .room {
+    .heiss-room {
+      h2 {
+        padding: 150px;
+        text-align: center;
+      }
+    }
+
+    .carousel {
+      .carousel-inner {
+        display: flex;
+        .carousel-item {
+          height: 500px;
+          width: 500px;
+          word-spacing: 0px;
+          display: center;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .paragraph {
+      display: flex;
+      justify-content: center;
+      .button {
+        margin: 0 auto;
+      }
+    }
+
+  }
 }
 
-.main {
-  width: 100%;
-}
 
+// .main {
+//   width: 100%;
+// }
 
-.hot h2 {
-  font-family: "Marko One", serif;
-  font-size: 96px;
-  padding-top: 150px;
-  // letter-spacing:-5px;
-  padding-left: inherit;
-}
-
-.hot .paragraph p {
-  margin-top: 60px;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #ffffff;
-  width: auto;
-}
 
 .btn-outline-light {
   color: #f8f9fa;
@@ -491,10 +573,10 @@ div.card-group {
 // .card-group {
 //   max-width: fit-content;
 // }
-.card-group {
-  flex-wrap: inherit;
-  width: fit-content;
-}
+// .card-group {
+//   flex-wrap: inherit;
+//   width: fit-content;
+// }
 
 // .card {
 //   border: none;
@@ -557,22 +639,6 @@ div.card-group {
 //   width: auto !important; 
 // }
 
-.carousel-item {
-  display: flex;
-  width: auto;
-  margin-right: auto;
-}
-
-.carousel-item p {
-  background-color: #F9D85F;
-  border: 3px solid #181c1c;
-  display: flex;
-  height: 200px;
-  max-width: 420px;
-  flex-direction: column;
-  padding: 1.5rem;
-  word-spacing: 0px;
-}
 
 .map-container {
   height: calc(100vh - 52px);

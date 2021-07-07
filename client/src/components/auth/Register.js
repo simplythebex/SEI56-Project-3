@@ -68,7 +68,7 @@ const Register = () => {
               onChange={handleChange}
               value={formData.username}
             />
-            {errors && <p className="error">{errors.username.message}</p>}
+            {errors && <p className="error">{errors.username}</p>}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="fromBasicEmail">
@@ -80,7 +80,7 @@ const Register = () => {
               onChange={handleChange}
               value={formData.email}
             />
-            {errors.email && <p className="error">{errors.email.message}</p>}
+            {errors.email && <p className="error">{errors.email}</p>}
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">

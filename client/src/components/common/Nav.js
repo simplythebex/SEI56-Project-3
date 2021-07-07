@@ -13,10 +13,8 @@ const Nav = () => {
 
   // const history = useHistory()
 
-  // const handleLogout = () => {
-  //   window.localStorage.removeItem('token')
-  //   history.push('/')
-  // 
+  const handleClick = () => setClick(!click)
+  const closeMobileMenu = () => setClick(false)
 
   const userIsAuthenticated = () => {
     const payload = getPayload()

@@ -2,7 +2,8 @@ import SuggestedDrink from '../models/suggestedDrink.js'
 
 // INDEX ROUTE - display all drinks
 export const getAllSuggestedDrinks = async (_req, res) => {
-  const drinks = await SuggestedDrink.find()
+  const drinks = await SuggestedDrink.find().populate('owner').populate('comments.owner')
+  console.log(drinks)
   return res.status(200).json(drinks)
 }
 

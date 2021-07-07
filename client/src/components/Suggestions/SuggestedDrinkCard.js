@@ -1,28 +1,105 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+import { getTokenFromLocalStorage } from '../helpers/auth'
 import Card from 'react-bootstrap/Card'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-const SuggestedDrinkCard = ({ drink, image, country, owner, description, comments, avgRating }) => {
+const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, comments, avgRating, funFact }) => {
+
+  const [formData, setFormData] = useState({
+    text: '',
+    rating: '',
+  })
+
+  const handleChange = (event) => {
+    console.log('changed')
+    const suggestedDrink = { ...formData, [event.target.name]: event.target.value }
+    setFormData(suggestedDrink)
+  }
+  console.log(formData)
+
+  const handleSubmit = async () => {
+    // event.preventDefault()
+    try {
+      await axios.post(
+        `/api/suggested-drinks/${id}/comments`,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+        }
+      )
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <Card className="suggested-drink" style={{ width: '40rem' }}>
       <Card.Header className="suggested-drink-header">
-        <h3>{owner}</h3>
-        <h3>Drink name: {drink}</h3>
-        <h3>About the drink: {description}</h3>
-        <h3>Country: {country}</h3>
+        <div className="heiss-room-title">
+          <img 
+            src={owner.image}
+            alt={owner.username}
+            width={50}
+            height={50}
+          />
+          <h3>{owner.username}</h3>
+        </div>
+        <div className="information">
+          <h3 className="drink-name">{drink}</h3>
+          <h3>{description}</h3>
+          <h3>This drink originates in {country}</h3>
+          <h3>{funFact}</h3>
+        </div>
       </Card.Header>
       <Card.Img src={image} alt={drink} />
       <Card.Footer className="suggested-drink-footer">
         <hr />
-        <h3>Rate this drink: {avgRating} </h3>
+        <div className="comments-stats">
+          <h3> {comments.length} comment </h3>
+          <h3> {avgRating} </h3>
+        </div>
         <hr />
-        <h3>Comments: {comments.map(comment => {
+        <div className="comments">{comments.map(comment => {
           return (
             <div className="heiss-room-comment" key={comment._id}>
-              {comment.text}
+              <img 
+                src={comment.owner.image}
+                alt={comment.owner.username}
+                width={50}
+                height={50}
+              />
+              <div className="comment-user">
+                <h3>{comment.owner.username}</h3>
+                <h3>{comment.text}</h3>
+              </div>
             </div>
           )
-        })}</h3>
+        })}</div>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group className="mb-3" controlId="formComment">
+            <Form.Control 
+              type="text" 
+              placeholder="Write a comment... " 
+              name="text" 
+              onChange={handleChange}
+              value={formData.text}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formComment">
+            <Form.Control 
+              type="text" 
+              placeholder="Rating here" 
+              name="rating" 
+              onChange={handleChange}
+              value={formData.rating}
+            />
+          </Form.Group>
+
+          <Button variant="light" type="Submit" block>Submit</Button>
+
+        </Form>
       </Card.Footer>
     </Card>
   )

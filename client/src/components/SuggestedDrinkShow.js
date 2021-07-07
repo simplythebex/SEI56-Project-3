@@ -66,7 +66,7 @@ const SuggestedDrinkShow = () => {
         <Breadcrumb.Item active>{drink.drink}</Breadcrumb.Item>
       </Breadcrumb>
 
-
+      
       <Container className="show-drink" fluid>
         <div className="image-text">
           {/* <div className="image"> */}

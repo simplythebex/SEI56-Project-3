@@ -16,11 +16,6 @@ const Nav = () => {
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
-  const handleLogout = () => {
-    window.localStorage.removeItem('token')
-    history.push('/')
-  }
-
   const userIsAuthenticated = () => {
     const payload = getPayload()
     if (!payload) return false 

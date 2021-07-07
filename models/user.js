@@ -4,7 +4,8 @@ import bcrypt from 'bcrypt'
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, maxLength: 30, unique: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
+  password: { type: String, required: true },
+  image: { type: String, required: true }
 })
 
 // Reverse relationship that shows all shows related to current user

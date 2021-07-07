@@ -100,6 +100,7 @@ h3, p {
     border: 1px solid white;
     border-radius: 5px;
     padding: 7px;
+    text-decoration: none;
   }
 }
 
@@ -125,9 +126,7 @@ h3, p {
       font-size: 0.8em;
       a {
         color: #360719;
-      }
-      .login-register {
-        border: 1px solid #360719;
+        text-decoration: none;
       }
       .login-register:hover {
         color: black;
@@ -519,6 +518,48 @@ div.card-body {
     flex-direction: column;
     .suggested-drink {
       margin: 20px;
+      .suggested-drink-header {
+        .heiss-room-title {
+          display: flex;
+          align-items: center;
+          img {
+            border-radius: 100%;
+            margin-right: 10px;
+            object-fit: cover;
+          }
+          h3 {
+            font-size: 1.25em;
+          }
+        }
+        .information {
+          margin-top: 10px;
+          .drink-name {
+            font-family: "Marko One", serif;
+          }
+        }
+      }
+      .suggested-drink-footer {
+        .comments-stats {
+          display: flex;
+          justify-content: space-around;
+        }
+        .comments {
+          .heiss-room-comment {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            background-color: $primaryGrey;
+            padding: 5px;
+            border-radius: 10px;
+            img {
+              border-radius: 100%;
+              margin-right: 10px;
+              object-fit: cover;
+              // margin-bottom: 5px;
+            }
+          }
+        }
+      }
     }
     h3 {
       font-size: 1em;
@@ -526,3 +567,8 @@ div.card-body {
   }
 }
 
+
+.nav-bar-profile-image {
+  border-radius: 100%;
+  object-fit: cover;
+}

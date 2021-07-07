@@ -29,6 +29,7 @@ const Home = () => {
 
   const history = useHistory()
 
+
   const userIsAuthenticated = () => {
     const payload = getPayload()
     if (!payload) return false 

@@ -54,6 +54,9 @@ router.route('/login')
 router.route('/profile/:id')
   .get(secureRoute, getUserProfile)
 
+router.route('/profile')
+  .get(secureRoute, getUserProfile)
+
 
 
 export default router

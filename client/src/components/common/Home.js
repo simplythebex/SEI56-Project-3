@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Nav from './Nav.js'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 // import AnimatedMap from './AnimatedMap.js'
 import Container from 'react-bootstrap/Container'
 import style from '../../styles/images/style.png'
@@ -19,10 +19,38 @@ import greentea from '../../styles/images/greentea.png'
 import ladydrinks from '../../styles/images/ladydrinks.png'
 import mandrinks from '../../styles/images/mandrinks.png'
 import crossleg from '../../styles/images/crossleg.png'
+import { getPayload } from '../helpers/auth.js'
+import { Modal } from 'react-bootstrap'
 // import bighair from '../../styles/images/bighair.png'
 // import footer from '../../styles/images/footer.png'
+import LoginBox from '../auth/LoginBox.js'
 
 const Home = () => {
+
+  const history = useHistory()
+
+  const userIsAuthenticated = () => {
+    const payload = getPayload()
+    if (!payload) return false 
+    const now = Math.round(Date.now() / 1000)
+    return now < payload.exp
+  }
+
+  const handleClick = () => {
+    if (!userIsAuthenticated()) {
+      console.log('not authenticated')
+      handleShow()
+    } else {
+      console.log('authenticated')
+      history.push('/suggest-drink')
+    }
+  }
+
+  const [show, setShow] = useState(false)
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
+
 
   return (
     <>
@@ -34,9 +62,25 @@ const Home = () => {
           <div>
             <div className='paragraph'>
               <p>Your favourite tea and coffee.</p>
-              <Link to="/suggest-drink">
-                <Button variant='outline-light'><span>Suggest Hot Drinks</span></Button>{' '}
-              </Link>
+              <Button variant='outline-light' onClick={handleClick}><span>Suggest Hot Drinks</span></Button>{' '}
+
+              <Modal 
+                size="lg"
+                show={show} 
+                onHide={handleClose}>
+                <Modal.Header>
+                  <Modal.Title>Please log in to suggest a drink</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <LoginBox 
+                    path = '/suggest-drink'
+                  />
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>Close</Button>
+                </Modal.Footer>
+              </Modal>
+
               <Link to="/drinks">
                 <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
               </Link>

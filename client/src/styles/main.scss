@@ -620,11 +620,24 @@ width: 720px;
 // Profile Page
 
 
+.show-drink-breadcrumb {
+  margin-top: 0px;
+  padding: 0px;
+}
+
+
+div.header.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 div.createdItems.container {
-  h3.title {
-    text-align: center;
-  }
   
+  a.linkToShowSuggestion {
+    text-decoration: none;
+    color: #360719; 
+  }
   div.suggestions.container {
     display: flex;
     flex-direction: column;
@@ -632,8 +645,11 @@ div.createdItems.container {
     margin-bottom: 1rem;
     
   }
+  h5.card-header {
+    background-color: $primaryBlue;
+  }
   div.card {
-    background-color: #E8EDE5;
+    background-color: white;
   }
   div.createdItems.col {
     display: flex;
@@ -643,11 +659,11 @@ div.createdItems.container {
   .outline-light {
     margin-bottom: 3px;
   }
-  div.card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  // div.card-body {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
 }
 
 // Edit Page

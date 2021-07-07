@@ -3,7 +3,6 @@ import { useParams, useHistory } from 'react-router-dom'
 import Nav from './common/Nav.js'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
-//import Col from 'react-bootstrap/esm/Col'
 import SuggestDrinkForm from './helpers/SuggestDrinkForm'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './helpers/auth.js'
@@ -58,7 +57,7 @@ const SuggestionsEdit = () => {
       <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
       </Container >
-      <Container className="breadcrumbs">
+      <Container className="show-drink-breadcrumb">
         <Breadcrumb className="breadcrump">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/profile">Profile</Breadcrumb.Item>

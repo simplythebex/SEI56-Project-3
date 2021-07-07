@@ -9,6 +9,7 @@ import UserProfile from './components/UserProfile.js'
 import SuggestDrink from './components/Suggestions/SuggestDrink'
 import HeissRoom from './components/Suggestions/HeissRoom.js'
 import SuggestedDrinkShow from './components/SuggestedDrinkShow.js'
+import SuggestionsEdit from './components/SuggestionsEdit.js'
 
 
 
@@ -19,6 +20,9 @@ const App = () => {
     <>
       <BrowserRouter>
         <Switch>
+          <Route path="/profile/:id/edit">
+            <SuggestionsEdit />
+          </Route> 
           <Route path="/drinks/:id">
             <DrinkShow />
           </Route> 

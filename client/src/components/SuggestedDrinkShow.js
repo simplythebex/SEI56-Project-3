@@ -1,6 +1,6 @@
-import React, { useEffect, useState, } from 'react' 
+import React, { useEffect, useState } from 'react' 
 import axios from 'axios'
-import { useParams,  useHistory } from 'react-router-dom'
+import { useParams,  useHistory, Link } from 'react-router-dom'
 import Nav from './common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -29,6 +29,17 @@ const SuggestedDrinkShow = () => {
   }, [id])
   console.log(drink)
 
+  // const userIsOwner = (userId) => {
+  //   const payload = getPayload()
+  //   if (!payload) return
+  //   return payload.sub === userId
+  // }
+  // userIsOwner()
+  // console.log('drink', drink)
+
+
+
+
   const handleDelete = async () => {
     try {
       await axios.delete(`/api/suggested-drinks/${id}`, {
@@ -42,7 +53,7 @@ const SuggestedDrinkShow = () => {
     }
   }
 
-
+ 
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
@@ -75,10 +86,13 @@ const SuggestedDrinkShow = () => {
                 {drink.description}
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
+              
+              {/* {userIsOwner(drink.user._id) && */}
               <Container className="buttons" fluid>
-                <Button className="outline-light" variant="warning">Edit</Button>
+                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="warning">Edit</Button></Link>
                 <Button onClick={handleDelete} variant="warning">Delete</Button>
-              </Container>
+              </Container> 
+              {/* } */}
             </Container> 
           
           </div>

@@ -8,6 +8,7 @@ import DrinksIndex from './components/DrinksIndex.js'
 import UserProfile from './components/UserProfile.js'
 import SuggestDrink from './components/Suggestions/SuggestDrink'
 import HeissRoom from './components/Suggestions/HeissRoom.js'
+import ShopDrink from './components/Shopping/ShopDrink.js'
 
 
 
@@ -38,6 +39,9 @@ const App = () => {
           </Route>
           <Route path="/suggest-drink">
             <SuggestDrink />
+          </Route>
+          <Route path="/shop-drink">
+            <ShopDrink />
           </Route>
           <Route path="/">
             <Home />

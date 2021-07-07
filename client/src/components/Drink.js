@@ -7,12 +7,17 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
+// import { getTokenFromLocalStorage } from './helpers/auth'
+import { useHistory } from 'react-router-dom'
 
 
 
 const DrinkShow = () => {
   const [drink, setDrink] = useState({})
+  const [quantity, setQuantity] = useState(1)
   const { id } = useParams()
+
+  const history = useHistory()
 
 
   useEffect(() => {
@@ -27,6 +32,37 @@ const DrinkShow = () => {
     getData()
   }, [id])
   console.log(drink)
+
+  const handleChange = (event) => {
+    console.log('changed=>', event.target.value)
+    setQuantity(event.target.value)
+  }
+
+  const handleCart = async (event) => {
+    event.preventDefault()
+    const total = quantity * drink.price
+    const formData = {
+      drinkId: drink._id,
+      quantity: parseInt(quantity),
+      price: drink.price,
+      total: total,
+    }
+
+    console.log('My form data=>', formData)
+    
+    try {
+      await axios.post(
+        `/api/shopped-drinks/${drink._id}`,
+        formData
+        // {
+        //   headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+        // }
+      )
+      history.push('/shop-drink')
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <>
@@ -60,8 +96,10 @@ const DrinkShow = () => {
                 {drink.description}
               </p>
               <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
+              <p className="averageRating"><span>Price: £</span>{drink.price}</p>
+              <p className="averageRating"><span>Quantity: </span><input name="quantity" value={quantity} onChange={handleChange}></input></p>
               <Container className="buttons" fluid>
-                <Button variant="outline-warning">Add to basket</Button>{' '}
+                <Button variant="outline-warning" onClick={handleCart}>Add to basket</Button>{' '}
               </Container>
             </Container> 
           

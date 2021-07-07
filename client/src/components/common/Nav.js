@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import { getPayload } from '../helpers/auth'
 import ButtonSignup from './navbar/ButtonSignup.js'
@@ -9,13 +8,12 @@ import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const Nav = () => {
-  const [click, setClick] = useState(false)
 
   const [userInfo, setUserInfo] = useState([])
+  const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
-
 
   const userIsAuthenticated = () => {
     const payload = getPayload()
@@ -27,7 +25,7 @@ const Nav = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/profile', 
+        const { data } = await axios.get('/api/profile',
           {
             headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
           })
@@ -39,7 +37,6 @@ const Nav = () => {
     getData()
   }, [])
   console.log('userinfo', userInfo)
-
 
   return (
     <>

@@ -1,8 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
+import { getTokenFromLocalStorage } from '../helpers/auth'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
-const SuggestedDrinkCard = ({ drink, image, country, owner, description, comments, avgRating, funFact }) => {
+const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, comments, avgRating, funFact }) => {
+
+  const [formData, setFormData] = useState({
+    text: '',
+    rating: '',
+  })
+
+  const handleChange = (event) => {
+    console.log('changed')
+    const suggestedDrink = { ...formData, [event.target.name]: event.target.value }
+    setFormData(suggestedDrink)
+  }
+  console.log(formData)
+
+  const handleSubmit = async () => {
+    // event.preventDefault()
+    try {
+      await axios.post(
+        `/api/suggested-drinks/${id}/comments`,
+        formData,
+        {
+          headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+        }
+      )
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <Card className="suggested-drink" style={{ width: '40rem' }}>
@@ -47,16 +77,28 @@ const SuggestedDrinkCard = ({ drink, image, country, owner, description, comment
             </div>
           )
         })}</div>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formComment">
             <Form.Control 
               type="text" 
-              placeholder="Write a comment here" 
-              name="drink" 
+              placeholder="Write a comment... " 
+              name="text" 
               onChange={handleChange}
-              value={formData.comment}
+              value={formData.text}
             />
           </Form.Group>
+          <Form.Group className="mb-3" controlId="formComment">
+            <Form.Control 
+              type="text" 
+              placeholder="Rating here" 
+              name="rating" 
+              onChange={handleChange}
+              value={formData.rating}
+            />
+          </Form.Group>
+
+          <Button variant="light" type="Submit" block>Submit</Button>
+
         </Form>
       </Card.Footer>
     </Card>

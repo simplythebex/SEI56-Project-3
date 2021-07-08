@@ -40,6 +40,7 @@ const UserProfile = () => {
 
   return (
     <>
+    //* in CSS added wrapper called .profile-wrapper, please add tages to target}
       <Container fluid sticky="top" className="nav-container-pages">
         <Nav />
       </Container>

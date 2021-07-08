@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import NavHomepage from '../common/NavHomepage.js'
+import Nav from '../common/NavHomepage.js'
 import Container from 'react-bootstrap/Container'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
@@ -39,8 +39,8 @@ const ShopDrink = () => {
 
   return (
     <>
-      <Container fluid sticky="top" className='nav-container-pages'>
-        <NavHomepage />
+      <Container fluid className='nav-container-pages'>
+        <Nav />
         <div className='cart-style'>
           <span>
               Cart

@@ -177,6 +177,12 @@ h3, p {
 
 //** HOMEPAGE navbar styling ** //
 
+// nav bar  image styling
+.nav-bar-profile-image {
+  border-radius: 100%;
+  object-fit: cover;
+  background-color: $primaryBlue;
+}
 
 .homepage-navbar-wrapper {
   background-color: rgba(2407, 0, 0, 0);
@@ -532,7 +538,11 @@ h3, p {
 
 }
 
-.outer-box {
+
+/* ---------------------------------------------------------------*/
+// LOGIN AND REGUSTER PAGES STYLING //
+
+.login-register-outer-box {
   max-width: 50%;
   background-color: $primaryYellow;
   border: 2px solid black;
@@ -564,7 +574,7 @@ h3, p {
   }
 }
 
-
+/* ---------------------------------------------------------------*/
 // Styling for Show Drink Route
 .show-drink {
   .image-text {
@@ -614,128 +624,135 @@ h3, p {
     }
   }
 }
+/* ---------------------------------------------------------------*/
+// MAP STYLING //
+// .map-styling {
+//   div.card-group {
+//     p {
+//     margin-top: 30px;
+//     color: #360719;
+//     width: 718px;
+//     word-spacing: 4px;
+//     font-size: 24px;
+//     margin-bottom: 60px;
+//     }
+//   }
+  
+//   .map-container {
+//     height: calc(100vh - 52px);
+//     width: 100%;
+//   }
+  
+//   .map-controller {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     max-width: 220px;
+//     background: #fff;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+//     padding: 0.8rem;
+//     margin: 1rem;
+//   }
+  
+//   .buttons {
+//     justify-content: space-evenly !important;
+//   }
+  
+//   .marker {
+//     font-size: 20px;
+//   }
+  
+//   .rocket {
+//     display: block;
+//     transform: translateX(-20px);
+//   }
+  
+//   .footer {
+//     background-color: $primaryYellow;
+//     text-align: center;
+//     margin-top: 100px;
+//     margin-bottom: 0;
+//     padding: 20px 0;
+//   }
+  
+//   .covered {
+//   margin-bottom: 70px;
+//   margin-top: 40px;
+//   font-size: 24px;
+//   width: 720px;
+//   }
+// }
 
-// this needs to be wrapped or else it breaks styling on show drink page
-div.card-group {
-  p {
-  margin-top: 30px;
-  color: #360719;
-  width: 718px;
-  word-spacing: 4px;
-  font-size: 24px;
-  margin-bottom: 60px;
-  }
-}
-
-.map-container {
-  height: calc(100vh - 52px);
-  width: 100%;
-}
-
-.map-controller {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 220px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  padding: 0.8rem;
-  margin: 1rem;
-}
-
-.buttons {
-  justify-content: space-evenly !important;
-}
-
-.marker {
-  font-size: 20px;
-}
-
-.rocket {
-  display: block;
-  transform: translateX(-20px);
-}
-
-.footer {
-  background-color: $primaryYellow;
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 0;
-  padding: 20px 0;
-}
-
-.covered {
-margin-bottom: 70px;
-margin-top: 40px;
-font-size: 24px;
-width: 720px;
-}
+/* ---------------------------------------------------------------*/
 
 // Profile Page
-
-
-.show-drink-breadcrumb {
-  margin-top: 0px;
-  padding: 0px;
-}
-
-
-div.header.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-div.createdItems.container {
+.profile-wrapper {
+  .show-drink-breadcrumb {
+    margin-top: 0px;
+    padding: 0px;
+  }
   
-  a.linkToShowSuggestion {
-    text-decoration: none;
-    color: #360719; 
-  }
-  div.suggestions.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
-    
-  }
-  h5.card-header {
-    background-color: $primaryBlue;
-  }
-  div.card {
-    background-color: white;
-  }
-  div.createdItems.col {
+  
+  div.header.container {
     display: flex;
     flex-direction: row;
-    max-width: 300px;
+    justify-content: space-between;
   }
-  .outline-light {
-    margin-bottom: 3px;
+  
+  div.createdItems.container {
+    
+    a.linkToShowSuggestion {
+      text-decoration: none;
+      color: #360719; 
+    }
+    div.suggestions.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+      
+    }
+    h5.card-header {
+      background-color: $primaryBlue;
+    }
+    div.card {
+      background-color: white;
+    }
+    div.createdItems.col {
+      display: flex;
+      flex-direction: row;
+      max-width: 300px;
+    }
+    .outline-light {
+      margin-bottom: 3px;
+    }
+    // div.card-body {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
   }
-  // div.card-body {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
+  
 }
 
-// Edit Page
-div.suggestChangeForm.container {
-  max-width: min-content;
-  background-color: #E8EDE5;
-  padding: 2rem;
-}
-//User profile Edit page
-
-div.image-text {
-  button.btn.btn-primary {
-    margin-left: 5px;
+// Edit Profile Page
+.edit-profile-wrapper {
+  div.suggestChangeForm.container {
+    max-width: min-content;
+    background-color: #E8EDE5;
+    padding: 2rem;
   }
-
-
+  
+  div.image-text {
+    button.btn.btn-primary {
+      margin-left: 5px;
+    }
+  
+  
+  }
 }
+
 
 // $primaryPink: #F7CAC7;
 // $primaryBlue: #99CEE3;
@@ -806,14 +823,10 @@ div.image-text {
   }
 }
 
-// nav bar  image styling
-.nav-bar-profile-image {
-  border-radius: 100%;
-  object-fit: cover;
-  background-color: $primaryBlue;
-}
+/* ---------------------------------------------------------------*/
 
 // Cart styling
+
 .cart-wrapper.container {
   .cartpage {
     display: flex;
@@ -854,6 +867,8 @@ div.image-text {
     }
   }
 }
+
+/* ---------------------------------------------------------------*/
 
 // about page styling 
 .about-page {

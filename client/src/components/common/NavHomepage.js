@@ -81,21 +81,17 @@ const NavHompage = () => {
             {!userIsAuthenticated() ? 
               <>
                 <li className="nav-item">
-                  <Link to="/register" className="nav-links-mobile" onClick={closeMobileMenu}>
-                  Sign up
-                  </Link> 
+                  <ButtonLogin />
                 </li>
                 <li className="nav-item">
-                  <Link to="/login" className="nav-links-mobile" onClick={closeMobileMenu}>
-                  Login
-                  </Link> 
+                  <ButtonSignup />
                 </li>
-                <ButtonLogin />
-                <ButtonSignup />
+
+                
 
               </>
               :
-              <Link to="/profile" >
+              <Link to="/profile" className="link-login-homepage">
                 <img
                   src={userInfo.image}
                   alt={userInfo.uername}
@@ -103,7 +99,7 @@ const NavHompage = () => {
                   width={50}
                   className="nav-bar-profile-image"
                 />
-                <Navbar.Brand clasName="login-register" href="/profile"> {userInfo.username}</Navbar.Brand>
+                <Navbar.Brand className="login-register" href="/profile"> {userInfo.username}</Navbar.Brand>
               </Link>
             }
           </ul>

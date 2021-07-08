@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Nav from '../common/NavHomepage.js'
+import NavHomepage from '../common/NavHomepage.js'
 import Container from 'react-bootstrap/Container'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
@@ -39,18 +39,18 @@ const ShopDrink = () => {
 
   return (
     <>
-      <Container fluid className='nav-container-pages'>
-        <Nav />
-        <div className='cart-style'>
-          <span>
-              Cart
-            <span className='cartlogo'>0</span>
-          </span>
-          <Link to='/shop-drink' className='cart-link'>
-            <img src={CartIcon} alt='' width='20'/>
-          </Link>
-        </div>
+      <Container fluid sticky="top" className='nav-container-pages'>
+        <NavHomepage />
       </Container>
+      <div className='cart-style'>
+        <span>
+              Cart
+          <span className='cartlogo'>0</span>
+        </span>
+        <Link to='/shop-drink' className='cart-link'>
+          <img src={CartIcon} alt='' width='20'/>
+        </Link>
+      </div>
       <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
         <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>

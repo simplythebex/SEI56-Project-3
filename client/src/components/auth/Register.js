@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Nav from '../common/Nav'
+import NavHomepage from '../common/NavHomepage'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
 import { ImageUploadField } from '../helpers/ImageUploadField'
+import Footer from '../common/Footer'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const Register = () => {
 
@@ -53,10 +55,15 @@ const Register = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
-      <Container className = "login-register-outer-box">
+      <Breadcrumb className="show-drink-breadcrumb">
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item active>Register</Breadcrumb.Item>
+      </Breadcrumb>
+
+      <Container className = "outer-box">
         <h2>Register</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="fromBasicUsername">
@@ -120,6 +127,8 @@ const Register = () => {
         <Link to="/login" className="login-register">Already registered? Login here!</Link>
 
       </Container>
+
+      <Footer />
     </>
   )
 }

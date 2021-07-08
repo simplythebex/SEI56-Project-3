@@ -173,34 +173,85 @@ h3, p {
 /* ---------------------------------------------------------------*/
 //                     //** NAVBAR STYLING **//
 
-
-
-//** HOMEPAGE navbar styling ** //
-
-// nav bar  image styling
 .nav-bar-profile-image {
   border-radius: 100%;
   object-fit: cover;
   background-color: $primaryBlue;
 }
 
+//** HOMEPAGE navbar styling ** //
+
+.homepage {
+  .hero {
+    .container-fluid {
+      .homepage-navbar-wrapper {
+        .nav-logo-div {
+          .navbar-logo {
+            color: white;
+          }
+        }
+
+        .menu-icon {
+          color: white;
+        }
+
+        .nav-menu {
+          .nav-item {
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 1.2rem;
+            }
+            }
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 1.2rem;
+          }
+          .signup-btn{
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            padding: 5px;
+            margin-left: 5px;
+            text-decoration: none;
+            border: 1px solid white;
+          }
+          .login-btn{
+            color: white;
+            text-decoration: none;
+            border: none;
+            background: transparent;
+            // border: 1px solid $primaryBrown;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nav-container-pages.container-fluid {
+  background-color: $primaryYellow;
+  color: $primaryBrown;
+
+  a {
+    font-size: 1.2rem;
+    color: $primaryBrown;
+    text-decoration: none;
+  }
+}
+
 .homepage-navbar-wrapper {
   background-color: rgba(2407, 0, 0, 0);
   height: 80px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-
-  a {
-    font-size: 1.2rem;
-    color: #FFFFFF;
-    text-decoration: none;
-  }
   
   .nav-logo-div {
     .navbar-logo {
       font-family: 'Marko One', serif;
-      color: #FFFFFF;
+      color: $primaryBrown;
       justify-self: start;
       cursor: pointer;
       text-decoration: none;
@@ -208,18 +259,20 @@ h3, p {
     }
   }
   .signup-btn{
-    background: $primaryPink;
     border-radius: 5px;
+    background-color: $primaryYellow;
     color: $primaryBrown;
     padding: 5px;
+    margin-left: 5px;
     text-decoration: none;
-    border: none;
+    border: 1px solid $primaryBrown;
   }
   .login-btn{
-    color: #FFFFFF;
+    color: $primaryBrown;
     text-decoration: none;
     border: none;
     background: transparent;
+    // border: 1px solid $primaryBrown;
   }
 
   // button:focus {
@@ -231,21 +284,40 @@ h3, p {
 
   //*? Homepage iPad screen size *//
   @media screen and (max-width: 768px) {
+
+    .homepage {
+      .hero {
+              .fas.fa-times, .fas.fa-times::before {
+                color: #FFFFFF;
+                font-size: 2rem;
+              }
+        .container-fluid {
+          .homepage-navbar-wrapper {
+            .menu-icon {
+              // i.fas.fa-bars::before {
+              //   color: white;
+              // }
+              // .fa-firstdraft {
+              //   color: #FFFFFF;
+              //   margin-left: 0.5rem;
+              //   font-size: 1.6rem;
+              // }
+              // .fas.fa-times, .fas.fa-times::before {
+              //   color: #FFFFFF;
+              //   font-size: 2rem;
+              // }
+            }
+          }
+        }
+      }
+    }
   .homepage-nav {
     color: #FFFFFF;
     
     .fa-bars {
       color: #FFFFFF;
     }
-    .fa-firstdraft {
-      color: #FFFFFF;
-      margin-left: 0.5rem;
-      font-size: 1.6rem;
-    }
-    .fas.fa-times, .fas.fa-times::before {
-      color: #FFFFFF;
-      font-size: 2rem;
-    }
+    
 
     .nav-menu {
       display: flex;
@@ -269,13 +341,6 @@ h3, p {
     }
   }
 }
-  
-  
-
-    
-  
-  
-  
   }
 
 
@@ -284,26 +349,26 @@ h3, p {
 
 //** ALL PAGES navbar styling ** //
 
-  .navbar-wrapper {
-    background-color: $primaryPink;
-    height: 80px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.2rem;
-  }
+  // .navbar-wrapper {
+  //   background-color: $primaryPink;
+  //   height: 80px;
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   align-items: center;
+  //   font-size: 1.2rem;
+  // }
 
-  .nav-logo-div {
-    .navbar-logo {
-      font-family: 'Marko One', serif;
-      color: $primaryBrown;
-      justify-self: start;
-      // margin-left: 20px;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 2rem;
-    }
-  }
+  // .nav-logo-div {
+  //   .navbar-logo {
+  //     font-family: 'Marko One', serif;
+  //     color: $primaryBrown;
+  //     justify-self: start;
+  //     // margin-left: 20px;
+  //     cursor: pointer;
+  //     text-decoration: none;
+  //     font-size: 2rem;
+  //   }
+  // }
   
   
   .fa-firstdraft {
@@ -314,36 +379,34 @@ h3, p {
   
   .nav-menu {
     display: flex;
-    justify-content: space-between;
+    margin: 0;
     align-items: center;
     list-style: none;
     text-align: center;
     width: 70vw;
-    margin-right: 2rem;
-  }
-  
-  .nav-item {
-    display: flex;
-    align-items: center;
-    height: 80px;
-  }
-  
-  .nav-links {
-    a {
-      color: $primaryBrown;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-    }
+    justify-content: flex-end;
+    
 
-  }
-  
-  .nav-links:hover {
-    font-weight: bold;
-    transition: all 0.2s ease-out;
-  }
-  
-  .fa-bars {
-    color: $primaryBrown;
+    .nav-item {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      margin-right: 50px;
+
+
+      a {
+        .nav-links {
+          color: $primaryBrown;
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          margin-right: 20px;
+        }
+      }
+      .nav-links:hover {
+        text-decoration: underline;
+        transition: all 0.2s ease-out;
+      }
+    }
   }
   
   .nav-links-mobile {
@@ -451,7 +514,7 @@ h3, p {
 
 // * All colours are placwholders atm - Daria
 .index-wrapper.container-fluid {
-  background-color: $primaryGrey;
+  // background-color: $primaryGrey;
   // hero section 
   .align-items-center.index-hero-row.row {
     .index-hero-img {
@@ -463,7 +526,7 @@ h3, p {
       height: 505px;
     }
     .index-hero-txt {
-      background-color: $primaryYellow; 
+      // background-color: $primaryPink; 
       text-align: center;
       padding: 100px;
       p {
@@ -530,7 +593,7 @@ h3, p {
           color: $primaryBrown;
           border: none;
           margin-left: 70px;
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
       }
     }
@@ -567,14 +630,18 @@ h3, p {
 // Becca breadcrumb styling
 .show-drink-breadcrumb {
   margin-top: 20px;
-  padding: 0 20px;
+  padding-left: 40px;
   a {
     color: #360719;
     text-decoration: none;
   }
 }
 
-/* ---------------------------------------------------------------*/
+.breadcrumb {
+  padding: 20px 0 0 27px;
+}
+
+
 // Styling for Show Drink Route
 .show-drink {
   .image-text {
@@ -763,7 +830,7 @@ h3, p {
 
 // Becca styling for Heiss room
 .heiss-room-wrapper {
-  background-color: $primaryGrey;
+  // background-color: $primaryGrey;
   .drink-wrapper {
     display: flex;
     justify-content: center;

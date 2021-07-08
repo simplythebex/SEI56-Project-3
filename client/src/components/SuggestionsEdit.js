@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
-import Nav from './common/Nav.js'
+import NavHomepage from '../components/common/NavHomepage'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
 import SuggestDrinkForm from './helpers/SuggestDrinkForm'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './helpers/auth.js'
+import Footer from './common/Footer'
 
 const SuggestionsEdit = () => {
   const { id } = useParams()
@@ -57,10 +58,10 @@ const SuggestionsEdit = () => {
     //* in CSS added wrapper called .edit-profile-wrapper, please add tages to target*//
     
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container >
       <Container className="show-drink-breadcrumb">
-        <Breadcrumb className="breadcrump">
+        <Breadcrumb className="breadcrumb">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/profile">Profile</Breadcrumb.Item>
           <Breadcrumb.Item active>Edit</Breadcrumb.Item>
@@ -75,6 +76,7 @@ const SuggestionsEdit = () => {
           formData = {FormData}
         />
       </Container>
+      <Footer />
     </>
   )
 

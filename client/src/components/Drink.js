@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react' 
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-import Nav from './common/Nav.js'
+import NavHomepage from './common/NavHomepage'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -67,7 +67,7 @@ const DrinkShow = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
       <Breadcrumb className="show-drink-breadcrumb">

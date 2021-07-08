@@ -41,16 +41,16 @@ const ShopDrink = () => {
     <>
       <Container fluid sticky="top" className='nav-container-pages'>
         <NavHomepage />
-        <div className='cart-style'>
-          <span>
-              Cart
-            <span className='cartlogo'>0</span>
-          </span>
-          <Link to='/shop-drink' className='cart-link'>
-            <img src={CartIcon} alt='' width='20'/>
-          </Link>
-        </div>
       </Container>
+      <div className='cart-style'>
+        <span>
+              Cart
+          <span className='cartlogo'>0</span>
+        </span>
+        <Link to='/shop-drink' className='cart-link'>
+          <img src={CartIcon} alt='' width='20'/>
+        </Link>
+      </div>
       <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
         <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>

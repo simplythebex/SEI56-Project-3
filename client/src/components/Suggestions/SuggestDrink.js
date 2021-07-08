@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import Nav from '../common/Nav'
+import NavHomepage from '../common/NavHomepage'
 import Container from 'react-bootstrap/Container'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import { useHistory } from 'react-router-dom'
@@ -49,7 +49,7 @@ const SuggestDrink = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
       <Container className = "outer-box">

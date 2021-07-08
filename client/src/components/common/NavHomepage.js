@@ -95,7 +95,7 @@ const NavHompage = () => {
 
               </>
               :
-              <Link to="/profile" >
+              <Link to="/profile" className="link-login-homepage">
                 <img
                   src={userInfo.image}
                   alt={userInfo.uername}
@@ -103,7 +103,7 @@ const NavHompage = () => {
                   width={50}
                   className="nav-bar-profile-image"
                 />
-                <Navbar.Brand clasName="login-register" href="/profile"> {userInfo.username}</Navbar.Brand>
+                <Navbar.Brand className="login-register" href="/profile"> {userInfo.username}</Navbar.Brand>
               </Link>
             }
           </ul>

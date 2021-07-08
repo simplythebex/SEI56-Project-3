@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
-import Nav from './common/Nav.js'
+import NavHomepage from '../components/common/NavHomepage'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
 import SuggestDrinkForm from './helpers/SuggestDrinkForm'
@@ -55,7 +55,7 @@ const SuggestionsEdit = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container >
       <Container className="show-drink-breadcrumb">
         <Breadcrumb className="breadcrump">

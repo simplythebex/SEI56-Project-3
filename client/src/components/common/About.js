@@ -15,30 +15,43 @@ const About = () => {
 
 
       
-      <Breadcrumb>
+      <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
         <Breadcrumb.Item active>About</Breadcrumb.Item>
       </Breadcrumb>
-      <Container >
+      <Container className="about-page">
         <Row>
-          <Col>This is the title section</Col>
+          <Col className="about-title">About this project</Col>
         </Row>
-        <Row>
-          <Col clasName="names">
-            <Row>
-              <span>name and <span>socials icons</span></span>
+        <Row className="information">
+          <Col className="names">
+            <Row className="subtitle">The Heiss Team</Row>
+            <Row className="bex">
+              <a href="https://github.com/simplythebex" rel="noreferrer"target="_blank"><i className="fab fa-github"></i> Bex Jones</a>
             </Row>
-            <Row>
-              <span>name and <span>socials icons</span></span>
+            <Row className="daria">
+              <a href="https://github.com/daria-kafler" rel="noreferrer"target="_blank"><i className="fab fa-github"></i> Daria Kafler</a>
             </Row>
-            <Row>
-              <span>name and <span>socials icons</span></span>
+            <Row className="ole">
+              <a href="https://github.com/eintrittfrei" rel="noreferrer"target="_blank"><i className="fab fa-github"></i> Ole Nascimento</a>
+            </Row>
+            <Row className="victoria">
+              <a href="https://github.com/victoriaolanipekun" rel="noreferrer"target="_blank"><i className="fab fa-github"></i> Victoria Olanipekun</a>
             </Row>
           </Col>
           <Col className="project">
-            <Row>technologies used</Row>
-            <Row>link to readme</Row>
+            <Row className="subtitle">Technologies Used:</Row>
+            <Row>
+              <ul>
+                <li>MongoDB</li>
+                <li>Express</li>
+                <li>React</li>
+                <li>Node</li>
+                <li>Bootstrap</li>
+              </ul>
+            </Row>
           </Col>
+
         </Row>
       </Container>
       

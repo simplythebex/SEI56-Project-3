@@ -64,22 +64,6 @@ const SuggestDrinkForm = ({ handleSubmit, handleChange, formData, handleImageUrl
         /> 
       </Form.Group>
 
-      <Form.Group>
-        <Form.Control 
-          as="select" 
-          value={formData.origin} 
-          name="origin" 
-          onChange={handleChange}>
-          <option>- Where is your drink from? -</option>
-          <option>Africa</option>
-          <option>Antartica</option>
-          <option>Asia</option>
-          <option>Europe</option>
-          <option>North America</option>
-          <option>Oceania</option>
-          <option>South America</option>
-        </Form.Control>
-      </Form.Group>
       <br />
 
       <ImageUploadField 

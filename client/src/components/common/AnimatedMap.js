@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import ReactMapGL, { Marker, FlyToInterpolator } from 'react-map-gl'
+import ReactMapGL from 'react-map-gl'
   
 const AnimatedMap = () => {
+
+  const reactMapToken = process.env.REACT_APP_MAPBOX_TOKEN
+
+  console.log('react-map-token', reactMapToken)
   const [locationData, setLocationData] = useState([])
   //const typesOfLocation = ['All']
   const [viewport, setNewViewport] = useState({
@@ -83,7 +87,7 @@ const AnimatedMap = () => {
     <div>
       {locationData.length > 0 ? 
         <ReactMapGL 
-          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_ACCESS_TOKEN}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
           height="100%"
           width="100%"
           mapStyle='mapbox://styles/mapbox/outdoors-v11'
@@ -114,6 +118,7 @@ const AnimatedMap = () => {
       }
     </div>
   )
+
 }
 
-// export default AnimatedMap
+export default AnimatedMap

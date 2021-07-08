@@ -55,11 +55,6 @@ const Nav = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/#index" className="nav-links" onClick={closeMobileMenu}>
-                Order Online
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/heiss-room" className="nav-links" onClick={closeMobileMenu}>
                 Heiss Room
               </Link>
@@ -88,7 +83,7 @@ const Nav = () => {
               <Link to="/profile" >
                 <img
                   src={userInfo.image}
-                  alt={userInfo.uername}
+                  alt={userInfo.username}
                   height={50}
                   width={50}
                   className="nav-bar-profile-image"

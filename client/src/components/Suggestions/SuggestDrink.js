@@ -16,8 +16,7 @@ const SuggestDrink = () => {
     country: '',
     description: '' ,
     image: '' ,
-    funFact: '' ,
-    origin: '',
+    funFact: '',
   })
 
   const handleChange = (event) => {

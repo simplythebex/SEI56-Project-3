@@ -83,7 +83,7 @@ const Nav = () => {
               <Link to="/profile" >
                 <img
                   src={userInfo.image}
-                  alt={userInfo.uername}
+                  alt={userInfo.username}
                   height={50}
                   width={50}
                   className="nav-bar-profile-image"

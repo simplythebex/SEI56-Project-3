@@ -370,7 +370,8 @@ h3, p {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      // padding: 100px;
+      padding: 100px;
+      height: 505px;
     }
     .index-hero-txt {
       background-color: $primaryYellow; 
@@ -415,14 +416,22 @@ h3, p {
       // justify-content: space-between;
     }
     .card {
-      max-width: 300px;
-      margin-bottom: 30px;
-      margin-left: 15px;
-      margin-right: 15px;
+      // max-width: 300px;
+      // margin-bottom: 30px;
+      // margin-left: 15px;
+      // margin-right: 15px;
       border: none;
+      img {
+        object-fit: cover;
+      }
+      .type {
+        font-size: 1.1em;
+        height: 100px;
+      }
     }
       .card-header {
         background-color:$primaryPink;
+        height: 125px;
       }
       .card-btn {
         align-items: center;
@@ -431,6 +440,8 @@ h3, p {
           background-color: $primaryBlue;
           color: $primaryBrown;
           border: none;
+          margin-left: 70px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -660,7 +671,8 @@ div.image-text {
         .information {
           margin-top: 10px;
           .drink-name {
-            font-family: "Marko One", serif;
+            font-weight: bold;
+            font-size: 1.2em;
           }
         }
       }
@@ -681,6 +693,9 @@ div.image-text {
               border-radius: 100%;
               margin-right: 10px;
               object-fit: cover;
+            }
+            .comment-owner {
+              font-weight: bold;
             }
           }
         }

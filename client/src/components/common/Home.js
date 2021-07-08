@@ -110,7 +110,7 @@ const Home = () => {
                   </h2>
                 </div>
                 <div className='covered'>
-                  <p>We Heiss - a revolutionary hot drink service that delivers quality coffee or tea in minutes. With our carefully curated products, we have got everything you need: from Cuban espresso to pink tea, to Maghrebi mint tea and Cafe de Olla, browse and order.</p>
+                  <p>We are Heiss - a revolutionary hot drink service that delivers quality coffee or tea in minutes. With our carefully curated products, we have got everything you need: from Cuban espresso to pink tea, to Maghrebi mint tea and Cafe de Olla, browse and order.</p>
                 </div>
               </div>
 
@@ -210,8 +210,6 @@ const Home = () => {
               <Button variant='warning' className="button">Join Our Community</Button>{' '}
             </Link>
           </div>
-
-          {/* <AnimatedMap /> */}
           
         </Container>
       </div>

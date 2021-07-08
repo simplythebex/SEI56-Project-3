@@ -71,7 +71,7 @@ const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, com
                 height={50}
               />
               <div className="comment-user">
-                <h3>{comment.owner.username}</h3>
+                <h3 className="comment-owner">{comment.owner.username}</h3>
                 <h3>{comment.text}</h3>
               </div>
             </div>

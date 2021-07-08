@@ -156,14 +156,12 @@ const DrinksIndex = () => {
               { hasError ? 'Oops,. something went wrong!' : 'Loading...' }
             </h3>
           }
-
-
         </Row>
-
       </Container>
       <Footer />
 
     </>
+    
   )
 
 }

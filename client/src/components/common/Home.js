@@ -3,7 +3,7 @@ import NavHomepage from '../common/NavHomepage'
 import { Link, useHistory } from 'react-router-dom'
 // import AnimatedMap from './AnimatedMap.js'
 import Container from 'react-bootstrap/Container'
-import style from '../../styles/images/style.png'
+import style from '../../styles/images/style.svg'
 import Happy from '../../styles/images/Happy.png'
 import Need from '../../styles/images/Need.png'
 import Choose from '../../styles/images/Choose.png'
@@ -60,11 +60,12 @@ const Home = () => {
         <Container fluid className='hero'>
           <NavHomepage />
           <div className='hot'>
-            <h2>Hot Drinks 
-              <br/>Around The World</h2>
+            <h2 className='hero-title'>
+              Hot Brews 
+              <br/>from Around The World</h2>
             <div>
               <div className='paragraph'>
-                <p>Your favourite tea and coffee.</p>
+                <p>Discover your new favourite coffees and teas.</p>
                 <Button variant='outline-light' onClick={handleClick}><span>Suggest Hot Drinks</span></Button>{' '}
 
                 <Modal 
@@ -111,7 +112,8 @@ const Home = () => {
                   </h2>
                 </div>
                 <div className='covered'>
-                  <p>We are Heiss - a revolutionary hot drink service that delivers quality coffee or tea in minutes. With our carefully curated products, we have got everything you need: from Cuban espresso to pink tea, to Maghrebi mint tea and Cafe de Olla, browse and order.</p>
+                  <p>We are Heiss - a revolutionary hot drink service that delivers quality coffee or tea you never even heard of! 
+                    <br/>With our carefully curated products, we&#39;ve got you covered: from Pakistani Pink Tea to Maghrebi Spiced Mint Tea and Cafe de Olla, just choose browse and order.</p>
                 </div>
               </div>
 

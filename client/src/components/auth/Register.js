@@ -6,6 +6,8 @@ import NavHomepage from '../common/NavHomepage'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
 import { ImageUploadField } from '../helpers/ImageUploadField'
+import Footer from '../common/Footer'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const Register = () => {
 
@@ -55,6 +57,11 @@ const Register = () => {
       <Container fluid sticky="top" className="nav-container-pages">
         <NavHomepage />
       </Container>
+
+      <Breadcrumb className="show-drink-breadcrumb">
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item active>Register</Breadcrumb.Item>
+      </Breadcrumb>
 
       <Container className = "outer-box">
         <h2>Register</h2>
@@ -120,6 +127,8 @@ const Register = () => {
         <Link to="/login" className="login-register">Already registered? Login here!</Link>
 
       </Container>
+
+      <Footer />
     </>
   )
 }

@@ -196,11 +196,29 @@ h3, p {
             a {
               color: white;
               text-decoration: none;
+              font-size: 1.2rem;
             }
             }
             a {
               color: white;
               text-decoration: none;
+              font-size: 1.2rem;
+          }
+          .signup-btn{
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+            padding: 5px;
+            margin-left: 5px;
+            text-decoration: none;
+            border: 1px solid white;
+          }
+          .login-btn{
+            color: white;
+            text-decoration: none;
+            border: none;
+            background: transparent;
+            // border: 1px solid $primaryBrown;
           }
         }
       }
@@ -237,18 +255,20 @@ h3, p {
     }
   }
   .signup-btn{
-    background: $primaryPink;
     border-radius: 5px;
+    background-color: $primaryYellow;
     color: $primaryBrown;
     padding: 5px;
+    margin-left: 5px;
     text-decoration: none;
-    border: none;
+    border: 1px solid $primaryBrown;
   }
   .login-btn{
-    color: #FFFFFF;
+    color: $primaryBrown;
     text-decoration: none;
     border: none;
     background: transparent;
+    // border: 1px solid $primaryBrown;
   }
 
   // button:focus {
@@ -260,21 +280,40 @@ h3, p {
 
   //*? Homepage iPad screen size *//
   @media screen and (max-width: 768px) {
+
+    .homepage {
+      .hero {
+              .fas.fa-times, .fas.fa-times::before {
+                color: #FFFFFF;
+                font-size: 2rem;
+              }
+        .container-fluid {
+          .homepage-navbar-wrapper {
+            .menu-icon {
+              // i.fas.fa-bars::before {
+              //   color: white;
+              // }
+              // .fa-firstdraft {
+              //   color: #FFFFFF;
+              //   margin-left: 0.5rem;
+              //   font-size: 1.6rem;
+              // }
+              // .fas.fa-times, .fas.fa-times::before {
+              //   color: #FFFFFF;
+              //   font-size: 2rem;
+              // }
+            }
+          }
+        }
+      }
+    }
   .homepage-nav {
     color: #FFFFFF;
     
     .fa-bars {
       color: #FFFFFF;
     }
-    .fa-firstdraft {
-      color: #FFFFFF;
-      margin-left: 0.5rem;
-      font-size: 1.6rem;
-    }
-    .fas.fa-times, .fas.fa-times::before {
-      color: #FFFFFF;
-      font-size: 2rem;
-    }
+    
 
     .nav-menu {
       display: flex;
@@ -371,10 +410,6 @@ h3, p {
         transition: all 0.2s ease-out;
       }
     }
-  }
-  
-  .fa-bars {
-    color: $primaryBrown;
   }
   
   .nav-links-mobile {
@@ -561,7 +596,7 @@ h3, p {
           color: $primaryBrown;
           border: none;
           margin-left: 70px;
-          margin-bottom: 30px;
+          margin-bottom: 50px;
         }
       }
     }
@@ -594,11 +629,15 @@ h3, p {
 // Becca breadcrumb styling
 .show-drink-breadcrumb {
   margin-top: 20px;
-  padding: 0 20px;
+  padding-left: 40px;
   a {
     color: #360719;
     text-decoration: none;
   }
+}
+
+.breadcrumb {
+  padding: 20px 0 0 27px;
 }
 
 
@@ -783,7 +822,7 @@ div.image-text {
 
 // Becca styling for Heiss room
 .heiss-room-wrapper {
-  background-color: $primaryGrey;
+  // background-color: $primaryGrey;
   .drink-wrapper {
     display: flex;
     justify-content: center;

@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/esm/Container'
 import SuggestDrinkForm from './helpers/SuggestDrinkForm'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './helpers/auth.js'
+import Footer from './common/Footer'
 
 const SuggestionsEdit = () => {
   const { id } = useParams()
@@ -58,7 +59,7 @@ const SuggestionsEdit = () => {
         <NavHomepage />
       </Container >
       <Container className="show-drink-breadcrumb">
-        <Breadcrumb className="breadcrump">
+        <Breadcrumb className="breadcrumb">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/profile">Profile</Breadcrumb.Item>
           <Breadcrumb.Item active>Edit</Breadcrumb.Item>
@@ -73,6 +74,7 @@ const SuggestionsEdit = () => {
           formData = {FormData}
         />
       </Container>
+      <Footer />
     </>
   )
 

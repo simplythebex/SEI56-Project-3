@@ -81,17 +81,13 @@ const NavHompage = () => {
             {!userIsAuthenticated() ? 
               <>
                 <li className="nav-item">
-                  <Link to="/register" className="nav-links-mobile" onClick={closeMobileMenu}>
-                  Sign up
-                  </Link> 
+                  <ButtonLogin />
                 </li>
                 <li className="nav-item">
-                  <Link to="/login" className="nav-links-mobile" onClick={closeMobileMenu}>
-                  Login
-                  </Link> 
+                  <ButtonSignup />
                 </li>
-                <ButtonLogin />
-                <ButtonSignup />
+
+                
 
               </>
               :

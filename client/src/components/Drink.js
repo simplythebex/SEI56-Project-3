@@ -3,12 +3,13 @@ import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import NavHomepage from './common/NavHomepage'
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+// import Row from 'react-bootstrap/Row'
+// import Col from 'react-bootstrap/Col'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Button from 'react-bootstrap/Button'
 // import { getTokenFromLocalStorage } from './helpers/auth'
 import { useHistory } from 'react-router-dom'
+import Footer from './common/Footer'
 
 
 
@@ -107,12 +108,8 @@ const DrinkShow = () => {
         
         </div>
       </Container>
-      
-      <Container className="footer" fluid>
-        <Row>
-          <Col>Map</Col>
-        </Row>
-      </Container>
+
+      <Footer />
       
     </>
   )

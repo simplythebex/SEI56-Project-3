@@ -24,6 +24,7 @@ import { Modal } from 'react-bootstrap'
 // import bighair from '../../styles/images/bighair.png'
 // import footer from '../../styles/images/footer.png'
 import LoginBox from '../auth/LoginBox.js'
+import Footer from './Footer'
 
 const Home = () => {
 
@@ -213,9 +214,7 @@ const Home = () => {
           
         </Container>
       </div>
-      <div className='footer'>
-        <p>Made with 🖤 by the Heiss team</p>
-      </div>
+      <Footer />
 
     </>     
   )

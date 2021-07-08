@@ -4,6 +4,7 @@ import SuggestedDrinkCard from './SuggestedDrinkCard'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import NavHomepage from '../common/NavHomepage'
 import Container from 'react-bootstrap/Container'
+import Footer from '../common/Footer'
 
 const HeissRoom = () => {
 
@@ -39,6 +40,7 @@ const HeissRoom = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

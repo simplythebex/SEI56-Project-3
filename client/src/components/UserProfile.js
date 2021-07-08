@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 //import { getTokenFromLocalStorage } from './helpers/auth.js'
 import Row from 'react-bootstrap/Row'
+import Footer from './common/Footer.js'
 
 const UserProfile = () => {
   const [userInfo,  setUserInfo] = useState([])
@@ -85,6 +86,7 @@ const UserProfile = () => {
 
         </Container>
       </Container>
+      <Footer />
     </>
   )
 

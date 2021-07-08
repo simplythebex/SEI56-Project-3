@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import { useHistory } from 'react-router-dom'
 import SuggestDrinkForm from '../helpers/SuggestDrinkForm'
+import Footer from '../common/Footer'
+import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const SuggestDrink = () => {
 
@@ -52,6 +54,11 @@ const SuggestDrink = () => {
         <NavHomepage />
       </Container>
 
+      <Breadcrumb className="show-drink-breadcrumb">
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+        <Breadcrumb.Item active>Suggest a Drink</Breadcrumb.Item>
+      </Breadcrumb>
+
       <Container className = "outer-box">
         <h2>Suggest a Drink</h2>
         <p>At Heiss we love to hear your suggestions, so please let us know if there is a drink you would like to see on our menu!</p>
@@ -63,6 +70,7 @@ const SuggestDrink = () => {
         />
 
       </Container>
+      <Footer />
     </>
   )
 }

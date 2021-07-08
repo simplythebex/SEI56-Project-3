@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import NavHomepage from '../common/NavHomepage'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import Footer from './Footer'
 
 const About = () => {
 
@@ -54,7 +55,7 @@ const About = () => {
 
         </Row>
       </Container>
-      
+      <Footer />
     </>
   )
 

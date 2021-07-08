@@ -63,7 +63,7 @@ const Register = () => {
         <Breadcrumb.Item active>Register</Breadcrumb.Item>
       </Breadcrumb>
 
-      <Container className = "outer-box">
+      <Container className = "login-register-outer-box">
         <h2>Register</h2>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="fromBasicUsername">

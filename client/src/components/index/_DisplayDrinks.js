@@ -20,9 +20,9 @@ const DisplayDrinks = ({ drinks, filteredDrinks  }) => {
       <Row className="api-row">
         {(filteredDrinks.length > 0 ? filteredDrinks : drinks).map(( drink ) => {
           return (
-            <Card key={drink._id} style={{ width: '21rem' }}>
-              <Card.Img height={300} variant="top" src={drink.image} />
-              <Card.Header as="h3">
+            <Card key={drink._id} style={{ width: '18rem' }}>
+              <Card.Img height={200} variant="top" src={drink.image} />
+              <Card.Header as="h5">
                 {drink.drink}
                       
                 <Card.Title as="h6">{drink.country}</Card.Title>
@@ -30,11 +30,17 @@ const DisplayDrinks = ({ drinks, filteredDrinks  }) => {
               <Card.Body>
                 <Card.Text className="type">{drink.description.length < 100 ? drink.description : drink.description.slice(0, 100) + '...'}</Card.Text>
                 <Card.Text></Card.Text>
+                <hr/>
                 <Container >
+                  <Row> 
+                    <Col className="card-price">
+                      <p>£ {drink.price}.00</p>
+                    </Col>
+                  </Row>
                   <Row>
                     <Col className="card-btn">
                       <Link to={`drinks/${drink._id}`}>
-                        <Button><span>More Info</span></Button>{' '}
+                        <Button variant="warning"><span>More Info</span></Button>{' '}
                       </Link>
                     </Col>
                   </Row>

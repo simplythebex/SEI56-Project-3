@@ -44,7 +44,7 @@ const Nav = () => {
   return (
     <>
       <div className="container-fluid">
-        <nav className="navbar-wrapper">
+        <nav className="homepage-navbar-wrapper">
           <div className="nav-logo-div">
             <Link to="/" className="navbar-logo">
           Heiss

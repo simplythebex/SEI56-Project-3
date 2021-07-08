@@ -6,7 +6,7 @@ import ButtonSignup from './navbar/ButtonSignup.js'
 import ButtonLogin from './navbar/ButtonLogin.js'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
-import CartTally from '../Shopping/CartTally.js'
+import CartTallyHomepage from '../Shopping/CartTallyHomepage.js'
 import CartIcon from '../../styles/images/cart.svg'
 
 
@@ -74,7 +74,7 @@ const NavHompage = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <CartTally 
+              <CartTallyHomepage 
                 CartIcon = {CartIcon}
               />
             </li>

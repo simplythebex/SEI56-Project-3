@@ -3,6 +3,7 @@ import axios from 'axios'
 import Nav from '../common/Nav.js'
 import Container from 'react-bootstrap/Container'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
+import Button from 'react-bootstrap/Button'
 import CartIcon from '../../styles/images/cart.svg'
 import { Link } from 'react-router-dom'
 
@@ -61,19 +62,25 @@ const ShopDrink = () => {
           {shoppedDrinks.map(drink => {
             if (drink !== null) {
               return (
-                <>
-                  <div><img src={drink[0].image}></img></div>
-                  <div>{drink[0].drink}</div>
-                  <div>£{drink[0].price}</div>
-                  <div>{drink[1].quantity}</div>
-                  <div>{drink[1].total}</div>
-                  <div><button value={drink[1]._id} onClick={handleDelete}>Delete</button></div>
-                </>
+                <div className='cartpage-info'>
+                  <div className='drink-img'><img src={drink[0].image}></img></div>
+                  <p>{drink[0].drink}</p>
+                  <p>Price: £{drink[0].price}</p>
+                  <p>Quantity: {drink[1].quantity}</p>
+                  <strong>
+                    <p>Subtotal: £{drink[1].total}</p>
+                  </strong>
+                  <div>
+                    <Button variant='outline-warning' value={drink[1]._id} onClick={handleDelete}>Delete</Button>
+                  </div>
+                </div>
               )
             }
           })}
           <div>
-            <button>Proceed To Checkout</button>
+            <Link to='/shop-success'>
+              <Button variant='warning'>Proceed To Checkout</Button>
+            </Link>
           </div>
         </div>
       </div>

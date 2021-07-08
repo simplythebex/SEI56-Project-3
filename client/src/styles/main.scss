@@ -832,11 +832,16 @@ div.image-text {
     .cartpage-main div:last-child {
       border: none;
     }
-    .cartpage-info p{
+    .cartpage-info p {
       padding: 8px;
+      width: 100px;
+    }
+    .cartpage-info {
+      display: flex;
     }
     img, svg {
-      width: 100%;
+      // width: 100%;
+      width:400px;
       padding: 1rem;
       margin-bottom: 8px;
       display: grid;
@@ -851,6 +856,14 @@ div.image-text {
       width: 100%;
       color: #360719;
       border: 1px solid $primaryYellow;
+    }
+    .checkout-success {
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      height: fit-content;
+    }
+    .cart-wrapper.container .cartpage img, .cart-wrapper.container .cartpage svg {
+      width: 200px;
     }
   }
 }

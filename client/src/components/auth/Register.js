@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import Nav from '../common/Nav'
+import NavHomepage from '../common/NavHomepage'
 import axios from 'axios'
 import { useHistory, Link } from 'react-router-dom'
 import { ImageUploadField } from '../helpers/ImageUploadField'
@@ -53,7 +53,7 @@ const Register = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
       <Container className = "outer-box">

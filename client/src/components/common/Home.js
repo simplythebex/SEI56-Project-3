@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Nav from './Nav.js'
+import NavHomepage from '../common/NavHomepage'
 import { Link, useHistory } from 'react-router-dom'
 // import AnimatedMap from './AnimatedMap.js'
 import Container from 'react-bootstrap/Container'
@@ -57,7 +57,7 @@ const Home = () => {
     <>
       <div className="homepage">
         <Container fluid className='hero'>
-          <Nav />
+          <NavHomepage />
           <div className='hot'>
             <h2>Hot Drinks 
               <br/>Around The World</h2>

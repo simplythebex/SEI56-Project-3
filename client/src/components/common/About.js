@@ -1,7 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Nav from './Nav.js'
+import NavHomepage from '../common/NavHomepage'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 
 const About = () => {
@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
 

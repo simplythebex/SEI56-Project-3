@@ -96,12 +96,18 @@ const DrinkShow = () => {
               <p className="description">
                 {drink.description}
               </p>
-              <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
-              <p className="averageRating"><span>Price: £</span>{drink.price}</p>
-              <p className="averageRating"><span>Quantity: </span><input name="quantity" value={quantity} onChange={handleChange}></input></p>
-              <Container className="buttons" fluid>
-                <Button variant="outline-warning" onClick={handleCart}>Add to basket</Button>{' '}
-              </Container>
+              <div className="info-container">
+                <div className="p-container">
+                  <p className="averageRating"><span>Average rating: </span>{drink.avgRating}</p>
+                  <p className="averageRating"><span>Price: £</span>{drink.price}</p>
+                  <p className="averageRating"><span>Quantity: </span><input name="quantity" value={quantity} onChange={handleChange}></input></p>
+                </div>
+                <Container className="buttons" fluid>
+                  <Button variant="outline-warning" onClick={handleCart}>Add to basket</Button>{' '}
+                </Container>
+
+              </div>
+              
             </Container> 
           
           </div>

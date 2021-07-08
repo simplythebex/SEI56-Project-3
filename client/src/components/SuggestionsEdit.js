@@ -55,8 +55,6 @@ const SuggestionsEdit = () => {
 
   return (
     <>
-    //* in CSS added wrapper called .edit-profile-wrapper, please add tages to target*//
-    
       <Container fluid sticky="top" className="nav-container-pages">
         <NavHomepage />
       </Container >
@@ -68,7 +66,7 @@ const SuggestionsEdit = () => {
         </Breadcrumb>
         <hr />
       </Container>
-      <Container className="suggestChangeForm">
+      <Container className="login-register-outer-box">
         <SuggestDrinkForm 
           handleChange = {handleChange}
           handleSubmit = {handleSubmit}

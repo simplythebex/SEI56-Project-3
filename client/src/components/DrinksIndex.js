@@ -112,9 +112,9 @@ const DrinksIndex = () => {
       <Container fluid sticky="top" className="nav-container-pages">
         <NavHomepage />
       </Container >
-      <Container fluid className="index-wrapper">
+      <Container className="index-wrapper">
         
-        <Row fluid className="align-items-center index-hero-row">
+        <Row className="align-items-center index-hero-row">
         
           <Col className="index-hero-txt">
             <h2>Fresh brew</h2>

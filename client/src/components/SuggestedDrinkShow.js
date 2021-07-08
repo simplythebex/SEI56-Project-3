@@ -74,11 +74,11 @@ const SuggestedDrinkShow = () => {
           /> 
           {/* </div> */}
           <div className="right">
-            <Container className="title" style={{ width: '100' }}>
+            <Container className="title" style={{ width: '500' }}>
               <h2>{drink.drink}</h2>
               <h4 className="origin">Origin: <span className="country-name">{drink.country}</span></h4>
             </Container>
-            <Container className="content" style={{ width: '100' }}>
+            <Container className="content" style={{ width: '500' }}>
               <h4>Description</h4>
               <p className="description">
                 {drink.description}
@@ -87,8 +87,8 @@ const SuggestedDrinkShow = () => {
               
               {/* {userIsOwner(drink.user._id) && */}
               <Container className="buttons" fluid>
-                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="primary">Edit</Button></Link>
-                <Button onClick={handleDelete} variant="primary">Delete</Button>
+                <Link to={`/profile/${id}/edit`} ><Button className="outline-light" variant="warning">Edit</Button></Link>
+                <Button onClick={handleDelete} variant="warning">Delete</Button>
               </Container> 
               {/* } */}
             </Container> 

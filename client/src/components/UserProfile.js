@@ -6,13 +6,13 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
 import Col from 'react-bootstrap/esm/Col'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-//import { getTokenFromLocalStorage } from './helpers/auth.js'
+import { getTokenFromLocalStorage } from './helpers/auth.js'
 import Row from 'react-bootstrap/Row'
 import Footer from './common/Footer.js'
 
 const UserProfile = () => {
   const [userInfo,  setUserInfo] = useState([])
+  const [profileInfo, setProfileInfo] = useState([])
   
   const history = useHistory()
 
@@ -29,6 +29,22 @@ const UserProfile = () => {
     getData()
   }, [])
   console.log('userinfo', userInfo)
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('/api/profile',
+          {
+            headers: { Authorization: `Bearer ${getTokenFromLocalStorage()}` },
+          })
+        setProfileInfo(data)
+      } catch (err) {
+        console.log('err', err)
+      }
+    }
+    getData()
+  }, [])
+  console.log('profileInfo', profileInfo)
   
   // Logout 
   const handleLogout = () => {
@@ -47,16 +63,22 @@ const UserProfile = () => {
             <Breadcrumb.Item href="./.">Home</Breadcrumb.Item>
             <Breadcrumb.Item active>Profile</Breadcrumb.Item>
           </Breadcrumb>
-          <Button className="logout" variant="primary" onClick={handleLogout} size="sm">Logout</Button>{' '}
           
         </Container>
-        <Container>
-          <h3 className="title">Your suggestions</h3>
-          <hr />
+        <Container className="profile-page-logout">
+          <div className="user-welcome">
+            <img src={profileInfo.image} alt={profileInfo.username} />
+            <div className="welcome-text">
+              <h3 className="title">Welcome {profileInfo.username}, here are the drinks you suggested.</h3>
+              <h4 className="small">Select a drink to edit or delete</h4>
+            </div>
+          </div>
+          <button className="logout" variant="primary" onClick={handleLogout} size="sm">Logout</button>{' '}
         </Container>
+        <hr />
         
           
-        <Container className="createdItems">
+        <Container fluid className="createdItems">
           
           {userInfo.map(info => {
             return (
@@ -67,15 +89,8 @@ const UserProfile = () => {
                     <Row className="suggestions-row">
                       <Link className="linkToShowSuggestion"to={`/profile/${info._id}`}>
                         <Card style={{ width: '18rem' }}>
-                          <Card.Img variant="top" alt={info.drink} src={info.image} />
-                          <Card.Header as="h5" key={info.drink}>{info.drink}</Card.Header>
-                          <Card.Body>
-                            <Card.Title>{info.origin}</Card.Title>
-                            <Card.Subtitle className="mb-2 "><p key={info.type}>{info.type}</p></Card.Subtitle>
-                            <Card.Text>                  
-                            </Card.Text>
-                          </Card.Body>
-                        
+                          <Card.Header as="h5" key={info.drink}>{info.drink}</Card.Header>   
+                          <Card.Img height={200} variant="top" alt={info.drink} src={info.image} />                     
                         </Card>
                       </Link>
                     </Row>

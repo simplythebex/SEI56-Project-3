@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Navbar from 'react-bootstrap/Navbar'
+// import Navbar from 'react-bootstrap/Navbar'
 import { getPayload } from '../helpers/auth'
-import ButtonSignup from './navbar/ButtonSignup.js'
-import ButtonLogin from './navbar/ButtonLogin.js'
+// import ButtonSignup from './navbar/ButtonSignup.js'
+// import ButtonLogin from './navbar/ButtonLogin.js'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
-import CartTally from '../Shopping/CartTally.js'
-import CartIcon from '../../styles/images/cart.svg'
+// import CartTally from '../Shopping/CartTally.js'
+// import CartIcon from '../../styles/images/cart.svg'
 
 
 const Nav = () => {
@@ -57,7 +57,7 @@ const Nav = () => {
           <div>
             {/* empty div for a layout oriented teen */}
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          {/* <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
               <Link to="/drinks" className="nav-links" onClick={closeMobileMenu}>
                 Our Drinks
@@ -97,7 +97,7 @@ const Nav = () => {
               <Link to="/profile" >
                 <img
                   src={userInfo.image}
-                  alt={userInfo.uername}
+                  alt={userInfo.username}
                   height={50}
                   width={50}
                   className="nav-bar-profile-image"
@@ -105,7 +105,7 @@ const Nav = () => {
                 <Navbar.Brand clasName="login-register" href="/profile"> {userInfo.username}</Navbar.Brand>
               </Link>
             }
-          </ul>
+          </ul> */}
 
         </nav>
       </div>

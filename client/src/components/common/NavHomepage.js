@@ -6,8 +6,8 @@ import ButtonSignup from './navbar/ButtonSignup.js'
 import ButtonLogin from './navbar/ButtonLogin.js'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
-import CartTallyHomepage from '../Shopping/CartTallyHomepage.js'
-import CartIcon from '../../styles/images/cart.svg'
+// import CartTally from '../Shopping/CartTally.js'
+// import CartIcon from '../../styles/images/cart.svg'
 
 
 const NavHompage = () => {
@@ -73,11 +73,11 @@ const NavHompage = () => {
                 About
               </Link>
             </li>
-            <li className="nav-item">
-              <CartTallyHomepage 
+            {/* <li className="nav-item">
+              <CartTally
                 CartIcon = {CartIcon}
               />
-            </li>
+            </li> */}
             {!userIsAuthenticated() ? 
               <>
                 <li className="nav-item">

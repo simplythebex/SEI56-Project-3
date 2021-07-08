@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Nav from './Nav.js'
+import NavHomepage from '../common/NavHomepage'
 import { Link, useHistory } from 'react-router-dom'
 // import AnimatedMap from './AnimatedMap.js'
 import Container from 'react-bootstrap/Container'
@@ -24,6 +24,7 @@ import { Modal } from 'react-bootstrap'
 // import bighair from '../../styles/images/bighair.png'
 // import footer from '../../styles/images/footer.png'
 import LoginBox from '../auth/LoginBox.js'
+import Footer from './Footer'
 
 const Home = () => {
 
@@ -57,7 +58,7 @@ const Home = () => {
     <>
       <div className="homepage">
         <Container fluid className='hero'>
-          <Nav />
+          <NavHomepage />
           <div className='hot'>
             <h2>Hot Drinks 
               <br/>Around The World</h2>
@@ -213,9 +214,7 @@ const Home = () => {
           
         </Container>
       </div>
-      <div className='footer'>
-        <p>Made with 🖤 by the Heiss team</p>
-      </div>
+      <Footer />
 
     </>     
   )

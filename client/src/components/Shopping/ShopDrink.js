@@ -39,19 +39,21 @@ const ShopDrink = () => {
 
   return (
     <>
+      <Container fluid sticky="top" className='nav-container-pages'>
+        <NavHomepage />
+      </Container>
       <Container className='cart-wrapper'>
-        <Container fluid sticky="top" className='nav-container-pages'>
-          <NavHomepage />
-          <div className='cart-style'>
-            <span>
+        
+        <div className='cart-style'>
+          <span>
               Cart
-              <span className='cartlogo'>0</span>
-            </span>
-            <Link to='/shop-drink' className='cart-link'>
-              <img src={CartIcon} alt='' width='20'/>
-            </Link>
-          </div>
-        </Container>
+            <span className='cartlogo'>0</span>
+          </span>
+          <Link to='/shop-drink' className='cart-link'>
+            <img src={CartIcon} alt='' width='20'/>
+          </Link>
+        </div>
+
         <Breadcrumb className="show-drink-breadcrumb">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>
@@ -79,14 +81,13 @@ const ShopDrink = () => {
             })}
           </div>
         </Container>
-      </Container>
+      
     
-      <Container className='checkout'>
-        <div className='checkout-success'>
+        <Container className='checkout'>
           <Link to='/shop-success'>
-            <Button variant='warning'>Proceed To Checkout</Button>
+            <Button variant='warning' className='checkout-success'>Proceed To Checkout</Button>
           </Link>
-        </div>
+        </Container>
       </Container>
     </>
   )

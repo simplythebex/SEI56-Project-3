@@ -40,7 +40,7 @@ const LoginBox = ({ path }) => {
   }
 
   return (
-    <Container className = "outer-box">
+    <Container className = "login-register-outer-box">
       <h2>Login</h2>
       <Form onSubmit={handleSubmit} >
         <Form.Group className="mb-3" controlId="fromBasicEmail">

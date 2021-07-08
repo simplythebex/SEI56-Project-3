@@ -3,10 +3,11 @@ import axios from 'axios'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Nav from './common/Nav.js'
+import NavHomepage from './common/NavHomepage'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import DisplayDrinks from './index/_DisplayDrinks.js'
 import DisplayChecked from './index/_DisplayChecked.js'
+import Footer from './common/Footer'
 
 
 
@@ -108,10 +109,11 @@ const DrinksIndex = () => {
   
   return (
     <>
-      <Container fluid className="nav-container-pages">
-        <Nav />
-      </Container>
+      <Container fluid sticky="top" className="nav-container-pages">
+        <NavHomepage />
+      </Container >
       <Container fluid className="index-wrapper">
+        
         <Row fluid className="align-items-center index-hero-row">
         
           <Col className="index-hero-txt">
@@ -125,7 +127,7 @@ const DrinksIndex = () => {
           </Col>
         </Row>
         {/* Breadcrumbs for navigation */}
-        <Breadcrumb>
+        <Breadcrumb className="show-drink-breadcrumb">
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item active>Browse Drinks</Breadcrumb.Item>
         </Breadcrumb>
@@ -148,9 +150,6 @@ const DrinksIndex = () => {
                   />
                 </Row>
               </Container>
-              <Container fluid className="index-footer">
-                <h6>Made with ❤️ by the Heiss gang.</h6>
-              </Container>
             </>
             :  
             <h3>
@@ -162,6 +161,8 @@ const DrinksIndex = () => {
         </Row>
 
       </Container>
+      <Footer />
+
     </>
   )
 

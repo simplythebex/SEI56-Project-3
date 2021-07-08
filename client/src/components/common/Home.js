@@ -213,10 +213,10 @@ const Home = () => {
 
           {/* <AnimatedMap /> */}
           
-          <div className='footer'>
-            <p>Made With ❤️</p>
-          </div>
         </Container>
+      </div>
+      <div className='footer'>
+        <p>Made with 🖤 by the Heiss team</p>
       </div>
 
     </>     

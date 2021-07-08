@@ -97,7 +97,7 @@ const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, com
             />
           </Form.Group>
 
-          <Button variant="light" type="Submit" block>Submit</Button>
+          <Button className="comment-submit"variant="light" type="Submit" block>Submit</Button>
 
         </Form>
       </Card.Footer>

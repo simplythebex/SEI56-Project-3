@@ -30,11 +30,17 @@ const DisplayDrinks = ({ drinks, filteredDrinks  }) => {
               <Card.Body>
                 <Card.Text className="type">{drink.description.length < 100 ? drink.description : drink.description.slice(0, 100) + '...'}</Card.Text>
                 <Card.Text></Card.Text>
+                <hr/>
                 <Container >
+                  <Row> 
+                    <Col className="card-price">
+                      <p>£ {drink.price}.00</p>
+                    </Col>
+                  </Row>
                   <Row>
                     <Col className="card-btn">
                       <Link to={`drinks/${drink._id}`}>
-                        <Button><span>More Info</span></Button>{' '}
+                        <Button variant="warning"><span>More Info</span></Button>{' '}
                       </Link>
                     </Col>
                   </Row>

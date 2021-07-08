@@ -32,7 +32,7 @@ export default [
     type: 'Coffee',
     country: 'Cuba ',
     description: 'An espresso shot,  sweetened  with natural brown sugar which has been whipped with the first and strongest drops of espresso. ' ,
-    image: 'https://331mrnu3ylm2k3db3s1xd1hg-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/egg_coffee.jpg ' ,
+    image: 'https://www.thespruceeats.com/thmb/xhjEXST5ToDhB3gFzCx6ZT5N3WI=/4000x2667/filters:no_upscale()/CubanCoffee-001-4928e640d5b7491aa223fb594285a3bf.jpg' ,
     price: 3.50,
     countInStock: 20,
     funFact: ' ' ,
@@ -82,20 +82,6 @@ export default [
     longitude: 133.775131,
     latitude: -25.274399,
     icon: '🇦🇺'
-  },
-  {
-    drink: 'Mazagran',
-    type: 'Coffee',
-    country: 'Algeria ',
-    description: 'Cold black brew with a simple syrup and a squeeze of lemon ' ,
-    image: 'https://coffeeordie.com/wp-content/uploads/2020/05/mazagran.jpg ' ,
-    funFact: ' ' ,
-    price: 3,
-    countInStock: 20,
-    origin: 'Africa',
-    longitude: 1.6596,
-    latitude: 28.0339,
-    icon: '🇩🇿'
   },
   {
     drink: 'Frappe',
@@ -186,7 +172,7 @@ export default [
     type: 'Coffee',
     country: 'Ireland',
     description: 'A mix of hot coffee, Irish whiskey, brown sugar, and whipped cream. It is really more of a special dessert than anything else!' ,
-    image: ' ' ,
+    image: 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/02/Irish-Coffee-2.jpg' ,
     funFact: 'It was created in Ireland in 1943' ,
     price: 2,
     countInStock: 10,
@@ -200,7 +186,7 @@ export default [
     type: 'Coffee',
     country: 'Finland',
     description: 'A dried cheese called juustoleipä is placed at the bottom of a wooden cup. Hot coffee is poured over and the juustoleipä absorbs the coffee like a sponge.' ,
-    image: ' ' ,
+    image: 'https://thejolipantrydotcom.files.wordpress.com/2015/12/kaffeost_077.jpg' ,
     funFact: 'Kaffeost translates to "coffee cheese! ' ,
     price: 2,
     countInStock: 20,
@@ -294,7 +280,7 @@ export default [
     icon: '🇮🇳'
   },
   {
-    drink: 'Taiwanese bubble tea, Zhēnzhū nǎichá 珍珠奶茶',
+    drink: 'Taiwanese bubble tea, 珍珠奶茶',
     type: 'Tea',
     country: 'Taiwan',
     description: 'Milk tea accompanied by chewy tapioca balls' ,
@@ -339,7 +325,7 @@ export default [
   {
     drink: 'Yerba Mate',
     type: 'Tea',
-    country: 'Argentina, Paraguay, Uruguay, and Southern South-America in general',
+    country: 'Argentina, Paraguay, Uruguay',
     description: 'Rich in antioxidants, the coffee-like tea is also said to possess several health benefits. It is brewed in a hollowed-out gourd and drunk through a metal straw called a bombilla.' ,
     image: 'https://blog.amigofoods.com/wp-content/uploads/2011/05/yerba-mate-products.jpg' ,
     funFact: 'It’s almost impossible to walk down the street in Argentina or Paraguay without seeing hordes of people sipping mate. Whether hot or iced, mate is regarded as a social facilitant, as single servings are often passed between friends and family during celebrations.' ,
@@ -435,9 +421,9 @@ export default [
     icon: '🇰🇷'
   },
   {
-    drink: 'Maghrebi mint tea, Alshaay Almaghribiu Bialnaenae, الشاي المغربي بالنعناع',
+    drink: 'Maghrebi mint tea, الشاي المغربي بالنعناع',
     type: 'Tea',
-    country: 'Maghreb region, spread across Morocco, Algeria, Tunisia, Libya, and Mauritania',
+    country: 'Morocco, Algeria, Tunisia, Libya, and Mauritania',
     description: 'Gunpowder green tea infused with spearmint and herbs such as sage, woodworm, lemon verbena, wild thyme and wild geranium. Sweetened with sugar.' ,
     image: 'https://www.thespruceeats.com/thmb/U-1j92gq_j-5AX9nvSxDDN8jUIM=/1830x1830/smart/filters:no_upscale()/tea-getty-2097-x-1830-56a645d63df78cf7728c31d9.jpg' ,
     funFact: 'Often involves an intricate brewing process and fairly formal service, called Atai.' ,

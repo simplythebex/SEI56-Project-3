@@ -10,13 +10,13 @@ import SuggestDrink from './components/Suggestions/SuggestDrink'
 import HeissRoom from './components/Suggestions/HeissRoom.js'
 import About from './components/common/About.js'
 import ShopDrink from './components/Shopping/ShopDrink.js'
+import ShopSuccess from './components/Shopping/ShopSuccess'
 import SuggestedDrinkShow from './components/SuggestedDrinkShow.js'
 import SuggestionsEdit from './components/SuggestionsEdit.js'
 
 
 
 const App = () => {
-
 
   return (
 
@@ -53,7 +53,10 @@ const App = () => {
           <About />
         </Route>
         <Route path="/shop-drink">
-          <ShopDrink />
+          <ShopDrink /> 
+        </Route>
+        <Route path="/shop-success">
+          <ShopSuccess /> 
         </Route>
         <Route path="/">
           <Home />

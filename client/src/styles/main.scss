@@ -32,37 +32,113 @@ h3, p {
   font-family: 'Raleway', sans-serif;
 }
 
+// Homepage styling Bex Wednesday PM
+.homepage {
+  .hero {
+    background-image: url(./images/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: inherit;
+    text-align: center;
+    color: white;
+    padding-bottom: 400px;
+    max-height: 900px;
+    .hot {
+      h2 {
+        font-family: "Marko One", serif;
+        font-size: 6rem;
+        padding-top: 100px;
+        padding-left: inherit;
+      }
+      .paragraph {
+        p {
+          margin-top: 60px;
+          font-size: 36px;
+          margin-bottom: 30px;
+          color: #ffffff;
+          width: auto;
+        }
+      }
+    }
+  }
+  
+  .zig-zag {
+    position: relative;
+    z-index: 1;
+    margin: -30px 0;
+    width: 100%;
+  }
 
-.hero {
-  background-image: url(./images/hero.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: inherit;
-  text-align: center;
-  color: white;
-  padding-bottom: 400px;
-  max-height: 900px;
-}
+  .choice {
+    background-color: $primaryPink;
+    padding: 50px 20px;
+    .choice-wrapper {
+      margin: 5px;
+      padding: 0 30px;
+      .drink {
+        padding-top: 30px;
+        h2 {
+          font-size: 4em;
+        }
+      }
+    }
 
-.main {
-  width: 100%;
-}
+    .need-choose-receive {
+      margin: 0 30px;
+      border: none;
+      background-color: $primaryPink;
+      div.card-title.h5 {
+        font-size: 2em;
+        font-family: 'Marko One', serif;
+      }
+      p.card-text {
+        font-size: 1.25em;
+      }
+    }
+    .card-body {
+      border: none;
+    }
 
+    .happy {
+      padding-top: 100px;
+    }
+    @media screen and (max-width: 1300px) {
+      .happy {
+        display: none;
+      }
+    }
+  }
 
-.hot h2 {
-  font-family: "Marko One", serif;
-  font-size: 96px;
-  padding-top: 150px;
-  // letter-spacing:-5px;
-  padding-left: inherit;
-}
+  .room {
+    .heiss-room {
+      h2 {
+        padding: 150px;
+        text-align: center;
+      }
+    }
 
-.hot .paragraph p {
-  margin-top: 60px;
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #ffffff;
-  width: auto;
+    .carousel {
+      .carousel-inner {
+        display: flex;
+        .carousel-item {
+          height: 500px;
+          width: 500px;
+          word-spacing: 0px;
+          display: center;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .paragraph {
+      display: flex;
+      justify-content: center;
+      .button {
+        margin: 0 auto;
+      }
+    }
+
+  }
 }
 
 .btn-outline-light {
@@ -257,10 +333,10 @@ h3, p {
 
   button {
     display: none;
-  background-color: #F7CAC7;
-  padding-bottom: 10px;
-  align-items: center;
-  width: 100%;
+    background-color: #F7CAC7;
+    padding-bottom: 10px;
+    align-items: center;
+    // width: 100%;
   //   .navbar-left {
   //     a {
   //       color: #360719;
@@ -294,7 +370,8 @@ h3, p {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      // padding: 100px;
+      padding: 100px;
+      height: 505px;
     }
     .index-hero-txt {
       background-color: $primaryYellow; 
@@ -339,14 +416,22 @@ h3, p {
       // justify-content: space-between;
     }
     .card {
-      max-width: 300px;
-      margin-bottom: 30px;
-      margin-left: 15px;
-      margin-right: 15px;
+      // max-width: 300px;
+      // margin-bottom: 30px;
+      // margin-left: 15px;
+      // margin-right: 15px;
       border: none;
+      img {
+        object-fit: cover;
+      }
+      .type {
+        font-size: 1.1em;
+        height: 100px;
+      }
     }
       .card-header {
         background-color:$primaryPink;
+        height: 125px;
       }
       .card-btn {
         align-items: center;
@@ -355,16 +440,14 @@ h3, p {
           background-color: $primaryBlue;
           color: $primaryBrown;
           border: none;
+          margin-left: 70px;
+          margin-bottom: 30px;
         }
       }
     }
 }
 
 }
-
-
-
-
 
 .outer-box {
   max-width: 50%;
@@ -388,7 +471,7 @@ h3, p {
 }
 
 
-// Becca show styling
+// Becca breadcrumb styling
 .show-drink-breadcrumb {
   margin-top: 20px;
   padding: 0 20px;
@@ -397,7 +480,6 @@ h3, p {
     text-decoration: none;
   }
 }
-
 
 
 // Styling for Show Drink Route
@@ -450,7 +532,6 @@ h3, p {
   }
 }
 
-
 // this needs to be wrapped or else it breaks styling on show drink page
 div.card-group {
   p {
@@ -461,117 +542,6 @@ div.card-group {
   font-size: 24px;
   margin-bottom: 60px;
   }
-}
-
-
-// * Homepage styling - Victoria please have a look
-// .how-it-works {
-//   position: relative;
-//   display: flex;
-// }
-  
-
-// .choice {
-//   background-color: rgba(252, 203, 201, 0.25);
-//   margin-top: -50px;
-//   padding-bottom: 100px;
-//   height: 1100px;
-// }
-
-// .drink h2 {
-//   font-family: "Marko One", serif;
-//   color: #360719;
-//   font-size: 64px;
-//   padding-top: 150px;
-//   padding-left: inherit;
-//   word-spacing: -10px;
-//   margin-top: revert;
-// }
-
-// .card-group {
-//   max-width: fit-content;
-// }
-.card-group {
-  flex-wrap: inherit;
-  width: fit-content;
-}
-
-// .card {
-//   border: none;
-//   background-color: transparent;
-// }
-
-// .col-md-8 {
-//   padding-left: 110px;
-// }
-
-// .col-md-4 {
-//   margin-top: 180px;
-// }
-
-// .card-group {
-//   width: min-content;
-// }
-
-// .card:not(:last-child) {
-//   margin-right: 30px;
-// }
-// .card:not(:last-child) {
-//   margin-right: 30px;
-// }
-
-// .card:not(:first-child) {
-//   margin-right: 30px;
-// }
-
-// .card-title {
-//   font-size: 36px;
-//   color: #360719;
-//   margin-left: -12px;
-//   font-family: "Marko One", serif;
-// }
-
-// .card-text:last-child {
-//   font-size: 20px;
-//   margin-left: -12px;
-//   margin-top: revert;
-// }
-
-// .room {
-//   background-color: #ffffff;
-//   padding-bottom: 100px;
-//   height: 911px
-// }
-
-// .heiss-room h2 {
-//   font-family: "Marko One", serif;
-//   color: #360719;
-//   font-size: 64px;
-//   padding-top: 150px;
-//   word-spacing: -10px;
-//   margin-top: revert;
-//   text-align: center;
-// }
-
-// .w-100 {
-//   width: auto !important; 
-// }
-
-.carousel-item {
-  display: flex;
-  width: auto;
-  margin-right: auto;
-}
-
-.carousel-item p {
-  background-color: #F9D85F;
-  border: 3px solid #181c1c;
-  display: flex;
-  height: 200px;
-  max-width: 420px;
-  flex-direction: column;
-  padding: 1.5rem;
-  word-spacing: 0px;
 }
 
 .map-container {
@@ -605,9 +575,11 @@ div.card-group {
 }
 
 .footer {
-  background-image: url(./images/footer.png);
+  background-color: $primaryYellow;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 0;
+  padding: 20px 0;
 }
 
 .covered {
@@ -715,7 +687,8 @@ div.image-text {
         .information {
           margin-top: 10px;
           .drink-name {
-            font-family: "Marko One", serif;
+            font-weight: bold;
+            font-size: 1.2em;
           }
         }
       }
@@ -736,7 +709,9 @@ div.image-text {
               border-radius: 100%;
               margin-right: 10px;
               object-fit: cover;
-              // margin-bottom: 5px;
+            }
+            .comment-owner {
+              font-weight: bold;
             }
           }
         }
@@ -757,11 +732,81 @@ div.image-text {
 
 // Cart styling
 .cart-wrapper.container {
-  .cartpage .cartpage-main {
+  .cartpage {
     display: flex;
     max-width: 1300px;
     margin: 2rem auto;
+    .cartpage-main {
+      flex: 0.3;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      height: fit-content;
+    }
+    .cartpage-main div {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 1rem;
+    }
+    .cartpage-main div:last-child {
+      border: none;
+    }
+    .cartpage-info p{
+      padding: 8px;
+    }
+    img, svg {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 8px;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr 1 fr 1fr;
+      gap: 8px;
+      background: #E8EDE5;
+      border-radius: 2px;
+      place-items: center;
+    }
+    .cartpage-main div button {
+      padding: 10px 17px;
+      width: 100%;
+      color: #360719;
+      border: 1px solid $primaryYellow;
+    }
   }
 }
 
-
+// about page styling 
+.about-page {
+  background-color: $primaryGrey;
+  color: $primaryBrown;
+  .about-title {
+    font-family: 'Marko One', serif;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+  .information.row {
+    font-size: 1.5em;
+    margin: 0 auto;
+    .names.col {
+      padding: 10px;
+      a {
+        border-radius: 5px;
+        border: 1px solid $primaryBrown;
+        max-width: 300px;
+        color: $primaryBrown;
+        text-decoration: none;
+        margin: 5px;
+      }
+      .bex a:hover {
+        background-color: $primaryPink;
+      }
+      .daria a:hover {
+        background-color: $primaryGreen;
+      }
+      .ole a:hover {
+        background-color: $primaryYellow;
+      }
+      .victoria a:hover {
+        background-color: $primaryBlue;
+      }
+    }
+  }
+}

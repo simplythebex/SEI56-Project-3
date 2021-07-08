@@ -32,7 +32,7 @@ export const ImageUploadField = ({ handleImageUrl, value }) => {
         </>
         :
         <>
-          <label>Upload a picture of your drink: </label>
+          <label>Upload an image: </label>
           <input  
             className="input"
             type="file"

@@ -41,6 +41,9 @@ const ShopDrink = () => {
     <>
       <Container fluid sticky="top" className='nav-container-pages'>
         <NavHomepage />
+      </Container>
+      <Container className='cart-wrapper'>
+        
         <div className='cart-style'>
           <span>
               Cart
@@ -50,38 +53,41 @@ const ShopDrink = () => {
             <img src={CartIcon} alt='' width='20'/>
           </Link>
         </div>
-      </Container>
-      <Breadcrumb className="show-drink-breadcrumb">
-        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>
-        <Breadcrumb.Item active>Cart</Breadcrumb.Item>
-      </Breadcrumb>
-      <Container className='cartpage'>
-        <div className='cartpage-main'>
-          {shoppedDrinks.map(drink => {
-            if (drink !== null) {
-              return (
-                <div className='cartpage-info'>
-                  <div className='drink-img'><img src={drink[0].image}></img></div>
-                  <p>{drink[0].drink}</p>
-                  <p>Price: £{drink[0].price}</p>
-                  <p>Quantity: {drink[1].quantity}</p>
-                  <strong>
-                    <p>Subtotal: £{drink[1].total}</p>
-                  </strong>
-                  <div>
-                    <Button variant='outline-warning' value={drink[1]._id} onClick={handleDelete}>Delete</Button>
+
+        <Breadcrumb className="show-drink-breadcrumb">
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item href="/drinks">Browse Drinks</Breadcrumb.Item>
+          <Breadcrumb.Item active>Cart</Breadcrumb.Item>
+        </Breadcrumb>
+        <Container className='cartpage'>
+          <div className='cartpage-main'>
+            {shoppedDrinks.map(drink => {
+              if (drink !== null) {
+                return (
+                  <div className='cartpage-info'>
+                    <div className='drink-img'><img src={drink[0].image}></img></div>
+                    <p>{drink[0].drink}</p>
+                    <p>Price: £{drink[0].price}</p>
+                    <p>Quantity: {drink[1].quantity}</p>
+                    <strong>
+                      <p>Subtotal: £{drink[1].total}</p>
+                    </strong>
+                    <div>
+                      <Button variant='outline-warning' value={drink[1]._id} onClick={handleDelete}>Delete</Button>
+                    </div>
                   </div>
-                </div>
-              )
-            }
-          })}
-          <div>
-            <Link to='/shop-success'>
-              <Button variant='warning'>Proceed To Checkout</Button>
-            </Link>
+                )
+              }
+            })}
           </div>
-        </div>
+        </Container>
+      
+    
+        <Container className='checkout'>
+          <Link to='/shop-success'>
+            <Button variant='warning' className='checkout-success'>Proceed To Checkout</Button>
+          </Link>
+        </Container>
       </Container>
     </>
   )

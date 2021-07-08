@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import SuggestedDrinkCard from './SuggestedDrinkCard'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import Nav from '../common/Nav'
+import NavHomepage from '../common/NavHomepage'
 import Container from 'react-bootstrap/Container'
+import Footer from '../common/Footer'
 
 const HeissRoom = () => {
 
@@ -22,7 +23,7 @@ const HeissRoom = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
 
       <Breadcrumb className="show-drink-breadcrumb">
@@ -39,6 +40,7 @@ const HeissRoom = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   )
 }

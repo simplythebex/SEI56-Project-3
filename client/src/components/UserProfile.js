@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react' 
 import { Link, useHistory } from 'react-router-dom'
-import Nav from './common/Nav.js'
+import NavHomepage from './common/NavHomepage.js'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Container from 'react-bootstrap/esm/Container'
 import Col from 'react-bootstrap/esm/Col'
@@ -9,6 +9,7 @@ import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 //import { getTokenFromLocalStorage } from './helpers/auth.js'
 import Row from 'react-bootstrap/Row'
+import Footer from './common/Footer.js'
 
 const UserProfile = () => {
   const [userInfo,  setUserInfo] = useState([])
@@ -38,7 +39,7 @@ const UserProfile = () => {
   return (
     <>
       <Container fluid sticky="top" className="nav-container-pages">
-        <Nav />
+        <NavHomepage />
       </Container>
       <Container fluid className="main-container">
         <Container className="header">
@@ -87,6 +88,7 @@ const UserProfile = () => {
 
         </Container>
       </Container>
+      <Footer />
     </>
   )
 

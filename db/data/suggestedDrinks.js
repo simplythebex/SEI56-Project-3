@@ -1,6 +1,6 @@
 export default [
   {
-    drink: 'British late',
+    drink: 'British latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -26,7 +26,7 @@ export default [
   },
 
   {
-    drink: 'Italian late',
+    drink: 'Italian latte',
     type: 'tea',
     country: 'Norway',
     description: 'Iciy',
@@ -35,7 +35,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'German late',
+    drink: 'German latte',
     type: 'coffee',
     country: 'Germany',
     description: 'test test',
@@ -44,7 +44,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'French late',
+    drink: 'French latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -53,7 +53,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'American late',
+    drink: 'American latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -62,7 +62,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'Brazilian late',
+    drink: 'Brazilian latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -71,7 +71,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'South African late',
+    drink: 'South African latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -80,7 +80,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'Thai late',
+    drink: 'Thai latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -89,7 +89,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'Belgian late',
+    drink: 'Belgian latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',
@@ -98,7 +98,7 @@ export default [
     origin: 'Europe'
   },
   {
-    drink: 'Australian late',
+    drink: 'Australian latte',
     type: 'coffee',
     country: 'sweden',
     description: 'test test',

@@ -689,9 +689,17 @@ div.header.container {
 
 div.createdItems.container {
   
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
   a.linkToShowSuggestion {
     text-decoration: none;
     color: #360719; 
+  }
+  div.suggestions.col {
+    margin: 1rem;
   }
   div.suggestions.container {
     display: flex;
@@ -705,6 +713,10 @@ div.createdItems.container {
   }
   div.card {
     background-color: white;
+  }
+  div.card-body {
+    background-color: #F9D85F;
+    color: #360719;
   }
   div.createdItems.col {
     display: flex;

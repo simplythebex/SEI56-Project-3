@@ -55,7 +55,7 @@ const LoginBox = ({ path }) => {
         {error && <p className="help is-danger">Sorry, your username or password are incorrect</p>}
 
 
-        <Button variant="light" type="Submit" block>Login</Button>
+        <Button variant="warning" type="Submit" block>Login</Button>
 
       </Form>
       <Link to="/register" className="login-register">Not yet registered? Sign up here!</Link>

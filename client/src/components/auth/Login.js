@@ -10,20 +10,22 @@ const Login = () => {
 
   return (
     <>
-      <Container fluid sticky="top" className="nav-container-pages">
-        <NavHomepage />
-      </Container>
+      <div className='login-wrapper'>
+        <Container fluid sticky="top" className="nav-container-pages">
+          <NavHomepage />
+        </Container>
 
-      <Breadcrumb className="show-drink-breadcrumb">
-        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-        <Breadcrumb.Item active>Login</Breadcrumb.Item>
-      </Breadcrumb>
+        <Breadcrumb className="show-drink-breadcrumb">
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>Login</Breadcrumb.Item>
+        </Breadcrumb>
 
-      <LoginBox
-        path = '/' 
-      />
+        <LoginBox
+          path = '/' 
+        />
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }

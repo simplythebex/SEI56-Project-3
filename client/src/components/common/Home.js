@@ -181,12 +181,7 @@ const Home = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-
-          <Carousel fade>
-=======
           {/* <Carousel fade>
->>>>>>> development
             <Carousel.Item >
               <img
                 className="heiss-img"

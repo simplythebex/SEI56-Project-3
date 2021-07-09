@@ -21,8 +21,20 @@ const About = () => {
         <Breadcrumb.Item active>About</Breadcrumb.Item>
       </Breadcrumb>
       <Container className="about-page">
-        <Row>
+        {/* <Row>
           <Col className="about-title">About this project</Col>
+        </Row> */}
+        <Row>
+          <Col className="about-copy">
+            <>
+              <p>Hi! 👋  We are &#8216;Heiss&#8217;, a group four students in General Assembly&#39;s Software Engineer Immersion course in London.
+                <br/>
+              &#8216;Heiss&#8217; or &#8216;Heiß&#8217;, is German for &#8216;Hot&#8217;, which is how we like our drinks.
+                <br/>
+              This group project had us build a Full-Stack React app in 10 days, utalising stuff we learned in the course, experience team work, and we anjoyed it alot!
+              </p>
+            </>
+          </Col>
         </Row>
         <Row className="information">
           <Col className="names">
@@ -44,15 +56,25 @@ const About = () => {
             <Row className="subtitle">Technologies Used:</Row>
             <Row>
               <ul>
-                <li>MongoDB</li>
+                <li>JavaScript ES6</li>
+                <li>HTML5</li>
+                <li>SCSS</li>
+                <li>React Bootstrap CSS Framework</li>
+                <li>Git</li>
+                <li>GitHub</li>
                 <li>Express</li>
                 <li>React</li>
                 <li>Node</li>
-                <li>Bootstrap</li>
+                <li>Bcrypt</li>
+                <li>JWT</li>
+                <li>MongoDB</li>
+                <li>Mongoose</li>
+                <li>Trello</li>
+                <li>Yarn</li>
+                <li></li>
               </ul>
             </Row>
           </Col>
-
         </Row>
       </Container>
       <Footer />

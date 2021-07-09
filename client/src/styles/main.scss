@@ -73,15 +73,16 @@ h3, p {
     z-index: 1;
     margin-top: -200px;
     margin-bottom: -200px;
-    width: 100%;
+
     .figure-img.img-fluid {
-      margin-right: -50px;
+      // margin-right: -50px;
+      width: inherit;
     }
   }
 
   .choice {
     background-color: $primaryPink;
-    padding: 50px 20px;
+    padding: 150px 20px;
     .choice-wrapper {
       margin: 5px;
       padding: 0 30px;
@@ -124,10 +125,17 @@ h3, p {
 
   .room {
     .heiss-room {
+      padding: 100px 150px 100px 150px;
+      text-align: center;
       h2 {
-        padding: 150px;
-        text-align: center;
+        font-size: 3rem;
+        padding-bottom: 30px;
       }
+      .heiss-room-copy {
+        font-size: 1.5rem;
+
+      }
+
     }
 
     .carousel {
@@ -298,13 +306,23 @@ h3, p {
                 color: #FFFFFF;
                 font-size: 2rem;
               }
+              .fas.fa-times::before {
+                color: #FFFFFF;
+                font-size: 2rem;
+              }
       }
     }
   .homepage-nav {
     color: #FFFFFF;
+
     
     .fa-bars {
       color: #FFFFFF;
+    }
+
+    .fas.fa-times, .fas.fa-times::before {
+      color: #FFFFFF;
+      font-size: 2rem;
     }
     
 
@@ -321,8 +339,8 @@ h3, p {
     }
   
     .nav-menu.active {
-      color: #360719;
-      background: $primaryBlue;
+      color: white;
+      background: $primaryBrown;
       right: 0%;
       opacity: 1;
       transition: all 0.5s ease;
@@ -392,7 +410,8 @@ h3, p {
         }
       }
       .nav-links:hover {
-        text-decoration: underline;
+        // text-decoration: underline;
+        border-bottom: 2px solid $primaryBrown;
         transition: all 0.2s ease-out;
       }
     }
@@ -405,6 +424,8 @@ h3, p {
   .menu-icon {
     display: none;
   }
+
+  // Smaller screens ALL PAGES NAVBAR
 @media screen and (max-width: 768px) {
 
   .nav-wrapper {
@@ -425,7 +446,7 @@ h3, p {
 
   .nav-menu.active {
     color: #360719;
-    background: $primaryBlue;
+    background: $primaryYellow;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -440,10 +461,12 @@ h3, p {
     display: table;
   }
 
-  .nav-links:hover {
-    background-color: #1888ff;
-    border-radius: 0;
-  }
+  // .nav-links:hover {
+  //     // text-decoration: underline;
+  //     border-bottom: 2px solid white;
+  //     transition: all 0.2s ease-out;
+    
+  // }
 
   .navbar-logo {
     position: absolute;
@@ -461,12 +484,13 @@ h3, p {
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    .fa-times {
+      color: $primaryBrown;
+      font-size: 2rem;
+    }
   }
 
-  .fa-times {
-    color: $primaryBrown;
-    font-size: 2rem;
-  }
+
 
   .nav-links-mobile {
     display: block;
@@ -475,16 +499,20 @@ h3, p {
     margin: 2rem auto;
     border-radius: 4px;
     width: 80%;
-    background: #1888ff;
+    background: $primaryBrown;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
   }
 
   .nav-links-mobile:hover {
-    background: #fff;
-    color: #1888ff;
+    background: $primaryBrown;
+    color: #fff;
     transition: 250ms;
+      // text-decoration: underline;
+      border-bottom: 2px solid $primaryBrown;
+      transition: all 0.2s ease-out;
+    
   }
 
   button {
@@ -526,7 +554,9 @@ h3, p {
       font-size: 1.2em;
     }
     button:hover {
-      text-decoration: underline;
+      // text-decoration: underline;
+      border-bottom: 2px solid $primaryBrown;
+      transition: all 0.2s ease-out;
     }
     .filter-btn-all {
       border-right: none;
@@ -534,6 +564,7 @@ h3, p {
   }
 
   .align-items-center.index-hero-row.row {
+    
     .index-hero-img {
       background-image: url(./assets/indexpagehero.jpeg);
       background-size: cover;
@@ -789,7 +820,8 @@ h3, p {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 0;
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   
 //   .covered {
@@ -1072,15 +1104,21 @@ div.createdItems.container-fluid {
 
 // about page styling 
 .about-page {
-  background-color: $primaryGrey;
   color: $primaryBrown;
   .about-title {
-    font-family: 'Marko One', serif;
+    background-color: $primaryPink;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
     font-size: 3em;
     margin-bottom: 50px;
   }
+  p {
+    line-height: 1.6;
+    font-size: 1.25em;
+    padding-bottom: 30px;
+  }
   .information.row {
+    font-family: 'Raleway', sans-serif;
     font-size: 1.5em;
     margin: 0 auto;
     .names.col {

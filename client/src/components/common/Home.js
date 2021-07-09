@@ -66,28 +66,30 @@ const Home = () => {
             <div>
               <div className='paragraph'>
                 <p>Discover your new favourite coffees and teas.</p>
-                <Button variant='outline-light' onClick={handleClick}><span>Suggest Hot Drinks</span></Button>{' '}
+                <div className='hero-buttons'>
+                  <Button variant='outline-light' onClick={handleClick}><span>Suggest Hot Drinks</span></Button>{' '}
 
-                <Modal 
-                  size="lg"
-                  show={show} 
-                  onHide={handleClose}>
-                  <Modal.Header>
-                    <Modal.Title>Please log in to suggest a drink</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-                    <LoginBox 
-                      path = '/suggest-drink'
-                    />
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>Close</Button>
-                  </Modal.Footer>
-                </Modal>
+                  <Modal 
+                    size="lg"
+                    show={show} 
+                    onHide={handleClose}>
+                    <Modal.Header>
+                      <Modal.Title>Please log in to suggest a drink</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <LoginBox 
+                        path = '/suggest-drink'
+                      />
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose}>Close</Button>
+                    </Modal.Footer>
+                  </Modal>
 
-                <Link to="/drinks">
-                  <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
-                </Link>
+                  <Link to="/drinks">
+                    <Button variant='warning'><span>Shop Hot Drinks</span></Button>{' '}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -174,7 +176,11 @@ const Home = () => {
             <h2>
             Heiss Room
             </h2>
+            <div className='heiss-room-copy'>
+              <p>See what others recommend</p>
+            </div>
           </div>
+
 
           <Carousel fade>
             <Carousel.Item >

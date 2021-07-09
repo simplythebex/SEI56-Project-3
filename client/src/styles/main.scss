@@ -683,14 +683,15 @@ h3, p {
 
 .login-register-outer-box {
   max-width: 50%;
-  background-color: $primaryYellow;
+  background-color: $primaryGrey;
   border: 2px solid black;
   padding: 20px;
   margin-top: 30px;
   h2 {
     text-align: center;
     margin: 20px;
-    font-family: 'Marko One', serif;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.75rem;
   }
   input {
     margin-bottom: 30px;
@@ -698,6 +699,7 @@ h3, p {
 
   button {
     margin-bottom: 20px;
+
   }
 
 }
@@ -830,10 +832,12 @@ h3, p {
   .footer {
     background-color: $primaryYellow;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 250px;
     margin-bottom: 0;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 80px;
+
+
   }
   
 //   .covered {
@@ -1001,7 +1005,7 @@ div.createdItems.container-fluid {
     justify-content: flex-end;
     align-items: center;
     padding-right: 30px;
-    a {
+    button {
       padding: 5px 5px;
       width: 150px;
       border: none;

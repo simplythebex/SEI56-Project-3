@@ -28,7 +28,7 @@ const seedDatabase = async () => {
 
     // create drinkData with added ownwer field 
     const drinksWithAddedUsers = drinkData.map(drink => {
-      return { ...drink, owner: users[0]._id }
+      return { ...drink, owner: users[3]._id }
     })
     console.log(users.length)
 

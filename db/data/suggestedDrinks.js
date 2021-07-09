@@ -53,15 +53,6 @@ export default [
     origin: 'World'
   },
   {
-    drink: 'Maghrebi mint tea',
-    type: 'Tea',
-    country: 'Morocco',
-    description: 'Maghrebi mint tea (Arabic: الشاي المغربي بالنعناع‎.Moroccan Arabic: أتاي‎, romanized: atay; Berber languages: ⴰⵜⴰⵢ, romanized: atay), also known as Moroccan mint tea,[2][3][4][5] is a green tea prepared with spearmint leaves and sugar, traditional to the Greater Maghreb region (the northwest African countries of Morocco, Algeria, Tunisia, Libya, and Mauritania). It has since spread throughout North Africa, parts of the Sahel, France and the Arab world. It is most closely associated with Morocco and in Spanish is known simply as "Moorish tea", té moruno. A similar drink is prepared in Spain but is typically served chilled as iced tea in the summer, instead of hot year-round.',
-    image: 'https://www.zliving.com/wp-content/uploads/2018/06/masalachairecipe.jpg',
-    funFact: 'It is not to be confused with Korean mint tea.',
-    origin: 'Morocco'
-  },
-  {
     drink: 'Korean Mint Tea',
     type: 'Tea',
     country: 'Korea',

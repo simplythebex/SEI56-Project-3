@@ -14,7 +14,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
-import Carousel from 'react-bootstrap/Carousel'
+// import Carousel from 'react-bootstrap/Carousel'
 import greentea from '../../styles/images/greentea.png'
 import ladydrinks from '../../styles/images/ladydrinks.png'
 import mandrinks from '../../styles/images/mandrinks.png'
@@ -176,18 +176,17 @@ const Home = () => {
             </h2>
           </div>
 
-          <Carousel fade>
+          {/* <Carousel fade>
             <Carousel.Item >
               <img
-                className="d-block w-100"
+                className="heiss-img"
                 src={greentea}
                 alt="First slide"
-                width={500}
               />
             </Carousel.Item>
             <Carousel.Item >
               <img
-                className="d-block w-100"
+                className="heiss-img"
                 src={ladydrinks}
                 alt="Second slide"
               />
@@ -206,7 +205,34 @@ const Home = () => {
                 alt="Fourth slide"
               />
             </Carousel.Item>
-          </Carousel>
+          </Carousel> */}
+
+          <Container className="heiss-img-wrapper">
+            <div className="heiss-img">
+              <img className="heiss-img"
+                alt='greentea'
+                src={greentea}
+              />
+            </div>
+            <div>
+              <img className="heiss-img"
+                alt='ladydrinks'
+                src={ladydrinks}
+              />
+            </div>
+            <div >
+              <img className="heiss-img"
+                alt='mandrinks'
+                src={mandrinks}
+              />
+            </div>
+            <div >
+              <img className="heiss-img"
+                alt='mandrinks'
+                src={crossleg}
+              /> 
+            </div>  
+          </Container>  
 
           <div className='paragraph'>
             <Link to="/register">

@@ -152,6 +152,18 @@ h3, p {
     }
 
   }
+  .heiss-img-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    margin-bottom: 100px;
+  }
+  .heiss-img {
+    width: fit-content;
+  }
+  .heiss-room h2 {
+    margin-top: -20px;
+  }
 }
 
 // .btn-outline-light {

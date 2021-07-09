@@ -59,7 +59,7 @@ const SuggestDrink = () => {
         <Breadcrumb.Item active>Suggest a Drink</Breadcrumb.Item>
       </Breadcrumb>
 
-      <Container className = "outer-box">
+      <Container className = "login-register-outer-box">
         <h2>Suggest a Drink</h2>
         <p>At Heiss we love to hear your suggestions, so please let us know if there is a drink you would like to see on our menu!</p>
         <SuggestDrinkForm 

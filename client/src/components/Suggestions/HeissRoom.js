@@ -5,6 +5,8 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import NavHomepage from '../common/NavHomepage'
 import Container from 'react-bootstrap/Container'
 import Footer from '../common/Footer'
+import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom'
 
 const HeissRoom = () => {
 
@@ -29,11 +31,22 @@ const HeissRoom = () => {
       <Breadcrumb className="show-drink-breadcrumb">
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
         <Breadcrumb.Item active>Heiss room</Breadcrumb.Item>
-
       </Breadcrumb>
+
+
+
       <div className="heiss-room-wrapper">
+        <Container className="sorting-row-wrapper">
+          <Col className="shop-drinks">
+            <h3 className="shop-drinks-h3">Heiss Room</h3>
+          </Col>
+          <Col xs={7} className="sorting-buttons">
+            <Link to ="/suggest-drink" className="filter-btn-coffee" >Suggest A Drink</Link>
+          </Col>
+        </Container>
+        <hr />
         <div className="drink-wrapper">
-          {suggestedDrinks.map(drink => {
+          {suggestedDrinks.reverse().map(drink => {
             return <SuggestedDrinkCard
               key={drink.id}
               { ...drink } />

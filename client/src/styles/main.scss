@@ -160,6 +160,18 @@ h3, p {
     }
 
   }
+  .heiss-img-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+    margin-bottom: 100px;
+  }
+  .heiss-img {
+    width: fit-content;
+  }
+  .heiss-room h2 {
+    margin-top: -20px;
+  }
 }
 
 // .btn-outline-light {
@@ -653,7 +665,7 @@ h3, p {
           // background-color: $primaryYellow;
           color: $primaryBrown;
           // border: none;
-          margin-left: 30px;
+          margin-left: 45px;
           margin-bottom: 20px;
         }
       
@@ -979,6 +991,33 @@ div.createdItems.container-fluid {
 // Becca styling for Heiss room
 .heiss-room-wrapper {
   // background-color: $primaryGrey;
+  .sorting-row-wrapper.container {
+    margin: 0 10px;
+    display: flex;
+    // justify-content: space-between;
+  }
+  .sorting-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 30px;
+    a {
+      padding: 5px 5px;
+      width: 150px;
+      border: none;
+      background-color: white;
+      color: $primaryBrown;
+      border-right: $primaryBrown;
+      font-family: 'raleway', sans-serif;
+      font-size: 1.1em;
+    }
+    button:hover {
+      text-decoration: underline;
+    }
+    .filter-btn-all {
+      border-right: none;
+    }
+  }
   .drink-wrapper {
     display: flex;
     justify-content: center;
@@ -1029,6 +1068,10 @@ div.createdItems.container-fluid {
               font-weight: bold;
             }
           }
+        }
+
+        .comment-submit {
+          display: none;
         }
       }
     }

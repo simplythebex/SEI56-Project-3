@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/esm/Container'
 import SuggestDrinkForm from './helpers/SuggestDrinkForm'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from './helpers/auth.js'
+import { ImageUploadField } from './helpers/ImageUploadField.js'
 import Footer from './common/Footer'
 
 const SuggestionsEdit = () => {
@@ -25,6 +26,7 @@ const SuggestionsEdit = () => {
     const getData = async () =>  {
       const { data } = await axios.get(`/api/suggested-drinks/${id}`)
       setFormData(data)
+      console.log('DATA', data)
     }
     getData()
   },[id])
@@ -71,7 +73,8 @@ const SuggestionsEdit = () => {
           handleChange = {handleChange}
           handleSubmit = {handleSubmit}
           handleImageUrl = {handleImageUrl}
-          formData = {FormData}
+          imageUploadField = {ImageUploadField}
+          formData = {formData}
         />
       </Container>
       <Footer />

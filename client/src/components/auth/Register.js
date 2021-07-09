@@ -120,7 +120,7 @@ const Register = () => {
             handleImageUrl={handleImageUrl}
           />
 
-          <Button variant="light" type="Submit" block>Register</Button>
+          <Button variant="warning" type="Submit" block>Register</Button>
 
         </Form>
 

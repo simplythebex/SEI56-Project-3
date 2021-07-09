@@ -83,19 +83,24 @@ const UserProfile = () => {
           {userInfo.map(info => {
             return (
               <>
-              
-                <Row>
-                  <Col className="suggestions">
-                    <Row className="suggestions-row">
-                      <Link className="linkToShowSuggestion"to={`/profile/${info._id}`}>
-                        <Card style={{ width: '18rem' }}>
-                          <Card.Header as="h5" key={info.drink}>{info.drink}</Card.Header>   
-                          <Card.Img height={200} variant="top" alt={info.drink} src={info.image} />                     
-                        </Card>
-                      </Link>
+                {
+                  info.owner.id === profileInfo._id 
+                    ?
+                    <Row>
+                      <Col className="suggestions">
+                        <Row className="suggestions-row">
+                          <Link className="linkToShowSuggestion"to={`/profile/${info._id}`}>
+                            <Card style={{ width: '18rem' }}>
+                              <Card.Header as="h5" key={info.drink}>{info.drink}</Card.Header>   
+                              <Card.Img height={200} variant="top" alt={info.drink} src={info.image} />                     
+                            </Card>
+                          </Link>
+                        </Row>
+                      </Col>
                     </Row>
-                  </Col>
-                </Row>
+                    :
+                    <div></div>
+                }
               </>
             )
           })}

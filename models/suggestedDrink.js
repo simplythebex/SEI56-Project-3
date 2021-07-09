@@ -2,8 +2,8 @@ import mongoose from 'mongoose'
 
 // comment Schema
 const commentSchema = new mongoose.Schema({
-  text: { type: String, required: true, maxlength: 300 },
-  rating: { type: Number, required: true, min: 1, max: 5 },
+  text: { type: String, maxlength: 300 },
+  rating: { type: Number, min: 1, max: 5 },
   owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 }, {
   timestamps: true

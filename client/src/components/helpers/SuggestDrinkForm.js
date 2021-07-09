@@ -72,7 +72,7 @@ const SuggestDrinkForm = ({ handleSubmit, handleChange, formData, handleImageUrl
         handleImageUrl={handleImageUrl}
       />
 
-      <Button variant="light" type="Submit" block>Submit</Button>
+      <Button variant="warning" type="Submit" block>Submit</Button>
 
     </Form>
   )

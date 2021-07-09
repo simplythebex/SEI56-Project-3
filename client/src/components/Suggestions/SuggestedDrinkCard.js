@@ -1,11 +1,18 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from '../helpers/auth'
+import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
 import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
-const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, comments, avgRating, funFact }) => {
+const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, comments, funFact, avgRating }) => {
+
+  const userIsAuthenticated = () => {
+    const payload = getPayload()
+    if (!payload) return false 
+    const now = Math.round(Date.now() / 1000)
+    return now < payload.exp
+  }
 
   const [formData, setFormData] = useState({
     text: '',
@@ -57,8 +64,8 @@ const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, com
       <Card.Footer className="suggested-drink-footer">
         <hr />
         <div className="comments-stats">
-          <h3> {comments.length} comment </h3>
-          <h3> {avgRating} </h3>
+          <h3> {comments.length} comments </h3>
+          <h3> Rating: {avgRating} </h3>
         </div>
         <hr />
         <div className="comments">{comments.map(comment => {
@@ -77,29 +84,35 @@ const SuggestedDrinkCard = ({ id, drink, image, country, owner, description, com
             </div>
           )
         })}</div>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formComment">
-            <Form.Control 
-              type="text" 
-              placeholder="Write a comment... " 
-              name="text" 
-              onChange={handleChange}
-              value={formData.text}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="formComment">
-            <Form.Control 
-              type="text" 
-              placeholder="Rating here" 
-              name="rating" 
-              onChange={handleChange}
-              value={formData.rating}
-            />
-          </Form.Group>
 
-          <Button className="comment-submit"variant="light" type="Submit" block>Submit</Button>
+        {userIsAuthenticated() ?
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formComment">
+              <Form.Control 
+                type="text" 
+                placeholder="Write a comment... " 
+                name="text" 
+                onChange={handleChange}
+                value={formData.text}
+              />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="formComment">
+              <Form.Control 
+                type="text" 
+                placeholder="Rating here" 
+                name="rating" 
+                onChange={handleChange}
+                value={formData.rating}
+              />
+            </Form.Group>
 
-        </Form>
+            <Button className="comment-submit"variant="light" type="Submit" block>Submit</Button>
+
+          </Form>
+          :
+          <div></div>
+
+        }
       </Card.Footer>
     </Card>
   )

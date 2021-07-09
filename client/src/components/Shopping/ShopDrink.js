@@ -36,7 +36,6 @@ const ShopDrink = () => {
     getDelete()
   }
 
-
   return (
     <>
       <Container fluid sticky="top" className='nav-container-pages'>
@@ -47,7 +46,7 @@ const ShopDrink = () => {
         <div className='cart-style'>
           <span>
               Cart
-            <span className='cartlogo'>0</span>
+            <span className='cartlogo'>{shoppedDrinks.length - 1}</span>
           </span>
           <Link to='/shop-drink' className='cart-link'>
             <img src={CartIcon} alt='' width='20'/>

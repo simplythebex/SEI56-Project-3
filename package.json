@@ -1,0 +1,26 @@
+{
+  "name": "SEI56-Project-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:simplythebex/SEI56-Project-3.git",
+  "author": "simplythebex <becca.jones@live.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.0",
+    "react-bootstrap": "^1.6.1",
+    "react-icons": "^4.2.0",
+    "react-map-gl": "^6.1.16"
+  },
+  "type": "module",
+  "scripts": {
+    "seed": "node db/seeds.js",
+	  "dev": "npx nodemon",
+    "start": "node index.js", 
+    "build": "cd client && yarn && yarn build" 
+  }
+}

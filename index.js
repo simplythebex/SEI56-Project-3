@@ -3,8 +3,10 @@ import mongoose from 'mongoose'
 // import Drink from './models/drink.js'
 import { dbURI, port  } from './config/environment.js'
 import router from './config/router.js'
+import path from 'path'
 
 const app = express()
+const __dirname = path.resolve()
 
 // setup the server
 const startServer = async () => {
@@ -18,9 +20,13 @@ const startServer = async () => {
       next()
     })
 
+    app.use(express.static(`${__dirname}/client/build`))
+
     app.use(express.json())
 
     app.use('/api', router)
+
+    app.use('/*', (_, res) => res.sendFile(`${__dirname}/client/build/index.html`))
 
     app.listen(port, () => console.log(`🚀 Express is up and running on port ${port}`))
     

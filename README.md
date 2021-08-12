@@ -1,10 +1,10 @@
 # Project 3: Heiss
 
 ## Project Members
-Ole Nascimento: https://github.com/eintrittfrei
-Daria Kafler: https://github.com/daria-kafler
-Victoria Olanipekun: https://github.com/victoriaolanipekun
-Bex Jones: https://github.com/simplythebex
+- Ole Nascimento: https://github.com/eintrittfrei
+- Daria Kafler: https://github.com/daria-kafler
+- Victoria Olanipekun: https://github.com/victoriaolanipekun
+- Bex Jones: https://github.com/simplythebex
 
 ## Overview
 
@@ -17,8 +17,8 @@ Heiss is an online retailer and community app. Users can purchase teas and coffe
 https://sei56-heiss.herokuapp.com/
 
 Please use the following credentials to explore the app:
-Email: bex@email.com	
-Password:  pass
+- Email: bex@email.com	
+- Password:  pass
 
 ## Code installation
 https://github.com/simplythebex/SEI56-Project-3
@@ -36,23 +36,23 @@ Create a full-stack app using Node.js, Express and MongoDB. The app should have 
 ## Technologies
 
 ### Planning
-Figma
-Trello
+- Figma
+- Trello
 
 ### Backend
-MongoDB/Mongoose
-Express
-Node
+- MongoDB/Mongoose
+- Express
+- Node
 ### Frontend
-JavaScript
-React
-HTML
-SASS
-Bootstrap
+- JavaScript
+- React
+- HTML
+- SASS
+- Bootstrap
 
 ### Other
-Git
-Github
+- Git
+- Github
 
 ## Approach 
 
@@ -131,13 +131,13 @@ Planning: While we took our time planning the Backend and Frontend we did not or
 
 ## Key Learnings
 
-The difference between embedded and referenced data.
-Using MongoDB/Mongoose and building a Backend from scratch.
-How to communicate and work efficiently within a team.
+- The difference between embedded and referenced data.
+- Using MongoDB/Mongoose and building a Backend from scratch.
+- How to communicate and work efficiently within a team.
 
 ## Future Improvements
 
-Add a map feature: Something that was on our original plan, we wanted users to be able to pick drinks on a map.
-Styling of the basket and making the basket accessible in the Navbar.
-Responsiveness: Ensuring the app is responsive across all pages.
+- Add a map feature: Something that was on our original plan, we wanted users to be able to pick drinks on a map.
+- Styling of the basket and making the basket accessible in the Navbar.
+- Responsiveness: Ensuring the app is responsive across all pages.
 

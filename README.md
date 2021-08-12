@@ -128,6 +128,10 @@ Styling: We wanted to use a bright and playful colour palette for this project, 
 
 Planning: While we took our time planning the Backend and Frontend we did not originally factor in styling which led to some confusion and to styles being overwritten. To resolve this we made sure that we were very specific in our class names, to avoid the same name being used twice, however if I were to re-do this project I would create a separate SASS file for each component.
 
+## Bugs
+Error handling on forms needs improvements
+Styling on some pages isn’t showing correctly on large screen sizes
+Heiss Room does not re-render when comments/ratings are added
 
 ## Key Learnings
 

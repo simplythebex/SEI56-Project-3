@@ -77,7 +77,7 @@ To create the SuggestedDrink model I used both embedded and referenced data. The
 
 <img width="924" alt="suggested-drinks model" src="https://user-images.githubusercontent.com/73421779/129205492-f9ed2474-8a00-4aa5-8440-3bb5d2573974.png">
 
-In the Users model I then referenced the drinks do that a profile could show the suggested drinks that were created by that user:
+In the Users model I then referenced the drinks so that a profile could show the suggested drinks that were created by that user:
 
 <img width="869" alt="user model" src="https://user-images.githubusercontent.com/73421779/129205569-510a52df-0659-48e8-a6d5-f5d196c582fc.png">
 
@@ -90,7 +90,7 @@ As I was changing the Backend without input from my team I ensured I commented t
 ### Frontend
 After creating the Backend we proceeded to each take ownership of a section of the Frontend. We created the React App and began working on our own tasks. 
 
-For the Heiss Room I wanted the page to display a newsfeed similar to that of Facebooks: 
+For the Heiss Room I wanted the page to display a newsfeed similar to that of Facebook: 
 
 ![Screenshot 2021-08-12 at 12 46 05](https://user-images.githubusercontent.com/73421779/129205809-8059a30c-6423-49bb-80e8-1d3cc18f1e44.png)
 
@@ -120,7 +120,7 @@ When the user submits a comment and rating, the data is sent via a POST request,
 
 Planning: We had a lot that we wanted to get done, so spending time together planning the project meant that we knew what was required and the timeframe in which we had to complete it.
 
-Teamworking: We were able to efficiently code together whilst working remotely, and were all learning to use git branches at the same time. We managed to streamline merging our work to avoid any issues in git, and enjoyed coming together as a team.
+Teamworking: We were able to efficiently code together whilst working remotely, and all learnt to use Git branches at the same time. We managed to streamline merging our work to avoid any issues in Git, and enjoyed coming together as a team.
 
 Styling: We wanted to use a bright and playful colour palette for this project, which we have definitely achieved! I think the imagery that we chose is beautiful and makes the app very inviting. 
 
@@ -129,9 +129,9 @@ Styling: We wanted to use a bright and playful colour palette for this project, 
 Planning: While we took our time planning the Backend and Frontend we did not originally factor in styling which led to some confusion and to styles being overwritten. To resolve this we made sure that we were very specific in our class names, to avoid the same name being used twice, however if I were to re-do this project I would create a separate SASS file for each component.
 
 ## Bugs
-Error handling on forms needs improvements
-Styling on some pages isn’t showing correctly on large screen sizes
-Heiss Room does not re-render when comments/ratings are added
+- Error handling on forms needs improvements.
+- Styling on some pages isn’t showing correctly on large screen sizes.
+- Heiss Room does not re-render when comments/ratings are added.
 
 ## Key Learnings
 

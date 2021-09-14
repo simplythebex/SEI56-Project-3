@@ -71,7 +71,7 @@ With a background in design Victoria created the wireframe with input from the r
 ### Backend
 As we had decided to code the Backend together, we took it in turns to write the code, while screen sharing so that the rest of the team could check the code and research any bugs that we encountered. 
 
-Our initial backend included just the Drinks and User models, however one we were working on the Frontend, both Victoria and I realised that having separate models for our work would make sense. Victoria created the ShoppedDrink model (basket) while I created the SuggestedDrink model (this was required for the Heiss room feature).
+Our initial Backend included just the Drinks and User models, however one we were working on the Frontend, both Victoria and I realised that having separate models for our work would make sense. Victoria created the ShoppedDrink model (basket) while I created the SuggestedDrink model (this was required for the Heiss room feature).
 
 To create the SuggestedDrink model I used both embedded and referenced data. The owner was added as embedded data as shown:
 
